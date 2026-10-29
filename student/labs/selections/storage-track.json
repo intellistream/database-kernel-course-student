@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "name": "storage-track",
+  "description": "存储算法专题；CLOCK/LRU 均可独立选做。",
+  "selected_questions": [
+    "S01.Q01",
+    "S01.Q02",
+    "S01.Q03",
+    "S01.Q04",
+    "S01.Q05",
+    "S01.Q06",
+    "S01.Q07",
+    "S01.Q08",
+    "S01.Q09",
+    "S01.Q10"
+  ],
+  "weights": {
+    "S01.Q01": 2,
+    "S01.Q02": 1,
+    "S01.Q03": 1,
+    "S01.Q04": 3,
+    "S01.Q05": 3,
+    "S01.Q06": 2,
+    "S01.Q07": 2,
+    "S01.Q08": 3,
+    "S01.Q09": 3,
+    "S01.Q10": 2
+  },
+  "requested_profiles": [],
+  "choices": {}
+}

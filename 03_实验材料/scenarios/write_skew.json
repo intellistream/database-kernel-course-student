@@ -1,0 +1,154 @@
+{
+  "description": "课程SI写偏斜示例，验证两个不同键写入可同时提交；SER必须另编调度及中止断言，不可直接套用此预期。",
+  "steps": [
+    {
+      "session": "setup",
+      "sql": "create table course_duty (id int, active int);",
+      "expect": {
+        "success": true
+      }
+    },
+    {
+      "session": "setup",
+      "sql": "insert into course_duty values (1,1);",
+      "expect": {
+        "success": true
+      }
+    },
+    {
+      "session": "setup",
+      "sql": "insert into course_duty values (2,1);",
+      "expect": {
+        "success": true
+      }
+    },
+    {
+      "session": "T1",
+      "sql": "set transaction isolation level SNAPSHOT ISOLATION;",
+      "expect": {
+        "success": true
+      }
+    },
+    {
+      "session": "T1",
+      "sql": "begin;",
+      "expect": {
+        "success": true
+      }
+    },
+    {
+      "session": "T2",
+      "sql": "set transaction isolation level SNAPSHOT ISOLATION;",
+      "expect": {
+        "success": true
+      }
+    },
+    {
+      "session": "T2",
+      "sql": "begin;",
+      "expect": {
+        "success": true
+      }
+    },
+    {
+      "session": "T1",
+      "sql": "select id,active from course_duty;",
+      "expect": {
+        "columns": [
+          "id",
+          "active"
+        ],
+        "numeric_columns": [
+          0,
+          1
+        ],
+        "rows": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "session": "T2",
+      "sql": "select id,active from course_duty;",
+      "expect": {
+        "columns": [
+          "id",
+          "active"
+        ],
+        "numeric_columns": [
+          0,
+          1
+        ],
+        "rows": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "session": "T1",
+      "sql": "update course_duty set active = 0 where id = 1;",
+      "expect": {
+        "success": true
+      }
+    },
+    {
+      "session": "T2",
+      "sql": "update course_duty set active = 0 where id = 2;",
+      "expect": {
+        "success": true
+      }
+    },
+    {
+      "session": "T1",
+      "sql": "commit;",
+      "expect": {
+        "success": true
+      }
+    },
+    {
+      "session": "T2",
+      "sql": "commit;",
+      "expect": {
+        "success": true
+      }
+    },
+    {
+      "session": "setup",
+      "sql": "select id,active from course_duty;",
+      "expect": {
+        "columns": [
+          "id",
+          "active"
+        ],
+        "numeric_columns": [
+          0,
+          1
+        ],
+        "rows": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      }
+    }
+  ]
+}

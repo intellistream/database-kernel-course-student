@@ -1,0 +1,107 @@
+[
+  {
+    "lab": "L0",
+    "hours": 2,
+    "topic": "环境与源码阅读",
+    "reference_questions": [],
+    "class_focus": "搭建 Linux / Docker 环境，运行 scaffold；记录预期的未实现失败，读懂 Database → Session → planner → execution 路径。",
+    "acceptance": "环境、构建日志、错误归因与 C++ 生命周期练习；不以完整 SQL 通过为起点。",
+    "status": "已有两题验收可用于试教，其他模块需补测试与依赖；非完整授课就绪"
+  },
+  {
+    "lab": "L1",
+    "hours": 4,
+    "topic": "页、缓冲池与记录",
+    "reference_questions": [
+      "S01.Q01",
+      "S01.Q02",
+      "S01.Q04",
+      "S01.Q07"
+    ],
+    "class_focus": "课堂聚焦 CLOCK 候选选择与 pin/dirty 状态；页文件和堆页作为配套阅读。",
+    "acceptance": "全 pin、脏页回写、失败不发布、槽复用；助教补独立测试及所需依赖实现。",
+    "status": "已有两题验收可用于试教，其他模块需补测试与依赖；非完整授课就绪"
+  },
+  {
+    "lab": "L2",
+    "hours": 6,
+    "topic": "B+树与索引",
+    "reference_questions": [
+      "S03.Q01",
+      "S03.Q02",
+      "S03.Q03",
+      "S03.Q04",
+      "S03.Q06"
+    ],
+    "class_focus": "课堂实现键比较和一次叶分裂；范围扫描与唯一冲突作为课后回归。",
+    "acceptance": "负整数/复合键、根分裂、跨叶区间、重复键；补隔离夹具和精确测试注册。",
+    "status": "已有两题验收可用于试教，其他模块需补测试与依赖；非完整授课就绪"
+  },
+  {
+    "lab": "L3",
+    "hours": 6,
+    "topic": "查询与集合算子",
+    "reference_questions": [
+      "S06.Q02",
+      "S06.Q03",
+      "S02.Q06",
+      "S04.Q05",
+      "S05.Q01",
+      "S07.Q02"
+    ],
+    "class_focus": "先完成 Append、Unique 两题；表达式、TopN、聚合、NLJ 分组阅读与扩展。",
+    "acceptance": "Append 已注册 6 项、Unique 已注册 10 项；其余题仍需独立验收。重扫、空输入、重复行与 NULL 语义逐项解释。",
+    "status": "已有两题验收可用于试教，其他模块需补测试与依赖；非完整授课就绪"
+  },
+  {
+    "lab": "L4",
+    "hours": 4,
+    "topic": "事务与锁",
+    "reference_questions": [
+      "S08.Q04",
+      "S08.Q05",
+      "S08.Q06"
+    ],
+    "class_focus": "围绕锁等待、死锁环与提交/中止选一个实现切片。",
+    "acceptance": "确定性屏障控制交错、死锁终止、失败释放；不能用 sleep 证明内部等待。补测试与调用适配。",
+    "status": "已有两题验收可用于试教，其他模块需补测试与依赖；非完整授课就绪"
+  },
+  {
+    "lab": "L5",
+    "hours": 4,
+    "topic": "MVCC 与隔离",
+    "reference_questions": [
+      "S09.Q01",
+      "S09.Q02",
+      "S09.Q03"
+    ],
+    "class_focus": "以可见性判定为实现核心，比较 RC/SI 的读快照与写冲突；SSI 为竞赛扩展。",
+    "acceptance": "同一事务前后读、活跃/提交/中止版本、写偏斜；补隔离测试并接入真实 Session。",
+    "status": "已有两题验收可用于试教，其他模块需补测试与依赖；非完整授课就绪"
+  },
+  {
+    "lab": "L6",
+    "hours": 4,
+    "topic": "WAL 与恢复",
+    "reference_questions": [
+      "S10.Q03",
+      "S10.Q08",
+      "S10.Q09",
+      "S10.Q11"
+    ],
+    "class_focus": "课堂实现或追踪一个 redo 切片及不完整日志尾；检查点/启动恢复做集成阅读。",
+    "acceptance": "二次 redo 幂等、截断尾、SIGKILL 后已确认事务恢复；必须先补独立验收与前置能力。",
+    "status": "已有两题验收可用于试教，其他模块需补测试与依赖；非完整授课就绪"
+  },
+  {
+    "lab": "L7",
+    "hours": 2,
+    "topic": "集成与性能",
+    "reference_questions": [
+      "S04.Q07"
+    ],
+    "class_focus": "小数据结果/计数对照，整理代码身份和环境；完整 grader 留在参赛训练。",
+    "acceptance": "完整记录 correctness、load、warmup、测量、重启检查；未完成集成不记录为 TPC-C 成绩。",
+    "status": "已有两题验收可用于试教，其他模块需补测试与依赖；非完整授课就绪"
+  }
+]

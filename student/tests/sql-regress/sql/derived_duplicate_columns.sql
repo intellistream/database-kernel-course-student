@@ -1,0 +1,15 @@
+-- PostgreSQL select_distinct.sql: repeated derived-table output columns
+CREATE TABLE distinct_input (two INT, four INT);
+INSERT INTO distinct_input VALUES
+    (0, 0), (0, 0), (0, 1), (1, 0), (1, 0), (1, 1);
+
+SELECT COUNT(*) AS distinct_rows FROM
+    (SELECT DISTINCT two, four, two FROM distinct_input) ss;
+
+SELECT * FROM
+    (SELECT two AS repeated, four, two AS repeated FROM distinct_input) ss
+    ORDER BY four;
+
+-- A named reference cannot choose between duplicate output columns.
+SELECT ss.repeated FROM
+    (SELECT two AS repeated, four, two AS repeated FROM distinct_input) ss;

@@ -1,0 +1,192 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 22,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "BUILD_TESTING": "ON",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "DB_ENABLE_ANALYSIS_TARGETS": "OFF"
+      }
+    },
+    {
+      "name": "gcc-debug",
+      "displayName": "GCC Debug",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "gcc-release",
+      "displayName": "GCC Release",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "DB_NATIVE_CPU": "ON"
+      }
+    },
+    {
+      "name": "gcc-relwithdebinfo",
+      "hidden": true,
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_CXX_FLAGS_RELWITHDEBINFO": "-O1 -g -DNDEBUG"
+      }
+    },
+    {
+      "name": "clang-tidy",
+      "displayName": "GCC Debug with clang-tidy",
+      "inherits": "gcc-debug",
+      "cacheVariables": {
+        "DB_ENABLE_CLANG_TIDY": "ON",
+        "DB_ENABLE_ANALYSIS_TARGETS": "ON"
+      }
+    },
+    {
+      "name": "asan-ubsan",
+      "displayName": "GCC RelWithDebInfo ASan + UBSan",
+      "inherits": "gcc-relwithdebinfo",
+      "cacheVariables": {
+        "DB_ENABLE_ADDRESS_SANITIZER": "ON",
+        "DB_ENABLE_UNDEFINED_SANITIZER": "ON"
+      }
+    },
+    {
+      "name": "tsan",
+      "displayName": "GCC RelWithDebInfo TSan",
+      "inherits": "gcc-relwithdebinfo",
+      "cacheVariables": {
+        "DB_ENABLE_THREAD_SANITIZER": "ON"
+      }
+    },
+    {
+      "name": "coverage",
+      "displayName": "GCC RelWithDebInfo -O0 lcov Coverage",
+      "inherits": "gcc-relwithdebinfo",
+      "cacheVariables": {
+        "DB_ENABLE_COVERAGE": "ON",
+        "DB_COVERAGE_OPTIMIZED": "OFF"
+      }
+    },
+    {
+      "name": "gcc-benchmark",
+      "displayName": "GCC Release benchmarks",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "DB_NATIVE_CPU": "ON",
+        "DB_BUILD_BENCHMARKS": "ON",
+        "DB_ENABLE_ANALYSIS_TARGETS": "OFF"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "gcc-debug",
+      "configurePreset": "gcc-debug"
+    },
+    {
+      "name": "gcc-release",
+      "configurePreset": "gcc-release"
+    },
+    {
+      "name": "clang-tidy",
+      "configurePreset": "clang-tidy"
+    },
+    {
+      "name": "asan-ubsan",
+      "configurePreset": "asan-ubsan"
+    },
+    {
+      "name": "tsan",
+      "configurePreset": "tsan"
+    },
+    {
+      "name": "coverage",
+      "configurePreset": "coverage"
+    },
+    {
+      "name": "gcc-benchmark",
+      "configurePreset": "gcc-benchmark"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "gcc-debug",
+      "configurePreset": "gcc-debug",
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error"
+      }
+    },
+    {
+      "name": "gcc-release",
+      "configurePreset": "gcc-release",
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error"
+      }
+    },
+    {
+      "name": "clang-tidy",
+      "configurePreset": "clang-tidy",
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error"
+      }
+    },
+    {
+      "name": "asan-ubsan",
+      "configurePreset": "asan-ubsan",
+      "environment": {
+        "ASAN_OPTIONS": "detect_leaks=1:halt_on_error=1:strict_string_checks=1",
+        "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+      },
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error"
+      }
+    },
+    {
+      "name": "tsan",
+      "configurePreset": "tsan",
+      "environment": {
+        "TSAN_OPTIONS": "detect_deadlocks=0:halt_on_error=1:history_size=7"
+      },
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error"
+      }
+    },
+    {
+      "name": "coverage",
+      "configurePreset": "coverage",
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error"
+      }
+    }
+  ]
+}

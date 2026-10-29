@@ -1,0 +1,96 @@
+[
+  {
+    "sql": "create table course_u1 (id int);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "create table course_u2 (id int);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_u1 values (1);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_u1 values (1);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_u1 values (2);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_u2 values (1);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_u2 values (3);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "select id from course_u1 union select id from course_u2;",
+    "expect": {
+      "columns": [
+        "id"
+      ],
+      "rows": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "select id from course_u1 union all select id from course_u2;",
+    "expect": {
+      "columns": [
+        "id"
+      ],
+      "rows": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  }
+]

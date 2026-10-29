@@ -1,0 +1,7 @@
+# Preserve source-receipt hashes on all platforms.
+* -text
+*.pdf binary
+*.ppt binary
+*.pptx binary
+*.docx binary
+*.tar.gz binary

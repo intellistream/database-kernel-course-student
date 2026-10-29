@@ -1,0 +1,49 @@
+# CMake and local build trees
+/build/
+/build-*/
+/out/
+/cmake-build-*/
+/CMakeUserPresets.json
+/compile_commands.json
+CMakeCache.txt
+CMakeFiles/
+Testing/
+
+# Compilers, linkers, and coverage/profiling
+*.a
+*.d
+*.gcda
+*.gcno
+*.gcov
+*.o
+*.obj
+*.profdata
+*.profraw
+*.so
+*.so.*
+/coverage/
+/profiles/
+
+# Runtime database and benchmark output
+/db-data/
+# Existing databases may still be opened explicitly during the one-shot rename.
+/ferrum-data/
+/tpcc_data/
+/results/
+/benchmark-results/
+*.pid
+core
+core.*
+
+# Local tools and editors
+/.cache/
+/.clangd/
+/.idea/
+/.venv/
+/.vscode/
+*.swp
+*~
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db

@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "scope": "initial student framework; functional algorithms remain to be implemented",
+  "questions": 83,
+  "hollowed_regions": 2229,
+  "build": {
+    "status": "passed",
+    "configuration": "GCC 15 Release, warnings as errors, all default targets and public/private header checks"
+  },
+  "scaffold": {
+    "passed_cases": 27,
+    "failed_cases": 0,
+    "skipped_cases": 0
+  },
+  "runner_policy_tests": {
+    "passed_cases": 23
+  },
+  "isolated_unit_validation": {
+    "S06.Q02": {
+      "passed_cases": 6,
+      "other_questions_unchanged": 82
+    },
+    "S06.Q03": {
+      "passed_cases": 10,
+      "other_questions_unchanged": 82
+    }
+  },
+  "pending": {
+    "unit_registration_or_isolation_questions": 81,
+    "database_profiles": [
+      "db-basic-rc",
+      "db-relational",
+      "db-reference"
+    ]
+  }
+}

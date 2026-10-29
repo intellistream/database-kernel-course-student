@@ -1,0 +1,114 @@
+---
+Language: Cpp
+BasedOnStyle: LLVM
+Standard: Latest
+
+# Layout
+IndentWidth: 4
+ContinuationIndentWidth: 4
+ConstructorInitializerIndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+AccessModifierOffset: -4
+IndentAccessModifiers: false
+IndentCaseLabels: true
+IndentCaseBlocks: false
+IndentRequires: true
+NamespaceIndentation: None
+LambdaBodyIndentation: Signature
+
+# Keep diffs stable: do not vertically align unrelated declarations or assignments.
+AlignAfterOpenBracket: BlockIndent
+AlignOperands: Align
+AlignConsecutiveAssignments: None
+AlignConsecutiveBitFields: None
+AlignConsecutiveDeclarations: None
+AlignConsecutiveMacros: None
+AlignEscapedNewlines: Left
+AlignTrailingComments: false
+
+# One logical item per line once a declaration or call wraps.
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+BinPackArguments: false
+BinPackParameters: false
+PackConstructorInitializers: Never
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeTernaryOperators: true
+BreakBeforeConceptDeclarations: true
+AlwaysBreakTemplateDeclarations: Yes
+
+# Braces and short forms
+BreakBeforeBraces: Attach
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Empty
+AllowShortLoopsOnASingleLine: false
+RemoveBracesLLVM: false
+SpaceInEmptyBlock: false
+
+# Types and expressions
+Cpp11BracedListStyle: true
+PointerAlignment: Left
+ReferenceAlignment: Left
+DerivePointerAlignment: false
+QualifierAlignment: Leave
+SpaceAfterTemplateKeyword: true
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpacesInAngles: Never
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# Includes: related header first, then standard/POSIX, third-party, project, local.
+IncludeBlocks: Regroup
+IncludeIsMainRegex: '(Test)?$'
+SortIncludes: CaseSensitive
+IncludeCategories:
+  - Regex: '^<[^/]+>$'
+    Priority: 1
+    SortPriority: 1
+    CaseSensitive: true
+  - Regex: '^<(gmock|gtest)/'
+    Priority: 3
+    SortPriority: 3
+    CaseSensitive: true
+  - Regex: '^<.*>'
+    Priority: 2
+    SortPriority: 2
+    CaseSensitive: true
+  - Regex: '^"db/'
+    Priority: 4
+    SortPriority: 4
+    CaseSensitive: true
+  - Regex: '^".*"'
+    Priority: 5
+    SortPriority: 5
+    CaseSensitive: true
+
+# Whitespace and comments
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: LogicalBlock
+FixNamespaceComments: true
+ReflowComments: true
+SeparateDefinitionBlocks: Always
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+ShortNamespaceLines: 0
+SpacesBeforeTrailingComments: 2
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: 1
+IndentPPDirectives: BeforeHash
+PPIndentWidth: 4
+DeriveLineEnding: false
+UseCRLF: false
+SortUsingDeclarations: true
+...

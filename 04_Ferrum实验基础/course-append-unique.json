@@ -1,0 +1,15 @@
+{
+  "schema_version": 2,
+  "name": "course-append-unique",
+  "description": "已注册独立验收的两题练习；不宣称组成完整数据库。",
+  "selected_questions": [
+    "S06.Q02",
+    "S06.Q03"
+  ],
+  "weights": {
+    "S06.Q02": 1,
+    "S06.Q03": 1
+  },
+  "requested_profiles": [],
+  "choices": {}
+}

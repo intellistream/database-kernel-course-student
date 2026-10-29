@@ -1,0 +1,31 @@
+-- PostgreSQL select_distinct.sql: repeated derived-table output columns
+CREATE TABLE distinct_input (two INT, four INT);
+INSERT INTO distinct_input VALUES
+    (0, 0), (0, 0), (0, 1), (1, 0), (1, 0), (1, 1);
+
+SELECT COUNT(*) AS distinct_rows FROM
+    (SELECT DISTINCT two, four, two FROM distinct_input) ss;
+distinct_rows
+-------------
+            4
+(1 row)
+
+
+SELECT * FROM
+    (SELECT two AS repeated, four, two AS repeated FROM distinct_input) ss
+    ORDER BY four;
+repeated | four | repeated
+---------+------+---------
+       0 |    0 |        0
+       0 |    0 |        0
+       1 |    0 |        1
+       1 |    0 |        1
+       0 |    1 |        0
+       1 |    1 |        1
+(6 rows)
+
+
+-- A named reference cannot choose between duplicate output columns.
+SELECT ss.repeated FROM
+    (SELECT two AS repeated, four, two AS repeated FROM distinct_input) ss;
+ERROR:  bind error: column reference is ambiguous: repeated

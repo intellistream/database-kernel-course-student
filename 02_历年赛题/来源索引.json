@@ -1,0 +1,205 @@
+[
+  {
+    "year": 2023,
+    "file": "02_历年赛题/2023/2023数据库系统设计赛技术方案V3.0.pdf",
+    "commit": "88c2b7bb94187978c0103e0f8e3a733a47d1f917",
+    "sha256": "158d487ed039788837e26dd1d1c6db297b64c3a0838fc468488f49dff9dae8d7",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2023/-/blob/88c2b7bb94187978c0103e0f8e3a733a47d1f917/2023数据库系统设计赛技术方案V3.0.pdf"
+  },
+  {
+    "year": 2023,
+    "file": "02_历年赛题/2023/数据库决赛题目.pdf",
+    "commit": "88c2b7bb94187978c0103e0f8e3a733a47d1f917",
+    "sha256": "ef70f68396619cadbee41dc61598603ca91c3ddc74360e64dd257450c35b7a0c",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2023/-/blob/88c2b7bb94187978c0103e0f8e3a733a47d1f917/数据库决赛题目.pdf"
+  },
+  {
+    "year": 2023,
+    "file": "02_历年赛题/2023/RMDB使用文档.pdf",
+    "commit": "88c2b7bb94187978c0103e0f8e3a733a47d1f917",
+    "sha256": "1f019b0acfe397f35d4e365c638a7ee332b5edc0cff39eb0c3dcc3816ecd0c0e",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2023/-/blob/88c2b7bb94187978c0103e0f8e3a733a47d1f917/rmdb/RMDB使用文档.pdf"
+  },
+  {
+    "year": 2023,
+    "file": "02_历年赛题/2023/RMDB环境配置文档.pdf",
+    "commit": "88c2b7bb94187978c0103e0f8e3a733a47d1f917",
+    "sha256": "6c1d5d073efb579da16cb2fc3663e406a20533761f2341a8c524997837081ef5",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2023/-/blob/88c2b7bb94187978c0103e0f8e3a733a47d1f917/rmdb/RMDB环境配置文档.pdf"
+  },
+  {
+    "year": 2023,
+    "file": "02_历年赛题/2023/决赛性能测试SQL示例.pdf",
+    "commit": "88c2b7bb94187978c0103e0f8e3a733a47d1f917",
+    "sha256": "e8cb6c16ca9f51e32e51a156e6e0126b412b7b7269825d816d3af9bdb27b19d4",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2023/-/blob/88c2b7bb94187978c0103e0f8e3a733a47d1f917/rmdb/决赛性能测试SQL示例.pdf"
+  },
+  {
+    "year": 2023,
+    "file": "02_历年赛题/2023/数据一致性检验规则.pdf",
+    "commit": "88c2b7bb94187978c0103e0f8e3a733a47d1f917",
+    "sha256": "f25864445a4e89c6aeda02eb72878b1588e2e99dd95e98cecf697c09f74e3f42",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2023/-/blob/88c2b7bb94187978c0103e0f8e3a733a47d1f917/rmdb/数据一致性检验规则.pdf"
+  },
+  {
+    "year": 2023,
+    "file": "02_历年赛题/2023/测试说明文档.pdf",
+    "commit": "88c2b7bb94187978c0103e0f8e3a733a47d1f917",
+    "sha256": "5c9ec9870f092c076dd01799bf9a5f277a117cd133049417ccd1c40448bd34df",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2023/-/blob/88c2b7bb94187978c0103e0f8e3a733a47d1f917/rmdb/测试说明文档.pdf"
+  },
+  {
+    "year": 2024,
+    "file": "02_历年赛题/2024/2024决赛题目.pdf",
+    "commit": "8fc7aa40aaa848580578f24220cfc8546fadf4db",
+    "sha256": "67e0c79cf71bf5ebd2ab91d84d00a42d4b1ca3aced37b68a2c46a4be3aa50c9d",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2024/-/blob/8fc7aa40aaa848580578f24220cfc8546fadf4db/2024决赛题目.pdf"
+  },
+  {
+    "year": 2024,
+    "file": "02_历年赛题/2024/2024数据库系统设计赛技术方案V3.0.pdf",
+    "commit": "8fc7aa40aaa848580578f24220cfc8546fadf4db",
+    "sha256": "cb24887e6cbb6f9b3e17ad4f84854856d4095ad3ec43ddf1152abb74a5432629",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2024/-/blob/8fc7aa40aaa848580578f24220cfc8546fadf4db/2024数据库系统设计赛技术方案V3.0.pdf"
+  },
+  {
+    "year": 2024,
+    "file": "02_历年赛题/2024/RMDB使用文档.pdf",
+    "commit": "8fc7aa40aaa848580578f24220cfc8546fadf4db",
+    "sha256": "cdfa5c6dca4c8d42f6f385e27f26ae85369eb438a1ef15efa51445dcd0a4b457",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2024/-/blob/8fc7aa40aaa848580578f24220cfc8546fadf4db/rmdb/RMDB使用文档.pdf"
+  },
+  {
+    "year": 2024,
+    "file": "02_历年赛题/2024/RMDB环境配置文档.pdf",
+    "commit": "8fc7aa40aaa848580578f24220cfc8546fadf4db",
+    "sha256": "6c1d5d073efb579da16cb2fc3663e406a20533761f2341a8c524997837081ef5",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2024/-/blob/8fc7aa40aaa848580578f24220cfc8546fadf4db/rmdb/RMDB环境配置文档.pdf"
+  },
+  {
+    "year": 2024,
+    "file": "02_历年赛题/2024/决赛性能测试SQL示例.pdf",
+    "commit": "8fc7aa40aaa848580578f24220cfc8546fadf4db",
+    "sha256": "e8cb6c16ca9f51e32e51a156e6e0126b412b7b7269825d816d3af9bdb27b19d4",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2024/-/blob/8fc7aa40aaa848580578f24220cfc8546fadf4db/rmdb/决赛性能测试SQL示例.pdf"
+  },
+  {
+    "year": 2024,
+    "file": "02_历年赛题/2024/数据一致性检验规则.pdf",
+    "commit": "8fc7aa40aaa848580578f24220cfc8546fadf4db",
+    "sha256": "f25864445a4e89c6aeda02eb72878b1588e2e99dd95e98cecf697c09f74e3f42",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2024/-/blob/8fc7aa40aaa848580578f24220cfc8546fadf4db/rmdb/数据一致性检验规则.pdf"
+  },
+  {
+    "year": 2024,
+    "file": "02_历年赛题/2024/测试说明文档v3.0.pdf",
+    "commit": "8fc7aa40aaa848580578f24220cfc8546fadf4db",
+    "sha256": "0f681b07e505fac4a20147702037f4728f2e6cc04bdb3063e11e7f946558b03b",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2024/-/blob/8fc7aa40aaa848580578f24220cfc8546fadf4db/rmdb/测试说明文档v3.0.pdf"
+  },
+  {
+    "year": 2025,
+    "file": "02_历年赛题/2025/2025决赛题目.pdf",
+    "commit": "d7bba41fca7cbc94a02d50b22700395cf9befec6",
+    "sha256": "28ac620437c3ecbea6df859a939d8bca5a42d24d2d99862a7aa9b37e1426b4a9",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2025/-/blob/d7bba41fca7cbc94a02d50b22700395cf9befec6/2025决赛题目.pdf"
+  },
+  {
+    "year": 2025,
+    "file": "02_历年赛题/2025/2025年数据库管理系统设计赛技术方案.pdf",
+    "commit": "d7bba41fca7cbc94a02d50b22700395cf9befec6",
+    "sha256": "adbd379fd9c901209a14dbda1a337af7b0b95cf0cf3365ffde863a858e6ff72b",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2025/-/blob/d7bba41fca7cbc94a02d50b22700395cf9befec6/2025年数据库管理系统设计赛技术方案.pdf"
+  },
+  {
+    "year": 2025,
+    "file": "02_历年赛题/2025/RMDB使用文档.pdf",
+    "commit": "d7bba41fca7cbc94a02d50b22700395cf9befec6",
+    "sha256": "cdfa5c6dca4c8d42f6f385e27f26ae85369eb438a1ef15efa51445dcd0a4b457",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2025/-/blob/d7bba41fca7cbc94a02d50b22700395cf9befec6/rmdb/RMDB使用文档.pdf"
+  },
+  {
+    "year": 2025,
+    "file": "02_历年赛题/2025/RMDB环境配置文档.pdf",
+    "commit": "d7bba41fca7cbc94a02d50b22700395cf9befec6",
+    "sha256": "6c1d5d073efb579da16cb2fc3663e406a20533761f2341a8c524997837081ef5",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2025/-/blob/d7bba41fca7cbc94a02d50b22700395cf9befec6/rmdb/RMDB环境配置文档.pdf"
+  },
+  {
+    "year": 2025,
+    "file": "02_历年赛题/2025/决赛性能测试SQL示例.pdf",
+    "commit": "d7bba41fca7cbc94a02d50b22700395cf9befec6",
+    "sha256": "e8cb6c16ca9f51e32e51a156e6e0126b412b7b7269825d816d3af9bdb27b19d4",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2025/-/blob/d7bba41fca7cbc94a02d50b22700395cf9befec6/rmdb/决赛性能测试SQL示例.pdf"
+  },
+  {
+    "year": 2025,
+    "file": "02_历年赛题/2025/数据一致性检验规则.pdf",
+    "commit": "d7bba41fca7cbc94a02d50b22700395cf9befec6",
+    "sha256": "89753888869eedfe2a2b06b5515b17b75c00a6b24c2d96c5f851403c5cd09cc1",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2025/-/blob/d7bba41fca7cbc94a02d50b22700395cf9befec6/rmdb/数据一致性检验规则.pdf"
+  },
+  {
+    "year": 2025,
+    "file": "02_历年赛题/2025/测试说明文档.pdf",
+    "commit": "d7bba41fca7cbc94a02d50b22700395cf9befec6",
+    "sha256": "18d92bc79efd3ec026e00aea6e499510e4811f9a4e4111844f206f2d7635958f",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2025/-/blob/d7bba41fca7cbc94a02d50b22700395cf9befec6/rmdb/测试说明文档.pdf"
+  },
+  {
+    "year": 2026,
+    "file": "02_历年赛题/2026/2026年全国大学生计算机系统能力大赛-数据库管理系统设计赛技术方案.pdf",
+    "commit": "8a7372685400e504433074af123987be9e0619ab",
+    "sha256": "883936126ffe1c733c9142af1ae5dd0fed156e285ce3bc8a0c4f4b3066a1d6f7",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2026/-/blob/8a7372685400e504433074af123987be9e0619ab/2026年全国大学生计算机系统能力大赛-数据库管理系统设计赛技术方案.pdf"
+  },
+  {
+    "year": 2026,
+    "file": "02_历年赛题/2026/2026年全国大学生计算机系统能力大赛-数据库管理系统设计赛现场编程赛相关事项说明.pdf",
+    "commit": "8a7372685400e504433074af123987be9e0619ab",
+    "sha256": "b8ff4ffc0a9e9989536c3ef9abd096f431c1e6ded1235cdbe918de388b2cf443",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2026/-/blob/8a7372685400e504433074af123987be9e0619ab/2026年全国大学生计算机系统能力大赛-数据库管理系统设计赛现场编程赛相关事项说明.pdf"
+  },
+  {
+    "year": 2026,
+    "file": "02_历年赛题/2026/2026年全国大学生计算机系统能力大赛数据库系统设计赛-决赛赛题.pdf",
+    "commit": "8a7372685400e504433074af123987be9e0619ab",
+    "sha256": "0d9d551a4349764e7a993e11ba14799394b3479a2137eda8cca6924752cdad06",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2026/-/blob/8a7372685400e504433074af123987be9e0619ab/2026年全国大学生计算机系统能力大赛数据库系统设计赛-决赛赛题.pdf"
+  },
+  {
+    "year": 2026,
+    "file": "02_历年赛题/2026/RMDB使用文档.pdf",
+    "commit": "8a7372685400e504433074af123987be9e0619ab",
+    "sha256": "cdfa5c6dca4c8d42f6f385e27f26ae85369eb438a1ef15efa51445dcd0a4b457",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2026/-/blob/8a7372685400e504433074af123987be9e0619ab/rmdb/RMDB使用文档.pdf"
+  },
+  {
+    "year": 2026,
+    "file": "02_历年赛题/2026/RMDB环境配置文档.pdf",
+    "commit": "8a7372685400e504433074af123987be9e0619ab",
+    "sha256": "6c1d5d073efb579da16cb2fc3663e406a20533761f2341a8c524997837081ef5",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2026/-/blob/8a7372685400e504433074af123987be9e0619ab/rmdb/RMDB环境配置文档.pdf"
+  },
+  {
+    "year": 2026,
+    "file": "02_历年赛题/2026/性能测试优化规范与SQL示例.pdf",
+    "commit": "8a7372685400e504433074af123987be9e0619ab",
+    "sha256": "b5d6cde4e5c225d212fd70e94383033c2e762bc39f474d5bbbf2c04ec81fe27a",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2026/-/blob/8a7372685400e504433074af123987be9e0619ab/rmdb/性能测试优化规范与SQL示例.pdf"
+  },
+  {
+    "year": 2026,
+    "file": "02_历年赛题/2026/数据一致性检验规则.pdf",
+    "commit": "8a7372685400e504433074af123987be9e0619ab",
+    "sha256": "89753888869eedfe2a2b06b5515b17b75c00a6b24c2d96c5f851403c5cd09cc1",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2026/-/blob/8a7372685400e504433074af123987be9e0619ab/rmdb/数据一致性检验规则.pdf"
+  },
+  {
+    "year": 2026,
+    "file": "02_历年赛题/2026/测试说明文档2026.pdf",
+    "commit": "8a7372685400e504433074af123987be9e0619ab",
+    "sha256": "836402b27748ef84895d71841c31e6a9041334ce476f474850805e7769126915",
+    "url": "https://gitlab.eduxiji.net/csc1/csc-db/db2026/-/blob/8a7372685400e504433074af123987be9e0619ab/rmdb/测试说明文档2026.pdf"
+  }
+]

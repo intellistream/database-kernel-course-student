@@ -1,0 +1,5 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Ferrum 学生实验材料</title><style>body{max-width:980px;margin:40px auto;font:17px/1.85 "Microsoft YaHei",sans-serif;padding:20px}a{color:#175d81}li{margin:10px 0}pre{background:#f3f5f7;padding:18px;white-space:pre-wrap}</style><h1>Ferrum 学生实验材料</h1><p>展开源码位于仓库 student/，可直接克隆后进入该目录。也可下载<a href="Ferrum-cpp-student.tar.gz">学生源码包</a>，按<a href="学生源码清单.json">文件清单</a>核对身份。</p><ul><li><a href="../03_实验材料/实验指导.html">实验手册</a> · <a href="../03_实验材料/实验手册.pdf">打印版</a></li><li><a href="83题目录.html">83 题指南</a> · <a href="32学时实验映射.json">32 学时映射</a></li><li><a href="../student/README.md">源码说明</a> · <a href="../student/docker/README.md">Docker 环境</a></li></ul><pre>cd student
+./dev.sh scaffold --report course-results/scaffold.json
+./dev.sh list --stage 06
+# 完成题目指定区域后再运行对应验收
+./dev.sh unit S06.Q02 S06.Q03 --report course-results/unit.json</pre><p>使用 Linux / WSL2 或源码提供的 Docker 环境。课程小组选题文件 course-append-unique.json 可复制到 student/labs/selections/ 后用于 selection；selection 生成计划不等于算法通过。</p><p>2,229 个题目实现区域保留初始桩。给定基础设施、题目指南和公开用例用于学习；课程工具测试通过不表示学生内核已完成。现有独立登记为 Append 6 项、Unique 10 项，其他 81 题及整库接线仍待补齐。</p></html>

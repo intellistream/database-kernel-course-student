@@ -1,0 +1,128 @@
+[
+  {
+    "sql": "create table course_sql (id int, score int);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_sql values (1,80);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_sql values (2,95);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_sql values (3,95);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "select id from course_sql where score > 90;",
+    "expect": {
+      "columns": [
+        "id"
+      ],
+      "rows": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "select score from course_sql where score > 90;",
+    "expect": {
+      "columns": [
+        "score"
+      ],
+      "rows": [
+        [
+          95
+        ],
+        [
+          95
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "select id from course_sql where score < 0;",
+    "expect": {
+      "columns": [
+        "id"
+      ],
+      "rows": [],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "update course_sql set score = 85 where id = 1;",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "select score from course_sql where id = 1;",
+    "expect": {
+      "columns": [
+        "score"
+      ],
+      "rows": [
+        [
+          85
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "delete from course_sql where id = 3;",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "select id from course_sql;",
+    "expect": {
+      "columns": [
+        "id"
+      ],
+      "rows": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  }
+]

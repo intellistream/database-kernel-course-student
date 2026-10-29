@@ -1,0 +1,29 @@
+include_guard(GLOBAL)
+
+function(db_set_warnings target)
+    target_compile_options(
+        ${target}
+        INTERFACE
+            -Wall
+            -Wextra
+            -Wpedantic
+            -Wcast-align
+            -Wconversion
+            -Wdouble-promotion
+            -Wformat=2
+            -Wimplicit-fallthrough
+            -Wnon-virtual-dtor
+            -Wnull-dereference
+            -Wold-style-cast
+            -Woverloaded-virtual
+            -Wshadow
+            -Wsign-conversion
+            -Wunused
+            $<$<CXX_COMPILER_ID:GNU>:-Wduplicated-branches>
+            $<$<CXX_COMPILER_ID:GNU>:-Wduplicated-cond>
+            $<$<CXX_COMPILER_ID:GNU>:-Wlogical-op>
+            $<$<CXX_COMPILER_ID:GNU>:-Wmisleading-indentation>
+            $<$<CXX_COMPILER_ID:GNU>:-Wuseless-cast>
+            $<$<BOOL:${DB_WARNINGS_AS_ERRORS}>:-Werror>
+    )
+endfunction()

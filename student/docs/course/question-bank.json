@@ -1,0 +1,5925 @@
+{
+  "schema_version": 2,
+  "status": "student-initial-framework",
+  "baseline": {
+    "kind": "student-initial-source",
+    "note": "83题核心算法已挖空；完整构建与27个给定原语测试已通过；2题独立验收已验证，其余81题及真实数据库组合仍待补齐。"
+  },
+  "stages": [
+    {
+      "id": 1,
+      "title": "存储与堆组织",
+      "intent": "页、缓冲、替换和堆记录；可以从独立页或帧夹具开始。",
+      "references": [
+        "docs/course/stages/S01.md",
+        "docs/course/conventions.md",
+        "docs/course/fixtures.md"
+      ],
+      "questions": [
+        "S01.Q01",
+        "S01.Q02",
+        "S01.Q03",
+        "S01.Q04",
+        "S01.Q05",
+        "S01.Q06",
+        "S01.Q07",
+        "S01.Q08",
+        "S01.Q09",
+        "S01.Q10"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "SQL 前端与基础查询",
+      "intent": "覆盖普通解析适配、绑定、类型规则、执行、目录及预处理。",
+      "references": [
+        "docs/course/stages/S02.md",
+        "docs/course/conventions.md",
+        "docs/course/fixtures.md"
+      ],
+      "questions": [
+        "S02.Q01",
+        "S02.Q02",
+        "S02.Q03",
+        "S02.Q04",
+        "S02.Q05",
+        "S02.Q06",
+        "S02.Q07",
+        "S02.Q08",
+        "S02.Q09",
+        "S02.Q10",
+        "S02.Q11",
+        "S02.Q12"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "B+Tree 与索引一致性",
+      "intent": "从树节点到查找、分裂、扫描、唯一性及堆索引同步。",
+      "references": [
+        "docs/course/stages/S03.md",
+        "docs/course/conventions.md",
+        "docs/course/fixtures.md"
+      ],
+      "questions": [
+        "S03.Q01",
+        "S03.Q02",
+        "S03.Q03",
+        "S03.Q04",
+        "S03.Q05",
+        "S03.Q06",
+        "S03.Q07",
+        "S03.Q08"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "查询优化与统计",
+      "intent": "重写、列需求、索引路径、有序性、Top-N、等价类及统计。",
+      "references": [
+        "docs/course/stages/S04.md",
+        "docs/course/conventions.md",
+        "docs/course/fixtures.md"
+      ],
+      "questions": [
+        "S04.Q01",
+        "S04.Q02",
+        "S04.Q03",
+        "S04.Q04",
+        "S04.Q05",
+        "S04.Q06",
+        "S04.Q07",
+        "S04.Q08"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "聚合与分组",
+      "intent": "可以分别选择累加器、分组表、DISTINCT、绑定或聚合执行协调。",
+      "references": [
+        "docs/course/stages/S05.md",
+        "docs/course/conventions.md",
+        "docs/course/fixtures.md"
+      ],
+      "questions": [
+        "S05.Q01",
+        "S05.Q02",
+        "S05.Q03",
+        "S05.Q04",
+        "S05.Q05"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "集合与派生关系",
+      "intent": "UNION 前端、Append、Unique、集合计划和派生表扫描分题。",
+      "references": [
+        "docs/course/stages/S06.md",
+        "docs/course/conventions.md",
+        "docs/course/fixtures.md"
+      ],
+      "questions": [
+        "S06.Q01",
+        "S06.Q02",
+        "S06.Q03",
+        "S06.Q04",
+        "S06.Q05"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "连接与子查询",
+      "intent": "NLJ、Hash Join、Merge Join、索引连接与子计划分别验收。",
+      "references": [
+        "docs/course/stages/S07.md",
+        "docs/course/conventions.md",
+        "docs/course/fixtures.md"
+      ],
+      "questions": [
+        "S07.Q01",
+        "S07.Q02",
+        "S07.Q03",
+        "S07.Q04",
+        "S07.Q05",
+        "S07.Q06",
+        "S07.Q07",
+        "S07.Q08"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "事务基础与并发控制",
+      "intent": "自动提交、显式事务、XID、CLOG、锁、等待和完成发布均纳入。",
+      "references": [
+        "docs/course/stages/S08.md",
+        "docs/course/conventions.md",
+        "docs/course/fixtures.md"
+      ],
+      "questions": [
+        "S08.Q01",
+        "S08.Q02",
+        "S08.Q03",
+        "S08.Q04",
+        "S08.Q05",
+        "S08.Q06",
+        "S08.Q07",
+        "S08.Q08"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "MVCC、隔离与版本回收",
+      "intent": "RC 也属于待实现范围，固定快照、SSI、HOT 与 vacuum 独立选题。",
+      "references": [
+        "docs/course/stages/S09.md",
+        "docs/course/conventions.md",
+        "docs/course/fixtures.md"
+      ],
+      "questions": [
+        "S09.Q01",
+        "S09.Q02",
+        "S09.Q03",
+        "S09.Q04",
+        "S09.Q05",
+        "S09.Q06",
+        "S09.Q07"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "WAL、检查点与恢复",
+      "intent": "覆盖日志生成到持久化、普通/静态检查点及整个启动恢复链。",
+      "references": [
+        "docs/course/stages/S10.md",
+        "docs/course/conventions.md",
+        "docs/course/fixtures.md"
+      ],
+      "questions": [
+        "S10.Q01",
+        "S10.Q02",
+        "S10.Q03",
+        "S10.Q04",
+        "S10.Q05",
+        "S10.Q06",
+        "S10.Q07",
+        "S10.Q08",
+        "S10.Q09",
+        "S10.Q10",
+        "S10.Q11",
+        "S10.Q12"
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "F-IO",
+      "title": "文件与故障脚本",
+      "contract": "使用临时文件、给定 POSIX 包装及确定的短读/短写/同步失败；不提供页管理或持久化发布策略。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-FRAME",
+      "title": "帧与固定状态",
+      "contract": "给定帧、pin/latch 原语与访问事件；不提供受害帧选择。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-BUFFER",
+      "title": "缓冲端口脚本",
+      "contract": "给定页字节、指定的替换候选及 WAL durable-LSN 回应，记录 I/O 与守卫事件；不实现缓存查找、替换或回写算法。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-HEAP",
+      "title": "堆页与版本事实",
+      "contract": "给定原始页、槽位/元组 DTO、指定 RID 的可见性/事务事实；不实现堆扫描、版本选择或空间分配。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-TREE",
+      "title": "索引节点与访问事实",
+      "contract": "给定节点镜像、键值、搜索路径或按调用脚本返回的页端口；不含通用 B+Tree、唯一性检查或分裂实现。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-AST",
+      "title": "语法与计划 DTO",
+      "contract": "直接构造 Source/Bound/Plan DTO、类型目录和参数；不执行解析适配、绑定、重写或规划。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-ROWS",
+      "title": "有限行流",
+      "contract": "只按顺序返回给定行和预定错误，记录 open/next/rescan/close 与参数；不执行过滤、排序、去重、聚合或连接。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-CATALOG",
+      "title": "元数据与发布事件",
+      "contract": "给定不可变模式/目录快照、ID 状态和文件事件脚本；不实现目录决策、DDL 或统计计算。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-MUTATION",
+      "title": "记录变更端口",
+      "contract": "记录操作、输入值和 RID，返回预定结果/错误；不替学生实现 DML 目标选择、去重、原子性或索引维护。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-TXN",
+      "title": "事务事件与完成端口",
+      "contract": "给定 XID/CLOG 事实、屏障、时钟、快照请求和日志完成回应；不计算可见性、分配事务、授予锁或发布提交。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-GRAPH",
+      "title": "并发事实集合",
+      "contract": "给定事务/锁目标/边输入和可控交错；不做环、危险结构或冲突判定。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-WAL",
+      "title": "日志字节与持久化端口",
+      "contract": "用格式原语构造固定字节/记录，记录 append/flush/publish/recycle；不含读流、排队、日志选择或检查点算法。",
+      "scope": "test-only"
+    },
+    {
+      "id": "F-RECOVERY",
+      "title": "恢复前镜像与外部事件",
+      "contract": "给定页/控制文件初态、类型化记录及故障事件；不提供待测 redo、事务收尾或启动决策。",
+      "scope": "test-only"
+    }
+  ],
+  "questions": [
+    {
+      "id": "S01.Q01",
+      "stage": 1,
+      "title": "页文件读写与分配",
+      "algorithm_scope": "FileDiskManager 的地址校验、read_page/write_page/allocate_page、扩展发布和同步边界。",
+      "source_paths": [
+        "libs/storage/src/disk_manager.cpp",
+        "libs/storage/src/file_layout.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-IO"
+        ],
+        "required_checks": [
+          "末页与越界",
+          "短读/写失败不发布虚假页数",
+          "关闭重开后页内容一致"
+        ],
+        "existing_test_sources": [
+          "libs/storage/tests/disk_manager_test.cpp",
+          "libs/storage/tests/file_layout_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S01.Q01.md"
+    },
+    {
+      "id": "S01.Q02",
+      "stage": 1,
+      "title": "CLOCK 替换",
+      "algorithm_scope": "ClockReplacer 的引用计数/二次机会、受害帧遍历与 pin/remove/restore 策略。",
+      "source_paths": [
+        "libs/storage/src/replacement.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-FRAME"
+        ],
+        "required_checks": [
+          "有引用帧得到二次机会",
+          "固定帧不可驱逐",
+          "全固定后可恢复"
+        ],
+        "existing_test_sources": [
+          "libs/storage/tests/replacement_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 1,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S01.Q02.md"
+    },
+    {
+      "id": "S01.Q03",
+      "stage": 1,
+      "title": "LRU 替换",
+      "algorithm_scope": "LruReplacer 现有分桶契约的访问记录、候选次序、移除与恢复；与 CLOCK 独立实现。",
+      "source_paths": [
+        "libs/storage/src/replacement.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-FRAME"
+        ],
+        "required_checks": [
+          "更新访问次序",
+          "桶边界与固定帧",
+          "失败后候选可恢复"
+        ],
+        "existing_test_sources": [
+          "libs/storage/tests/replacement_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 1,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S01.Q03.md"
+    },
+    {
+      "id": "S01.Q04",
+      "stage": 1,
+      "title": "缓冲池调入与并发替换",
+      "algorithm_scope": "Impl::fetch/cache hit/install/replace 的映射、帧取得、并发缺页合并、失败恢复；调用回写端口。",
+      "source_paths": [
+        "libs/storage/src/buffer_pool.cpp",
+        "libs/storage/src/frame.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-BUFFER",
+          "F-FRAME"
+        ],
+        "required_checks": [
+          "同页并发调入唯一映射",
+          "命中不读盘",
+          "替换失败不丢失旧页和 pin"
+        ],
+        "existing_test_sources": [
+          "libs/storage/tests/buffer_pool_test.cpp",
+          "libs/storage/tests/frame_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S01.Q04.md"
+    },
+    {
+      "id": "S01.Q05",
+      "stage": 1,
+      "title": "脏页回写与批次跟踪",
+      "algorithm_scope": "writeback_image/writeback、脏代数与 checkpoint dirty 标记/批次；验证 WAL durable-LSN 后写页。",
+      "source_paths": [
+        "libs/storage/src/buffer_pool.cpp",
+        "libs/storage/src/frame.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-BUFFER",
+          "F-WAL"
+        ],
+        "required_checks": [
+          "WAL 先于数据页",
+          "写失败仍为脏",
+          "并发再脏不能被旧回写清除"
+        ],
+        "existing_test_sources": [
+          "libs/storage/tests/buffer_pool_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S01.Q05.md"
+    },
+    {
+      "id": "S01.Q06",
+      "stage": 1,
+      "title": "空闲空间映射 FSM",
+      "algorithm_scope": "空间分类树的更新、查找、record_and_find、失效信息修正及持久化代数。",
+      "source_paths": [
+        "libs/storage/src/free_space_map.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-IO",
+          "F-HEAP"
+        ],
+        "required_checks": [
+          "多层最大值传播",
+          "无可用页",
+          "陈旧候选与重开后一致"
+        ],
+        "existing_test_sources": [
+          "libs/storage/tests/free_space_map_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S01.Q06.md"
+    },
+    {
+      "id": "S01.Q07",
+      "stage": 1,
+      "title": "堆页槽位与空间组织",
+      "algorithm_scope": "HeapPage 插入/复用槽位、tuple 偏移与空闲空间、物理碎片整理；页字节编码原语给定。",
+      "source_paths": [
+        "libs/access/src/heap_page.cpp",
+        "libs/access/src/heap_prune.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-HEAP"
+        ],
+        "required_checks": [
+          "满页与槽位复用",
+          "长短记录",
+          "整理后 RID 与存活记录不变"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/heap_page_test.cpp",
+          "libs/access/tests/heap_maintenance_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S01.Q07.md"
+    },
+    {
+      "id": "S01.Q08",
+      "stage": 1,
+      "title": "堆记录定位与扫描",
+      "algorithm_scope": "HeapTable 插入/批量插入的选页、RID 定位、物理链与跨页扫描推进；版本判定通过端口。",
+      "source_paths": [
+        "libs/access/src/heap_fetch.cpp",
+        "libs/access/src/heap_page_scan_view.hpp",
+        "libs/access/src/heap_scan.cpp",
+        "libs/access/src/heap_table.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-HEAP",
+          "F-BUFFER"
+        ],
+        "required_checks": [
+          "跨页/空页",
+          "指定可见性事实",
+          "EOF/rescan",
+          "中途错误释放页"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/heap_insert_test.cpp",
+          "libs/access/tests/heap_fetch_test.cpp",
+          "libs/access/tests/heap_scan_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S01.Q08.md"
+    },
+    {
+      "id": "S01.Q09",
+      "stage": 1,
+      "title": "堆更新与删除的物理修改",
+      "algorithm_scope": "更新新版本、旧头部/ctid/HOT 标记和删除标记的页修改；接收已作出的事务决策并调用日志端口。",
+      "source_paths": [
+        "libs/access/src/heap_delete.cpp",
+        "libs/access/src/heap_table.cpp",
+        "libs/access/src/heap_tuple_state_internal.hpp",
+        "libs/access/src/heap_update.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-HEAP",
+          "F-MUTATION"
+        ],
+        "required_checks": [
+          "同页与跨页更新",
+          "失败前后页状态",
+          "旧 RID 与新版本链接完整"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/heap_update_test.cpp",
+          "libs/access/tests/heap_delete_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S01.Q09.md"
+    },
+    {
+      "id": "S01.Q10",
+      "stage": 1,
+      "title": "堆关系建立与打开",
+      "algorithm_scope": "HeapTable create/open/extend、关系元数据与 FSM 的初始化、校验、扩展及回收协调。",
+      "source_paths": [
+        "libs/access/src/heap_table.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-IO",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "初始化失败不留下可见半成品",
+          "已有关系身份校验",
+          "空关系扩展与重开"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/heap_table_test.cpp",
+          "libs/access/tests/heap_insert_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S01.Q10.md"
+    },
+    {
+      "id": "S02.Q01",
+      "stage": 2,
+      "title": "普通 SQL 解析适配",
+      "algorithm_scope": "将第三方解析树转为普通 SELECT/VALUES/DML/DDL 的 Source AST，保留所有权、语句边界与拒绝规则；集合/连接/子链接分属后续题。",
+      "source_paths": [
+        "libs/sql/src/parser.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST"
+        ],
+        "required_checks": [
+          "名称与字面量",
+          "多语句边界",
+          "错误输入与不支持语法",
+          "解析器内存释放后 AST 有效"
+        ],
+        "existing_test_sources": [
+          "libs/sql/tests/parser_test.cpp",
+          "libs/sql/tests/parser_corpus_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q01.md"
+    },
+    {
+      "id": "S02.Q02",
+      "stage": 2,
+      "title": "类型转换与标量运算规则",
+      "algorithm_scope": "find_coercion_path/apply_coercion、运算符解析和标量实现；隐式/赋值/显式转换、舍入与越界。",
+      "source_paths": [
+        "libs/sql/src/binder.cpp",
+        "libs/types/src/coercion.cpp",
+        "libs/types/src/operator_registry.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST"
+        ],
+        "required_checks": [
+          "INT/FLOAT 与 CHAR 转换上下文",
+          "NULL 类型",
+          "溢出/除零",
+          "非法运算组合"
+        ],
+        "existing_test_sources": [
+          "libs/types/tests/coercion_test.cpp",
+          "libs/types/tests/operator_registry_test.cpp",
+          "libs/types/tests/type_registry_test.cpp",
+          "libs/execution/tests/expression_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q02.md"
+    },
+    {
+      "id": "S02.Q03",
+      "stage": 2,
+      "title": "名称与作用域绑定",
+      "algorithm_scope": "普通表/列/别名、星号展开、歧义与层级引用解析；通用作用域容器的算法。",
+      "source_paths": [
+        "libs/sql/src/binder.cpp",
+        "libs/sql/src/binder_scope.cpp",
+        "libs/sql/src/binder_scope_internal.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "同名列歧义",
+          "遮蔽与限定名",
+          "星号次序",
+          "绑定结果不借用目录视图"
+        ],
+        "existing_test_sources": [
+          "libs/sql/tests/binder_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q03.md"
+    },
+    {
+      "id": "S02.Q04",
+      "stage": 2,
+      "title": "表达式与语句类型绑定",
+      "algorithm_scope": "普通表达式、谓词、外部参数、DML 目标列和窗口表达式的类型推导、强制转换与合法性判断。",
+      "source_paths": [
+        "libs/sql/src/binder.cpp",
+        "libs/sql/src/binder_scope.cpp",
+        "libs/sql/src/binder_scope_internal.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "NULL/参数定型",
+          "目标列重排",
+          "WHERE 类型错误",
+          "窗口/赋值类型边界"
+        ],
+        "existing_test_sources": [
+          "libs/sql/tests/binder_test.cpp",
+          "libs/engine/tests/prepared_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q04.md"
+    },
+    {
+      "id": "S02.Q05",
+      "stage": 2,
+      "title": "基础查询与 DML 降低",
+      "algorithm_scope": "普通 Bound→Preprocessed→Plan 的构造、列/参数布局和 SeqScan/Values/Result/Sort/Limit/ModifyTable 接线；优化策略另题。",
+      "source_paths": [
+        "libs/planner/src/lowering_bound_adapter.cpp",
+        "libs/planner/src/lowering_dml.cpp",
+        "libs/planner/src/lowering_expression.cpp",
+        "libs/planner/src/lowering_internal.hpp",
+        "libs/planner/src/lowering_query.cpp",
+        "libs/planner/src/lowering_select_ops.cpp",
+        "libs/planner/src/lowering_statement.cpp",
+        "libs/planner/src/lowering_table.cpp",
+        "libs/planner/src/preprocess_convert.cpp",
+        "libs/planner/src/preprocess_internal.hpp",
+        "libs/planner/src/preprocess_query.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "投影列重排",
+          "常量查询",
+          "DML 目标布局",
+          "构造后无悬空来源/参数引用"
+        ],
+        "existing_test_sources": [
+          "libs/planner/tests/lowering_test.cpp",
+          "libs/planner/tests/preprocess_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q05.md"
+    },
+    {
+      "id": "S02.Q06",
+      "stage": 2,
+      "title": "表达式编译与三值求值",
+      "algorithm_scope": "表达式程序编译、输入/参数加载、算术比较、AND/OR/NOT、IN/BETWEEN/IS NULL 与错误传播；子计划调用另题。",
+      "source_paths": [
+        "libs/execution/src/expression.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "TRUE/FALSE/UNKNOWN 真值表",
+          "类型化 NULL",
+          "重绑定",
+          "求值失败不污染后续输入"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/expression_test.cpp",
+          "libs/execution/tests/exec_context_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q06.md"
+    },
+    {
+      "id": "S02.Q07",
+      "stage": 2,
+      "title": "基础算子与投影生命周期",
+      "algorithm_scope": "Values/Result/SeqScan/IndexScan 共有行循环、过滤、投影程序和 open/next/rescan/close；物理索引范围由端口提供。",
+      "source_paths": [
+        "libs/engine/src/heap_index_scan_port.cpp",
+        "libs/engine/src/heap_seq_scan_port.cpp",
+        "libs/execution/src/operators.cpp",
+        "libs/execution/src/projection_program.cpp",
+        "libs/execution/src/projection_program.hpp",
+        "libs/execution/src/scan_state.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS",
+          "F-AST"
+        ],
+        "required_checks": [
+          "仅 TRUE 通过",
+          "输出所有权",
+          "稳定 EOF",
+          "部分打开失败清理",
+          "参数变化后重新扫描"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/operators_test.cpp",
+          "libs/execution/tests/plan_state_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q07.md"
+    },
+    {
+      "id": "S02.Q08",
+      "stage": 2,
+      "title": "排序与 LIMIT/OFFSET",
+      "algorithm_scope": "SortSupport 比较键与 NULL 顺序、Sort 物化/输出、Limit 流式窗口和行数表达式求值。",
+      "source_paths": [
+        "libs/execution/src/limit.cpp",
+        "libs/execution/src/row_count.cpp",
+        "libs/execution/src/sort.cpp",
+        "libs/execution/src/sort_support.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "多键与同键顺序",
+          "LIMIT 0 不读子节点",
+          "OFFSET",
+          "负数/溢出",
+          "rescan"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/sort_test.cpp",
+          "libs/execution/tests/window_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q08.md"
+    },
+    {
+      "id": "S02.Q09",
+      "stage": 2,
+      "title": "DML 执行协调",
+      "algorithm_scope": "ModifyTable 输入求值/映射、更新删除的 RID 去重与物化、变更调用、结果计数和错误上报。",
+      "source_paths": [
+        "libs/engine/src/physical_modify_port.cpp",
+        "libs/engine/src/physical_modify_port.hpp",
+        "libs/execution/src/modify_table.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS",
+          "F-MUTATION"
+        ],
+        "required_checks": [
+          "同一 RID 只修改一次",
+          "批量中途失败",
+          "影响行数",
+          "旧新行与目标列映射"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/modify_table_test.cpp",
+          "libs/engine/tests/query_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q09.md"
+    },
+    {
+      "id": "S02.Q10",
+      "stage": 2,
+      "title": "目录管理与表 DDL",
+      "algorithm_scope": "OID 分配、不可变快照、名称/模式约束、目录代数与发布、CREATE/DROP TABLE；索引 DDL 的专有步骤另题。",
+      "source_paths": [
+        "libs/catalog/src/id_allocator.cpp",
+        "libs/catalog/src/id_allocator.hpp",
+        "libs/catalog/src/index_schema.cpp",
+        "libs/catalog/src/metadata.cpp",
+        "libs/catalog/src/metadata_validation.cpp",
+        "libs/catalog/src/metadata_validation.hpp",
+        "libs/catalog/src/schema.cpp",
+        "libs/catalog/src/snapshot.cpp",
+        "libs/catalog/src/store.cpp",
+        "libs/catalog/src/store_internal.cpp",
+        "libs/catalog/src/store_internal.hpp",
+        "libs/engine/src/ddl_executor.cpp",
+        "libs/engine/src/ddl_executor.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-CATALOG",
+          "F-IO"
+        ],
+        "required_checks": [
+          "重复名称与耗尽",
+          "失败不发布",
+          "旧快照稳定",
+          "删除/重开与目录身份一致"
+        ],
+        "existing_test_sources": [
+          "libs/catalog/tests/id_allocator_test.cpp",
+          "libs/catalog/tests/store_test.cpp",
+          "libs/catalog/tests/concurrency_test.cpp",
+          "libs/engine/tests/ddl_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q10.md"
+    },
+    {
+      "id": "S02.Q11",
+      "stage": 2,
+      "title": "预处理语句与查询调度",
+      "algorithm_scope": "prepare/execute 的参数、目录代数失效、查询资源绑定与脚本错误边界；事务决策和静态检查点预检分别归所属题。",
+      "source_paths": [
+        "libs/engine/src/catalog_snapshot_adapter.cpp",
+        "libs/engine/src/catalog_snapshot_adapter.hpp",
+        "libs/engine/src/database.cpp",
+        "libs/engine/src/dispatch.cpp",
+        "libs/engine/src/dispatch_internal.hpp",
+        "libs/engine/src/query_executor.cpp",
+        "libs/engine/src/query_executor.hpp",
+        "libs/engine/src/storage_plan_factory.cpp",
+        "libs/engine/src/storage_plan_factory.hpp",
+        "libs/engine/src/storage_query_binding.cpp",
+        "libs/engine/src/storage_query_binding.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG",
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "重复参数重绑定",
+          "目录变更后旧计划失效",
+          "执行错误后的资源释放",
+          "结果模式一致"
+        ],
+        "existing_test_sources": [
+          "libs/engine/tests/prepared_test.cpp",
+          "libs/engine/tests/dispatch_test.cpp",
+          "libs/engine/tests/query_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q11.md"
+    },
+    {
+      "id": "S02.Q12",
+      "stage": 2,
+      "title": "COPY 文本导入",
+      "algorithm_scope": "文本字段/NULL/转义解码、行批次映射与 COPY 执行的变更/错误边界；复用事务端口。",
+      "source_paths": [
+        "libs/engine/src/copy_executor.cpp",
+        "libs/engine/src/copy_executor.hpp",
+        "libs/engine/src/copy_text_decoder.cpp",
+        "libs/engine/src/copy_text_decoder.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-IO",
+          "F-MUTATION"
+        ],
+        "required_checks": [
+          "空字段和转义",
+          "坏行/半行",
+          "批量错误传播",
+          "完整组合中的失败原子性"
+        ],
+        "existing_test_sources": [
+          "libs/engine/tests/copy_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S02.Q12.md"
+    },
+    {
+      "id": "S03.Q01",
+      "stage": 3,
+      "title": "索引键与节点页算法",
+      "algorithm_scope": "复合键比较、叶/内部节点有序槽位、边界键与节点内容重组；字节格式原语给定。",
+      "source_paths": [
+        "libs/access/src/btree_key.cpp",
+        "libs/access/src/btree_key_internal.hpp",
+        "libs/access/src/btree_page.cpp",
+        "libs/access/src/btree_page_read_view.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TREE"
+        ],
+        "required_checks": [
+          "重复键/RID 次序",
+          "NULL/FLOAT 格式契约",
+          "节点容量与重组边界"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/btree_key_test.cpp",
+          "libs/access/tests/btree_page_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S03.Q01.md"
+    },
+    {
+      "id": "S03.Q02",
+      "stage": 3,
+      "title": "B+Tree 下降与定位",
+      "algorithm_scope": "树下降、high key/right link 修正、叶定位与并发变化后的重新定位。",
+      "source_paths": [
+        "libs/access/src/btree_insert.cpp",
+        "libs/access/src/btree_insert.hpp",
+        "libs/access/src/btree_relation.cpp",
+        "libs/access/src/btree_scan.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TREE"
+        ],
+        "required_checks": [
+          "多层树",
+          "边界键",
+          "读到分裂中的节点",
+          "空树与不存在的键"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/btree_relation_scan_test.cpp",
+          "libs/access/tests/btree_insert_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S03.Q02.md"
+    },
+    {
+      "id": "S03.Q03",
+      "stage": 3,
+      "title": "插入、分裂与新根",
+      "algorithm_scope": "非唯一插入、分裂点选择、兄弟链接、父级传播、新根与并发插入重试。",
+      "source_paths": [
+        "libs/access/src/btree_concurrency.hpp",
+        "libs/access/src/btree_insert.cpp",
+        "libs/access/src/btree_insert.hpp",
+        "libs/access/src/btree_page.cpp",
+        "libs/access/src/btree_relation.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TREE",
+          "F-WAL"
+        ],
+        "required_checks": [
+          "叶/内部节点分裂",
+          "连续根增长",
+          "同键多 RID",
+          "故障与并发后结构完整"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/btree_insert_test.cpp",
+          "libs/access/tests/btree_model_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S03.Q03.md"
+    },
+    {
+      "id": "S03.Q04",
+      "stage": 3,
+      "title": "范围扫描与游标",
+      "algorithm_scope": "上下界/开闭端点、复合前缀、跨叶推进、候选 RID 与重复扫描。",
+      "source_paths": [
+        "libs/access/src/btree_relation.cpp",
+        "libs/access/src/btree_scan.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TREE"
+        ],
+        "required_checks": [
+          "端点相等/矛盾",
+          "跨多叶重复键",
+          "rescan 重设范围",
+          "提前结束释放守卫"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/btree_scan_bounds_test.cpp",
+          "libs/access/tests/btree_relation_scan_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S03.Q04.md"
+    },
+    {
+      "id": "S03.Q05",
+      "stage": 3,
+      "title": "排序批量建树",
+      "algorithm_scope": "条目排序、叶填充、父层构建、根发布和失败清理；唯一性判定通过独立端口。",
+      "source_paths": [
+        "libs/access/src/btree_bulk_build.cpp",
+        "libs/access/src/btree_page_builder.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TREE",
+          "F-IO"
+        ],
+        "required_checks": [
+          "空输入和跨层输入",
+          "填充率",
+          "排序/发布失败",
+          "与逐条插入结果一致"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/btree_bulk_build_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S03.Q05.md"
+    },
+    {
+      "id": "S03.Q06",
+      "stage": 3,
+      "title": "唯一性与存量冲突检测",
+      "algorithm_scope": "全复合键相等探测、跨叶相等版本、批量重复检查、任一 NULL 允许重复；消费给定版本事实。",
+      "source_paths": [
+        "libs/access/src/btree_bulk_build.cpp",
+        "libs/access/src/btree_insert.cpp",
+        "libs/access/src/btree_insert.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TREE",
+          "F-TXN"
+        ],
+        "required_checks": [
+          "存量重复",
+          "跨叶版本",
+          "复合 NULL",
+          "已提交/已中止版本的不同裁决"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/btree_unique_test.cpp",
+          "libs/access/tests/btree_bulk_build_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S03.Q06.md"
+    },
+    {
+      "id": "S03.Q07",
+      "stage": 3,
+      "title": "唯一索引等待与重查",
+      "algorithm_scope": "收集待决 XID，释放全部页守卫后等待，提交/回滚后重新下降并完整检查。",
+      "source_paths": [
+        "libs/access/src/btree_insert.cpp",
+        "libs/access/src/btree_insert.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TREE",
+          "F-TXN"
+        ],
+        "required_checks": [
+          "同键竞争不同完成次序",
+          "等待期间没有页守卫",
+          "重查遭遇树分裂"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/btree_unique_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S03.Q07.md"
+    },
+    {
+      "id": "S03.Q08",
+      "stage": 3,
+      "title": "堆索引同步与索引 DDL",
+      "algorithm_scope": "DML 索引维护、CREATE/DROP INDEX 构建/发布/回退、索引元数据与物理身份审计。",
+      "source_paths": [
+        "libs/access/src/btree_relation.cpp",
+        "libs/catalog/src/consistency.cpp",
+        "libs/catalog/src/consistency_internal.hpp",
+        "libs/catalog/src/store.cpp",
+        "libs/engine/src/ddl_executor.cpp",
+        "libs/engine/src/ddl_executor.hpp",
+        "libs/engine/src/physical_modify_port.cpp",
+        "libs/engine/src/physical_modify_port.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-MUTATION",
+          "F-CATALOG",
+          "F-TREE"
+        ],
+        "required_checks": [
+          "堆成功而索引失败",
+          "建索引失败后同名重试",
+          "更新删除一致",
+          "身份不匹配报告"
+        ],
+        "existing_test_sources": [
+          "libs/engine/tests/ddl_test.cpp",
+          "libs/engine/tests/query_test.cpp",
+          "libs/catalog/tests/consistency_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S03.Q08.md"
+    },
+    {
+      "id": "S04.Q01",
+      "stage": 4,
+      "title": "表达式预处理与条件归类",
+      "algorithm_scope": "常量与布尔表达式重写、条件拆分/特征分析、伪常量判断和保留语义的规范化。",
+      "source_paths": [
+        "libs/planner/src/path_restrictions.cpp",
+        "libs/planner/src/preprocess_expression.cpp",
+        "libs/planner/src/preprocess_expression_compare.cpp",
+        "libs/planner/src/preprocess_expression_features.cpp",
+        "libs/planner/src/preprocess_internal.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST"
+        ],
+        "required_checks": [
+          "三值逻辑不变",
+          "异常表达式求值时机",
+          "重复条件",
+          "跨关系条件不误下推"
+        ],
+        "existing_test_sources": [
+          "libs/planner/tests/preprocess_test.cpp",
+          "libs/planner/tests/path_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S04.Q01.md"
+    },
+    {
+      "id": "S04.Q02",
+      "stage": 4,
+      "title": "列需求与条件放置",
+      "algorithm_scope": "需求列收集、投影裁剪、表达式引用重映射与可安全下推的条件分配；连接特有放置另题。",
+      "source_paths": [
+        "libs/planner/src/lowering_required_columns.cpp",
+        "libs/planner/src/lowering_select_ops.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "重复/重排列",
+          "隐藏排序列",
+          "保留残余谓词需要的列",
+          "裁剪前后结果等价"
+        ],
+        "existing_test_sources": [
+          "libs/planner/tests/lowering_test.cpp",
+          "libs/planner/tests/preprocess_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S04.Q02.md"
+    },
+    {
+      "id": "S04.Q03",
+      "stage": 4,
+      "title": "索引边界推导",
+      "algorithm_scope": "连续等值前缀、下一列范围、端点合并、反向比较和残余条件；NULL/参数/FLOAT 安全性。",
+      "source_paths": [
+        "libs/planner/src/path_index.cpp",
+        "libs/planner/src/path_internal.hpp",
+        "libs/planner/src/path_restrictions.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "复合前缀",
+          "矛盾端点",
+          "参数 NULL",
+          "FLOAT 比较不误变为不安全索引域"
+        ],
+        "existing_test_sources": [
+          "libs/planner/tests/path_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S04.Q03.md"
+    },
+    {
+      "id": "S04.Q04",
+      "stage": 4,
+      "title": "路径选择与有序性证明",
+      "algorithm_scope": "确定性 SeqScan/IndexScan 选择、索引次序传播、NULL 顺序兼容性与省略 Sort 的证明。",
+      "source_paths": [
+        "libs/planner/src/lowering_select_ops.cpp",
+        "libs/planner/src/path_internal.hpp",
+        "libs/planner/src/path_relation.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "等值前缀优先与稳定择优",
+          "不兼容 NULL 次序保留 Sort",
+          "结果/实际计划/访问计数"
+        ],
+        "existing_test_sources": [
+          "libs/planner/tests/path_test.cpp",
+          "libs/planner/tests/lowering_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S04.Q04.md"
+    },
+    {
+      "id": "S04.Q05",
+      "stage": 4,
+      "title": "有界 Top-N",
+      "algorithm_scope": "候选堆维护、LIMIT+OFFSET 容量、最终窗口与相应 lowering；不依赖完整 Sort 的学生实现。",
+      "source_paths": [
+        "libs/execution/src/topn.cpp",
+        "libs/planner/src/lowering_select_ops.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS",
+          "F-AST"
+        ],
+        "required_checks": [
+          "100000 行、LIMIT 10 OFFSET 5 的峰值不超过 15",
+          "空/零窗口",
+          "重扫",
+          "输出等价"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/window_test.cpp",
+          "libs/planner/tests/lowering_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S04.Q05.md"
+    },
+    {
+      "id": "S04.Q06",
+      "stage": 4,
+      "title": "等价类与推导谓词",
+      "algorithm_scope": "内连接域中安全等价关系的合并、常量锚点与隐含等式推导。",
+      "source_paths": [
+        "libs/planner/src/equivalence.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST"
+        ],
+        "required_checks": [
+          "传递性与重复边",
+          "域隔离",
+          "NULL/FLOAT 限制",
+          "伪常量与参数命名空间"
+        ],
+        "existing_test_sources": [
+          "libs/planner/tests/equivalence_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S04.Q06.md"
+    },
+    {
+      "id": "S04.Q07",
+      "stage": 4,
+      "title": "ANALYZE 与统计维护",
+      "algorithm_scope": "有界采样、NULL/宽度/不同值等现有统计计算、目录统计安装/失效和 ANALYZE 协调；不新增成本模型。",
+      "source_paths": [
+        "libs/catalog/src/analyze.cpp",
+        "libs/catalog/src/statistics.cpp",
+        "libs/catalog/src/store.cpp",
+        "libs/engine/src/maintenance_executor.cpp",
+        "libs/engine/src/maintenance_executor.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "采样容量",
+          "固定种子可复现",
+          "空表/NULL",
+          "数据/模式变化后统计代数正确"
+        ],
+        "existing_test_sources": [
+          "libs/catalog/tests/statistics_test.cpp",
+          "libs/catalog/tests/store_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S04.Q07.md"
+    },
+    {
+      "id": "S04.Q08",
+      "stage": 4,
+      "title": "计划完整性验证",
+      "algorithm_scope": "Plan 描述符、表达式输入/输出类型、参数命名空间和树级结构/语义校验。",
+      "source_paths": [
+        "libs/execution/src/join_support.hpp",
+        "libs/planner/src/plan.cpp",
+        "libs/planner/src/plan_descriptor_validation.cpp",
+        "libs/planner/src/plan_descriptor_validation.hpp",
+        "libs/planner/src/plan_expression_validation.cpp",
+        "libs/planner/src/plan_expression_validation.hpp",
+        "libs/planner/src/plan_validation.cpp",
+        "libs/planner/src/preprocess_validation.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST"
+        ],
+        "required_checks": [
+          "伪造列引用/类型/参数",
+          "子节点形状不匹配",
+          "合法复杂计划不被误拒绝"
+        ],
+        "existing_test_sources": [
+          "libs/planner/tests/plan_test.cpp",
+          "libs/planner/tests/preprocess_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S04.Q08.md"
+    },
+    {
+      "id": "S05.Q01",
+      "stage": 5,
+      "title": "标量聚合累加器",
+      "algorithm_scope": "COUNT/SUM/AVG/MIN/MAX 状态转移与 finish，NULL、空输入、浮点及整数溢出语义。",
+      "source_paths": [
+        "libs/execution/src/aggregate.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "全 NULL 与空输入",
+          "COUNT(*)",
+          "SUM/AVG 边界",
+          "重置后不混入旧值"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/aggregate_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S05.Q01.md"
+    },
+    {
+      "id": "S05.Q02",
+      "stage": 5,
+      "title": "哈希分组表",
+      "algorithm_scope": "多列组键、结构相等与哈希、组创建/查找/扩容及组状态所有权。",
+      "source_paths": [
+        "libs/execution/src/aggregate.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "NULL 组键",
+          "复合键",
+          "碰撞与扩容",
+          "FLOAT 位表示",
+          "首次出现顺序契约"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/aggregate_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S05.Q02.md"
+    },
+    {
+      "id": "S05.Q03",
+      "stage": 5,
+      "title": "每聚合 DISTINCT",
+      "algorithm_scope": "按组、按聚合分别维护已见值并控制累加；不复用全行 Unique 充当答案。",
+      "source_paths": [
+        "libs/execution/src/aggregate.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "两个 DISTINCT 聚合互不污染",
+          "NULL",
+          "组间隔离",
+          "rescan 清空集合"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/aggregate_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S05.Q03.md"
+    },
+    {
+      "id": "S05.Q04",
+      "stage": 5,
+      "title": "聚合绑定与计划",
+      "algorithm_scope": "聚合参数/类型、GROUP BY 合法性、HAVING 引用和输出位置映射，生成 AggregatePlan。",
+      "source_paths": [
+        "libs/planner/src/lowering_aggregate.cpp",
+        "libs/planner/src/lowering_select_ops.cpp",
+        "libs/sql/src/binder.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "非分组列拒绝",
+          "嵌套聚合限制",
+          "别名/隐藏聚合",
+          "COUNT(DISTINCT *) 拒绝"
+        ],
+        "existing_test_sources": [
+          "libs/sql/tests/binder_test.cpp",
+          "libs/planner/tests/lowering_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S05.Q04.md"
+    },
+    {
+      "id": "S05.Q05",
+      "stage": 5,
+      "title": "聚合执行协调",
+      "algorithm_scope": "输入组装、调用组表/累加器、空输入行数、HAVING、最终输出与完整生命周期。",
+      "source_paths": [
+        "libs/execution/src/aggregate.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "全局空输入一行/分组空输入零行",
+          "HAVING 仅 TRUE",
+          "部分失败清理",
+          "重扫"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/aggregate_test.cpp",
+          "libs/execution/tests/execution_differential_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S05.Q05.md"
+    },
+    {
+      "id": "S06.Q01",
+      "stage": 6,
+      "title": "UNION 解析与共型绑定",
+      "algorithm_scope": "集合语法适配、列数/共型、左侧列名、UNKNOWN、括号/左结合与全局排序名称/序号绑定。",
+      "source_paths": [
+        "libs/sql/src/binder.cpp",
+        "libs/sql/src/binder_scope.cpp",
+        "libs/sql/src/binder_scope_internal.hpp",
+        "libs/sql/src/parser.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "列数不等",
+          "NULL/INT/FLOAT/CHAR",
+          "全 UNKNOWN",
+          "三分支结合",
+          "参数已知类型"
+        ],
+        "existing_test_sources": [
+          "libs/sql/tests/parser_test.cpp",
+          "libs/sql/tests/binder_test.cpp",
+          "libs/engine/tests/union_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S06.Q01.md"
+    },
+    {
+      "id": "S06.Q02",
+      "stage": 6,
+      "title": "Append 流式串接",
+      "algorithm_scope": "多个子节点的按序、惰性打开与推进；EOF、rescan 和部分打开失败的清理。",
+      "source_paths": [
+        "libs/execution/src/append.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "保留重复次数",
+          "未访问分支不提前打开",
+          "部分失败关闭已访问分支",
+          "重扫"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/plan_state_test.cpp"
+        ],
+        "registration_status": "registered-and-isolation-verified",
+        "test_ids": [
+          {
+            "binary": "libs/execution/tests/db_execution_append_lab_tests",
+            "name": "LabS06Q02Test.ConcatenatesStablyAndOpensChildrenOnlyWhenNeeded"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_append_lab_tests",
+            "name": "LabS06Q02Test.EmptyChildrenHaveStableEndAndCanBeRescanned"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_append_lab_tests",
+            "name": "LabS06Q02Test.RescanRewindsVisitedChildrenAndLeavesUnvisitedOnesClosed"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_append_lab_tests",
+            "name": "LabS06Q02Test.NextFailureDoesNotOpenLaterChildrenOrLeaveStaleOutput"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_append_lab_tests",
+            "name": "LabS06Q02Test.FailedChildOpenCleansVisitedInputsAndKeepsThePrimaryError"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_append_lab_tests",
+            "name": "LabS06Q02Test.RescanFailureStopsRestartAndRemainsSafeToClose"
+          }
+        ],
+        "isolation_validation": {
+          "completed_question_count": 1,
+          "other_question_count": 82,
+          "non_target_sources_unchanged": true,
+          "passed_cases": 6
+        }
+      },
+      "effort_weight": 1,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S06.Q02.md"
+    },
+    {
+      "id": "S06.Q03",
+      "stage": 6,
+      "title": "全行 Unique",
+      "algorithm_scope": "完整类型化行的去重、相等/哈希与生命周期；同时服务 SELECT DISTINCT 和 UNION DISTINCT。",
+      "source_paths": [
+        "libs/execution/src/unique.cpp",
+        "libs/planner/src/lowering_select_ops.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "多列/NULL/FLOAT 位表示",
+          "第一次出现保留",
+          "碰撞",
+          "重复执行不遗留状态"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/window_test.cpp"
+        ],
+        "registration_status": "registered-and-isolation-verified",
+        "test_ids": [
+          {
+            "binary": "libs/execution/tests/db_execution_unique_lab_tests",
+            "name": "LabS06Q03Test.ComparesCompleteRowsIncludingTypedNullsAndKeepsFirstOccurrence"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_unique_lab_tests",
+            "name": "LabS06Q03Test.PullsOnlyEnoughRowsForTheNextDistinctResult"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_unique_lab_tests",
+            "name": "LabS06Q03Test.UsesStructuralFloatBitsForSignedZeroAndNanPayloads"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_unique_lab_tests",
+            "name": "LabS06Q03Test.RescanClearsSeenRowsAfterPartialAndCompleteConsumption"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_unique_lab_tests",
+            "name": "LabS06Q03Test.EmptyInputAndZeroColumnRowsHaveDifferentCardinality"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_unique_lab_tests",
+            "name": "LabS06Q03Test.ChildOpenFailureIsPropagatedAndCleanupRunsOnce"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_unique_lab_tests",
+            "name": "LabS06Q03Test.NextFailureClearsOutputAndCannotBeRescanned"
+          },
+          {
+            "binary": "libs/execution/tests/db_execution_unique_lab_tests",
+            "name": "LabS06Q03Test.RescanFailureIsPropagatedAndRemainsSafeToClose"
+          },
+          {
+            "binary": "libs/planner/tests/db_planner_unique_lab_tests",
+            "name": "LabS06Q03LoweringTest.WrapsOwnedPlanAndCopiesTheWholeOutputSchema"
+          },
+          {
+            "binary": "libs/planner/tests/db_planner_unique_lab_tests",
+            "name": "LabS06Q03LoweringTest.PreservesAnExplicitZeroColumnOutput"
+          }
+        ],
+        "isolation_validation": {
+          "completed_question_count": 1,
+          "other_question_count": 82,
+          "non_target_sources_unchanged": true,
+          "passed_cases": 10
+        }
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S06.Q03.md"
+    },
+    {
+      "id": "S06.Q04",
+      "stage": 6,
+      "title": "集合计划与输入适配",
+      "algorithm_scope": "UNION 预处理和 Append/Unique 组合，分支输出共型转换，局部与全局排序/窗口层次。",
+      "source_paths": [
+        "libs/planner/src/lowering_select_ops.cpp",
+        "libs/planner/src/lowering_table.cpp",
+        "libs/planner/src/preprocess_query.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST"
+        ],
+        "required_checks": [
+          "分支 DISTINCT 后才转换、集合 DISTINCT 前转换",
+          "局部 LIMIT",
+          "INSERT SELECT 与聚合分支"
+        ],
+        "existing_test_sources": [
+          "libs/planner/tests/lowering_test.cpp",
+          "libs/engine/tests/union_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S06.Q04.md"
+    },
+    {
+      "id": "S06.Q05",
+      "stage": 6,
+      "title": "派生关系绑定与扫描",
+      "algorithm_scope": "派生表列名/作用域、SubqueryScan 输出描述符与过滤、子查询状态重扫。",
+      "source_paths": [
+        "libs/execution/src/subquery_scan.cpp",
+        "libs/planner/src/lowering_table.cpp",
+        "libs/sql/src/binder.cpp",
+        "libs/sql/src/parser.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "派生列遮蔽",
+          "描述符所有权",
+          "过滤 UNKNOWN",
+          "相关上下文不串行",
+          "重扫"
+        ],
+        "existing_test_sources": [
+          "libs/sql/tests/binder_test.cpp",
+          "libs/execution/tests/subplan_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S06.Q05.md"
+    },
+    {
+      "id": "S07.Q01",
+      "stage": 7,
+      "title": "连接前端与基本计划",
+      "algorithm_scope": "JOIN 语法适配、关系/ON 作用域、连接条件与输出列绑定，按语法顺序产生基本连接树。",
+      "source_paths": [
+        "libs/planner/src/lowering_table.cpp",
+        "libs/sql/src/binder.cpp",
+        "libs/sql/src/binder_scope.cpp",
+        "libs/sql/src/binder_scope_internal.hpp",
+        "libs/sql/src/parser.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "限定列与歧义",
+          "多表别名",
+          "ON 类型",
+          "只接受参考实现支持的连接语义"
+        ],
+        "existing_test_sources": [
+          "libs/sql/tests/binder_test.cpp",
+          "libs/planner/tests/lowering_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S07.Q01.md"
+    },
+    {
+      "id": "S07.Q02",
+      "stage": 7,
+      "title": "嵌套循环连接",
+      "algorithm_scope": "外行推进、内行重扫、连接条件、空侧与输出组合的实际循环。",
+      "source_paths": [
+        "libs/execution/src/nested_loop.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "空侧不读无关子节点",
+          "多对多重复键",
+          "非等值/NULL",
+          "重扫与错误清理"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/nested_loop_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S07.Q02.md"
+    },
+    {
+      "id": "S07.Q03",
+      "stage": 7,
+      "title": "Hash Join",
+      "algorithm_scope": "构建键/桶、探测、重复键输出和残余条件，保持参考支持类型及顺序契约。",
+      "source_paths": [
+        "libs/execution/src/hash_join.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "复合键/碰撞",
+          "NULL 不匹配",
+          "多对多",
+          "残余仅 TRUE",
+          "重扫不保留旧桶"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/hash_join_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S07.Q03.md"
+    },
+    {
+      "id": "S07.Q04",
+      "stage": 7,
+      "title": "Merge Join",
+      "algorithm_scope": "双有序流推进、相等键组保存/重放、多对多和残余谓词。",
+      "source_paths": [
+        "libs/execution/src/merge_join.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS"
+        ],
+        "required_checks": [
+          "重复外键重复播放内组",
+          "空侧",
+          "NULL",
+          "组边界和缓存资源"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/merge_join_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S07.Q04.md"
+    },
+    {
+      "id": "S07.Q05",
+      "stage": 7,
+      "title": "参数化索引连接",
+      "algorithm_scope": "外行参数绑定、索引边界重算、内层执行器 rescan 与参数化路径降低。",
+      "source_paths": [
+        "libs/engine/src/heap_index_scan_port.cpp",
+        "libs/execution/src/nested_loop.cpp",
+        "libs/execution/src/operators.cpp",
+        "libs/execution/src/scan_state.cpp",
+        "libs/planner/src/lowering_join_strategy.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-ROWS",
+          "F-TREE"
+        ],
+        "required_checks": [
+          "连续不同外行",
+          "NULL 参数",
+          "旧边界不泄漏",
+          "与 NLJ 等价且减少候选访问"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/nested_loop_test.cpp",
+          "libs/planner/tests/join_strategy_test.cpp",
+          "libs/planner/tests/lowering_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S07.Q05.md"
+    },
+    {
+      "id": "S07.Q06",
+      "stage": 7,
+      "title": "连接顺序与策略选择",
+      "algorithm_scope": "小规模内连接搜索、条件放置、路径组合与确定性 NLJ/Index/Hash/Merge 策略选择。",
+      "source_paths": [
+        "libs/planner/src/join_order.cpp",
+        "libs/planner/src/join_strategy.cpp",
+        "libs/planner/src/lowering_join_strategy.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "不连通关系图",
+          "条件只放到合法位置",
+          "稳定择优",
+          "未提供的算法不被选中"
+        ],
+        "existing_test_sources": [
+          "libs/planner/tests/join_order_test.cpp",
+          "libs/planner/tests/join_strategy_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S07.Q06.md"
+    },
+    {
+      "id": "S07.Q07",
+      "stage": 7,
+      "title": "子计划求值与相关参数",
+      "algorithm_scope": "Scalar/EXISTS/IN/NOT IN 求值、相关参数传递、成员缓存、NULL/空输入和基数错误。",
+      "source_paths": [
+        "libs/execution/src/expression.cpp",
+        "libs/execution/src/subplan.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-ROWS",
+          "F-AST"
+        ],
+        "required_checks": [
+          "空标量为类型化 NULL",
+          "多行标量拒绝",
+          "NOT IN 的 UNKNOWN",
+          "相关参数与缓存重置"
+        ],
+        "existing_test_sources": [
+          "libs/execution/tests/subplan_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S07.Q07.md"
+    },
+    {
+      "id": "S07.Q08",
+      "stage": 7,
+      "title": "子查询规划与安全改写",
+      "algorithm_scope": "子链接解析/绑定、相关引用发现、参数命名空间、子计划降低及参考支持的安全改写。",
+      "source_paths": [
+        "libs/planner/src/lowering_expression.cpp",
+        "libs/planner/src/lowering_subplan.cpp",
+        "libs/planner/src/lowering_subplan_rewrite.cpp",
+        "libs/sql/src/binder.cpp",
+        "libs/sql/src/binder_scope.cpp",
+        "libs/sql/src/parser.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-AST",
+          "F-CATALOG"
+        ],
+        "required_checks": [
+          "跨层相关引用",
+          "不能改写的情形保持子计划",
+          "NULL/重复行不变",
+          "参数不越域"
+        ],
+        "existing_test_sources": [
+          "libs/sql/tests/binder_test.cpp",
+          "libs/planner/tests/lowering_test.cpp",
+          "libs/planner/tests/planner_differential_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S07.Q08.md"
+    },
+    {
+      "id": "S08.Q01",
+      "stage": 8,
+      "title": "隐式与显式事务状态机",
+      "algorithm_scope": "start/finish command、BEGIN/COMMIT/ROLLBACK、失败块、command/epoch 转移；自动提交同样挖空。",
+      "source_paths": [
+        "libs/transaction/src/state.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TXN"
+        ],
+        "required_checks": [
+          "Idle/Implicit/Explicit/Failed 全状态表",
+          "嵌套 BEGIN",
+          "失败仅可回滚",
+          "完成失败可诊断"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/state_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S08.Q01.md"
+    },
+    {
+      "id": "S08.Q02",
+      "stage": 8,
+      "title": "XID 与活动事务登记",
+      "algorithm_scope": "XID 分配边界、ProcSlot 占用/释放、活动集合登记/撤销与进度维护；快照计算另题。",
+      "source_paths": [
+        "libs/transaction/src/manager.cpp",
+        "libs/transaction/src/proc_array.cpp",
+        "libs/transaction/src/proc_array_state.cpp",
+        "libs/transaction/src/proc_array_state.hpp",
+        "libs/transaction/src/proc_slot.cpp",
+        "libs/transaction/src/proc_slot_lease.cpp",
+        "libs/transaction/src/xid.cpp",
+        "libs/transaction/src/xid_assignment.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TXN"
+        ],
+        "required_checks": [
+          "分配失败不发布",
+          "租约所有权",
+          "XID 边界",
+          "并发登记与释放不遗漏"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/xid_test.cpp",
+          "libs/transaction/tests/proc_slot_test.cpp",
+          "libs/transaction/tests/proc_array_test.cpp",
+          "libs/transaction/tests/manager_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S08.Q02.md"
+    },
+    {
+      "id": "S08.Q03",
+      "stage": 8,
+      "title": "CLOG 状态与持久化",
+      "algorithm_scope": "事务状态页/段访问、缓存、提交/中止状态更新、准备与同步；给定记录格式。",
+      "source_paths": [
+        "libs/transaction/src/commit_log.cpp",
+        "libs/transaction/src/commit_log_files.cpp",
+        "libs/transaction/src/commit_log_files.hpp",
+        "libs/transaction/src/commit_log_segment.cpp",
+        "libs/transaction/src/commit_log_segment.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-IO",
+          "F-TXN"
+        ],
+        "required_checks": [
+          "跨段边界",
+          "非法状态迁移",
+          "写入/同步失败",
+          "重开后的状态与损坏检测"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/commit_log_test.cpp",
+          "libs/transaction/tests/commit_log_segment_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S08.Q03.md"
+    },
+    {
+      "id": "S08.Q04",
+      "stage": 8,
+      "title": "锁兼容与等待队列",
+      "algorithm_scope": "锁模式兼容、请求排队、授予/升级、取消与唤醒，不保留完整队列策略。",
+      "source_paths": [
+        "libs/transaction/src/lock_manager.cpp",
+        "libs/transaction/src/lock_manager_state.hpp",
+        "libs/transaction/src/lock_mode_policy.cpp",
+        "libs/transaction/src/lock_mode_policy.hpp",
+        "libs/transaction/src/lock_queue.cpp",
+        "libs/transaction/src/lock_queue.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-GRAPH",
+          "F-TXN"
+        ],
+        "required_checks": [
+          "兼容/冲突组合",
+          "取消与升级",
+          "等待顺序",
+          "释放后不丢失唤醒"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/lock_manager_test.cpp",
+          "libs/transaction/tests/lock_queue_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S08.Q04.md"
+    },
+    {
+      "id": "S08.Q05",
+      "stage": 8,
+      "title": "死锁检测",
+      "algorithm_scope": "wait-for 图的维护、环检测、受害者裁决与取消后清理。",
+      "source_paths": [
+        "libs/transaction/src/lock_manager.cpp",
+        "libs/transaction/src/lock_manager_state.hpp",
+        "libs/transaction/src/lock_wait_graph.cpp",
+        "libs/transaction/src/lock_wait_graph.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-GRAPH"
+        ],
+        "required_checks": [
+          "两点/多点环",
+          "无环链",
+          "边撤销",
+          "受害者退出后其余事务可前进"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/lock_wait_graph_test.cpp",
+          "libs/transaction/tests/lock_manager_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S08.Q05.md"
+    },
+    {
+      "id": "S08.Q06",
+      "stage": 8,
+      "title": "提交与中止发布",
+      "algorithm_scope": "日志完成记录和耐久屏障、CLOG/ProcArray 发布、提交顺序与失败保留；WAL 通过完成端口。",
+      "source_paths": [
+        "libs/transaction/src/backend_transaction_services.cpp",
+        "libs/transaction/src/backend_transaction_services.hpp",
+        "libs/transaction/src/completion_journal_adapter.cpp",
+        "libs/transaction/src/completion_journal_adapter.hpp",
+        "libs/transaction/src/manager.cpp",
+        "libs/transaction/src/proc_array_completion.cpp",
+        "libs/transaction/src/transaction_completion.cpp",
+        "libs/transaction/src/transaction_completion.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TXN",
+          "F-WAL"
+        ],
+        "required_checks": [
+          "日志 durable 后才可见提交",
+          "各失败点保持可重试/待决状态",
+          "中止与无日志路径"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/manager_test.cpp",
+          "libs/transaction/tests/backend_test.cpp",
+          "libs/transaction/tests/completion_journal_adapter_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S08.Q06.md"
+    },
+    {
+      "id": "S08.Q07",
+      "stage": 8,
+      "title": "Backend 与 Session 事务协调",
+      "algorithm_scope": "自动/显式事务端到端状态衔接、快照/写入标记、命令失败原子性、提交/回滚/析构资源完成。",
+      "source_paths": [
+        "libs/engine/src/command_scope.cpp",
+        "libs/engine/src/command_scope.hpp",
+        "libs/engine/src/query_error.cpp",
+        "libs/engine/src/query_error.hpp",
+        "libs/engine/src/session.cpp",
+        "libs/engine/src/session_factory.hpp",
+        "libs/transaction/src/backend.cpp",
+        "libs/transaction/src/backend_transaction_services.cpp",
+        "libs/transaction/src/backend_transaction_services.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TXN",
+          "F-MUTATION"
+        ],
+        "required_checks": [
+          "DML/COPY 失败进入正确状态",
+          "自己的写入",
+          "完成错误不假成功",
+          "下一事务可恢复"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/backend_test.cpp",
+          "libs/engine/tests/session_test.cpp",
+          "libs/engine/tests/query_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S08.Q07.md"
+    },
+    {
+      "id": "S08.Q08",
+      "stage": 8,
+      "title": "事务等待与唤醒",
+      "algorithm_scope": "XidWaiter 的等待登记、完成检测、取消/超时和防丢失唤醒；调用方释放页守卫另属唯一索引/版本题。",
+      "source_paths": [
+        "libs/transaction/src/manager.cpp",
+        "libs/transaction/src/xid_waiter.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TXN"
+        ],
+        "required_checks": [
+          "登记与提交交错",
+          "已完成 XID",
+          "取消与异常",
+          "不同 XID 唤醒隔离"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/xid_waiter_test.cpp",
+          "libs/transaction/tests/manager_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 2,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S08.Q08.md"
+    },
+    {
+      "id": "S09.Q01",
+      "stage": 9,
+      "title": "ProcArray 快照与回收边界",
+      "algorithm_scope": "活动 XID 快照、xmin/xmax、注册/复用与最老可回收边界；共享快照算法全部挖空。",
+      "source_paths": [
+        "libs/transaction/src/proc_array.cpp",
+        "libs/transaction/src/proc_array_snapshot.cpp",
+        "libs/transaction/src/proc_array_state.cpp",
+        "libs/transaction/src/proc_array_state.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TXN"
+        ],
+        "required_checks": [
+          "并发登记/完成",
+          "快照集合边界",
+          "复用不能漏新事务",
+          "最老读者阻止过早回收"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/proc_array_test.cpp",
+          "libs/transaction/tests/visibility_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S09.Q01.md"
+    },
+    {
+      "id": "S09.Q02",
+      "stage": 9,
+      "title": "RC/SI 快照协调与配置",
+      "algorithm_scope": "READ COMMITTED 每命令捕获、事务固定快照、BEGIN 时点、SET 规则、XID/epoch 所有权。",
+      "source_paths": [
+        "libs/engine/src/session.cpp",
+        "libs/transaction/src/snapshot_coordinator.cpp",
+        "libs/transaction/src/state.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TXN"
+        ],
+        "required_checks": [
+          "RC 与 SI 可重复读差异",
+          "首条数据前 SET",
+          "失败/Implicit 状态拒绝",
+          "跨事务不复用"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/visibility_test.cpp",
+          "libs/transaction/tests/state_test.cpp",
+          "libs/engine/tests/session_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S09.Q02.md"
+    },
+    {
+      "id": "S09.Q03",
+      "stage": 9,
+      "title": "元组可见性与索引版本分类",
+      "algorithm_scope": "creator/modifier、command ID、提交状态与快照的读/修改判定；堆和索引 RID 的生命周期分类。",
+      "source_paths": [
+        "libs/access/src/heap_fetch.cpp",
+        "libs/access/src/heap_index_tid.cpp",
+        "libs/access/src/heap_scan.cpp",
+        "libs/transaction/src/visibility.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-HEAP",
+          "F-TXN"
+        ],
+        "required_checks": [
+          "自己的写入",
+          "他人待决/提交/回滚",
+          "旧快照",
+          "锁标记与更新标记",
+          "SQL 与物理重放不同"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/visibility_test.cpp",
+          "libs/access/tests/heap_fetch_test.cpp",
+          "libs/access/tests/btree_unique_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S09.Q03.md"
+    },
+    {
+      "id": "S09.Q04",
+      "stage": 9,
+      "title": "并发版本更新与 HOT 选择",
+      "algorithm_scope": "基于快照的版本链选择、更新/删除冲突分类、等待后重查和 SI 写冲突；物理页改动调用阶段一端口。",
+      "source_paths": [
+        "libs/access/src/heap_delete.cpp",
+        "libs/access/src/heap_fetch.cpp",
+        "libs/access/src/heap_tuple_state_internal.hpp",
+        "libs/access/src/heap_update.cpp",
+        "libs/engine/src/physical_modify_port.cpp",
+        "libs/engine/src/physical_modify_port.hpp",
+        "libs/execution/src/modify_table.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-HEAP",
+          "F-TXN"
+        ],
+        "required_checks": [
+          "并发更新同 RID",
+          "提交/回滚后重查",
+          "HOT 链与旧快照",
+          "不可接受的旧版本写入"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/heap_update_test.cpp",
+          "libs/access/tests/heap_delete_test.cpp",
+          "libs/access/tests/heap_fetch_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S09.Q04.md"
+    },
+    {
+      "id": "S09.Q05",
+      "stage": 9,
+      "title": "SSI 读集与谓词锁",
+      "algorithm_scope": "读目标/范围匹配、锁提升、读写事件收集和读集生命周期；不保留自动发现冲突的辅助答案。",
+      "source_paths": [
+        "libs/access/src/heap_fetch.cpp",
+        "libs/access/src/heap_scan.cpp",
+        "libs/engine/src/logical_scan_ssi.cpp",
+        "libs/engine/src/logical_scan_ssi.hpp",
+        "libs/engine/src/physical_modify_port.cpp",
+        "libs/transaction/src/ssi_lifecycle.cpp",
+        "libs/transaction/src/ssi_lifecycle.hpp",
+        "libs/transaction/src/ssi_predicate_locks.cpp",
+        "libs/transaction/src/ssi_predicate_locks.hpp",
+        "libs/transaction/src/ssi_read_locks.cpp",
+        "libs/transaction/src/ssi_read_locks.hpp",
+        "libs/transaction/src/ssi_state.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-GRAPH",
+          "F-TXN"
+        ],
+        "required_checks": [
+          "点/范围/全表读",
+          "扫描空结果仍有谓词读",
+          "锁提升",
+          "事务结束后的保留/回收"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/ssi_predicate_locks_test.cpp",
+          "libs/transaction/tests/ssi_read_locks_test.cpp",
+          "libs/transaction/tests/ssi_lifecycle_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S09.Q05.md"
+    },
+    {
+      "id": "S09.Q06",
+      "stage": 9,
+      "title": "SSI 冲突图与提交裁决",
+      "algorithm_scope": "rw 边、并发性/提交次序、危险结构/环判定、失败受害者和安全清理。",
+      "source_paths": [
+        "libs/transaction/src/ssi.cpp",
+        "libs/transaction/src/ssi_commit_order.cpp",
+        "libs/transaction/src/ssi_commit_order.hpp",
+        "libs/transaction/src/ssi_conflict_graph.cpp",
+        "libs/transaction/src/ssi_conflict_graph.hpp",
+        "libs/transaction/src/ssi_lifecycle.cpp",
+        "libs/transaction/src/ssi_lifecycle.hpp",
+        "libs/transaction/src/ssi_state.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-GRAPH",
+          "F-TXN"
+        ],
+        "required_checks": [
+          "写偏斜被阻止",
+          "无冲突可提交",
+          "已提交/重叠事务边界",
+          "边清理不丢必要冲突"
+        ],
+        "existing_test_sources": [
+          "libs/transaction/tests/ssi_conflict_graph_test.cpp",
+          "libs/transaction/tests/ssi_commit_order_test.cpp",
+          "libs/transaction/tests/ssi_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S09.Q06.md"
+    },
+    {
+      "id": "S09.Q07",
+      "stage": 9,
+      "title": "HOT 修剪与 VACUUM",
+      "algorithm_scope": "基于 oldest_xmin 的可回收判定、链修剪/重定向、dead TID 收集、索引清理后槽位回收和 FSM 更新。",
+      "source_paths": [
+        "libs/access/src/btree_maintenance.cpp",
+        "libs/access/src/heap_maintenance.cpp",
+        "libs/access/src/heap_prune.cpp",
+        "libs/engine/src/maintenance_executor.cpp",
+        "libs/engine/src/maintenance_executor.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-HEAP",
+          "F-TREE",
+          "F-TXN"
+        ],
+        "required_checks": [
+          "旧快照保护",
+          "索引先清理再复用 RID",
+          "重复维护幂等",
+          "空间统计与活元组完整"
+        ],
+        "existing_test_sources": [
+          "libs/access/tests/heap_maintenance_test.cpp",
+          "libs/access/tests/btree_maintenance_test.cpp",
+          "libs/access/tests/heap_update_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S09.Q07.md"
+    },
+    {
+      "id": "S10.Q01",
+      "stage": 10,
+      "title": "WAL 环形缓冲",
+      "algorithm_scope": "空间预留、生产者发布、连续可读边界、回绕及背压唤醒。",
+      "source_paths": [
+        "libs/wal/src/ring_buffer.cpp",
+        "libs/wal/src/ring_layout.cpp",
+        "libs/wal/src/ring_layout.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-WAL"
+        ],
+        "required_checks": [
+          "跨环边界",
+          "并发未完成预留不越过发布",
+          "满环背压",
+          "取消/关闭"
+        ],
+        "existing_test_sources": [
+          "libs/wal/tests/ring_buffer_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S10.Q01.md"
+    },
+    {
+      "id": "S10.Q02",
+      "stage": 10,
+      "title": "WAL 分段写入与刷盘",
+      "algorithm_scope": "WalWriter 和段存储的页/段跨界写、flush_through、短写重试、保留区间及资源结束。",
+      "source_paths": [
+        "libs/wal/src/segment_directory.cpp",
+        "libs/wal/src/segment_directory.hpp",
+        "libs/wal/src/segment_file.cpp",
+        "libs/wal/src/segment_file.hpp",
+        "libs/wal/src/segment_storage.cpp",
+        "libs/wal/src/writer.cpp",
+        "libs/wal/src/writer_io.cpp",
+        "libs/wal/src/writer_io.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-WAL",
+          "F-IO"
+        ],
+        "required_checks": [
+          "跨页/段记录",
+          "短写/同步失败",
+          "durable LSN 单调",
+          "不能回收仍需数据"
+        ],
+        "existing_test_sources": [
+          "libs/wal/tests/writer_test.cpp",
+          "libs/wal/tests/segment_storage_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S10.Q02.md"
+    },
+    {
+      "id": "S10.Q03",
+      "stage": 10,
+      "title": "WAL 读取与尾部分类",
+      "algorithm_scope": "framing/seek/read_next、跨段组帧、有限预读、记录校验与不完整尾部/中部损坏区分。",
+      "source_paths": [
+        "libs/wal/src/reader.cpp",
+        "libs/wal/src/reader_dispatch.cpp",
+        "libs/wal/src/reader_dispatch.hpp",
+        "libs/wal/src/reader_framing.cpp",
+        "libs/wal/src/reader_framing.hpp",
+        "libs/wal/src/reader_read_ahead.cpp",
+        "libs/wal/src/reader_read_ahead.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-WAL",
+          "F-IO"
+        ],
+        "required_checks": [
+          "完整前缀与截断尾部",
+          "中部损坏必须报告",
+          "seek 边界",
+          "跨段与预读容量"
+        ],
+        "existing_test_sources": [
+          "libs/wal/tests/reader_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S10.Q03.md"
+    },
+    {
+      "id": "S10.Q04",
+      "stage": 10,
+      "title": "WAL 管理与后台刷盘",
+      "algorithm_scope": "append 分配与发布、flush 等待、后台批次/唤醒/关闭和活动操作管理；检查点发布另题。",
+      "source_paths": [
+        "libs/recovery/src/wal_durability.cpp",
+        "libs/recovery/src/wal_stream.cpp",
+        "libs/wal/src/manager.cpp",
+        "libs/wal/src/manager_background_writer.cpp",
+        "libs/wal/src/manager_background_writer.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-WAL",
+          "F-TXN"
+        ],
+        "required_checks": [
+          "批量刷盘",
+          "等待者不早返回",
+          "后台错误传播",
+          "关闭排空与失败重试"
+        ],
+        "existing_test_sources": [
+          "libs/wal/tests/manager_test.cpp",
+          "libs/wal/tests/manager_background_writer_test.cpp",
+          "libs/recovery/tests/wal_durability_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S10.Q04.md"
+    },
+    {
+      "id": "S10.Q05",
+      "stage": 10,
+      "title": "整页镜像、压缩与 delta",
+      "algorithm_scope": "FPI 是否生成/复用、洞区和压缩选择、压缩解压与页差分重建；格式字段编码给定。",
+      "source_paths": [
+        "libs/recovery/src/full_page_image.cpp",
+        "libs/recovery/src/full_page_image_internal.hpp",
+        "libs/recovery/src/page_image.cpp",
+        "libs/recovery/src/page_image_internal.hpp",
+        "libs/wal/src/compression.cpp",
+        "libs/wal/src/delta.cpp",
+        "libs/wal/src/manager.cpp",
+        "libs/wal/src/manager_page_images.cpp",
+        "libs/wal/src/manager_page_images.hpp",
+        "libs/wal/src/record_image.cpp",
+        "libs/wal/src/record_image.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-WAL",
+          "F-RECOVERY"
+        ],
+        "required_checks": [
+          "检查点 epoch 边界",
+          "可压缩/不可压缩",
+          "非法差分",
+          "重建与原页字节一致"
+        ],
+        "existing_test_sources": [
+          "libs/wal/tests/compression_test.cpp",
+          "libs/wal/tests/delta_test.cpp",
+          "libs/wal/tests/record_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S10.Q05.md"
+    },
+    {
+      "id": "S10.Q06",
+      "stage": 10,
+      "title": "业务变更的 WAL 生成",
+      "algorithm_scope": "堆/Btree/事务/目录操作的记录种类、payload、FPI/LSN 和发布时序；移除专用日志辅助实现。",
+      "source_paths": [
+        "libs/access/src/btree_insert.cpp",
+        "libs/access/src/btree_logging.cpp",
+        "libs/access/src/btree_logging.hpp",
+        "libs/access/src/heap_table.cpp",
+        "libs/recovery/src/btree_wal.cpp",
+        "libs/recovery/src/btree_wal_internal.hpp",
+        "libs/recovery/src/catalog_recovery.cpp",
+        "libs/recovery/src/heap_wal.cpp",
+        "libs/recovery/src/heap_wal_internal.hpp",
+        "libs/recovery/src/transaction_wal.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-WAL",
+          "F-MUTATION"
+        ],
+        "required_checks": [
+          "每种变更记录字段",
+          "append 失败不发布页面新状态",
+          "LSN 对齐",
+          "批量与跨页记录"
+        ],
+        "existing_test_sources": [
+          "libs/recovery/tests/heap_wal_test.cpp",
+          "libs/recovery/tests/btree_wal_test.cpp",
+          "libs/recovery/tests/transaction_wal_test.cpp",
+          "libs/recovery/tests/catalog_recovery_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S10.Q06.md"
+    },
+    {
+      "id": "S10.Q07",
+      "stage": 10,
+      "title": "普通检查点与 control 发布",
+      "algorithm_scope": "fuzzy 检查点边界、脏页/CLOG/目录批次，最终记录→control→回收顺序及故障恢复；普通 CHECKPOINT 同样挖空。",
+      "source_paths": [
+        "libs/engine/src/database.cpp",
+        "libs/recovery/src/checkpoint.cpp",
+        "libs/wal/src/control_store.cpp",
+        "libs/wal/src/manager.cpp",
+        "libs/wal/src/manager_checkpoint.cpp",
+        "libs/wal/src/manager_checkpoint.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-WAL",
+          "F-RECOVERY"
+        ],
+        "required_checks": [
+          "并发再脏",
+          "各发布失败点",
+          "旧/新 control 权威边界",
+          "过早回收禁止"
+        ],
+        "existing_test_sources": [
+          "libs/recovery/tests/checkpoint_test.cpp",
+          "libs/wal/tests/control_store_test.cpp",
+          "libs/wal/tests/manager_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S10.Q07.md"
+    },
+    {
+      "id": "S10.Q08",
+      "stage": 10,
+      "title": "静态检查点接纳与排空",
+      "algorithm_scope": "全会话/API 接纳租约、standalone/mixed-script 预检、Idle 限制、排空/超时/开放与权威事务复核。",
+      "source_paths": [
+        "libs/engine/src/checkpoint_admission.hpp",
+        "libs/engine/src/database.cpp",
+        "libs/engine/src/dispatch.cpp",
+        "libs/engine/src/dispatch_internal.hpp",
+        "libs/engine/src/session.cpp",
+        "libs/engine/src/utility_executor.cpp",
+        "libs/engine/src/utility_executor.hpp",
+        "libs/recovery/src/checkpoint.cpp",
+        "libs/sql/src/parser.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-TXN",
+          "F-WAL"
+        ],
+        "required_checks": [
+          "拒新允许旧事务结束",
+          "空闲会话不阻塞",
+          "混合脚本无部分效果",
+          "超时/失败后恢复接纳"
+        ],
+        "existing_test_sources": [
+          "libs/engine/tests/static_checkpoint_test.cpp",
+          "libs/recovery/tests/checkpoint_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S10.Q08.md"
+    },
+    {
+      "id": "S10.Q09",
+      "stage": 10,
+      "title": "堆与 B+Tree 页重做",
+      "algorithm_scope": "每种 redo opcode 的物理应用、page LSN 幂等、FPI/delta 与恢复页缓存；包含 loser 的必要物理记录。",
+      "source_paths": [
+        "libs/recovery/src/btree_redo_internal.hpp",
+        "libs/recovery/src/btree_startup_redo.cpp",
+        "libs/recovery/src/btree_wal.cpp",
+        "libs/recovery/src/heap_redo_internal.hpp",
+        "libs/recovery/src/heap_startup_redo.cpp",
+        "libs/recovery/src/heap_wal.cpp",
+        "libs/recovery/src/recovery_page_cache.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-RECOVERY",
+          "F-WAL"
+        ],
+        "required_checks": [
+          "旧 LSN 跳过",
+          "重复重放",
+          "跨页分裂与更新",
+          "缺页/坏页/FPI",
+          "不按最终提交状态跳过物理记录"
+        ],
+        "existing_test_sources": [
+          "libs/recovery/tests/heap_wal_test.cpp",
+          "libs/recovery/tests/btree_wal_test.cpp",
+          "libs/recovery/tests/recovery_page_cache_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S10.Q09.md"
+    },
+    {
+      "id": "S10.Q10",
+      "stage": 10,
+      "title": "事务与目录恢复收尾",
+      "algorithm_scope": "提交状态重放、未完成/遗弃事务中止、XID/OID 前移、目录恢复与索引身份验证。",
+      "source_paths": [
+        "libs/recovery/src/catalog_index.cpp",
+        "libs/recovery/src/catalog_recovery.cpp",
+        "libs/recovery/src/durable_state_redo.cpp",
+        "libs/transaction/src/manager.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-RECOVERY",
+          "F-CATALOG",
+          "F-TXN"
+        ],
+        "required_checks": [
+          "winner/loser",
+          "下一 ID 不回退",
+          "恢复中再次失败",
+          "目录和物理索引不一致报告"
+        ],
+        "existing_test_sources": [
+          "libs/recovery/tests/durable_state_redo_test.cpp",
+          "libs/recovery/tests/catalog_recovery_test.cpp",
+          "libs/recovery/tests/catalog_index_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S10.Q10.md"
+    },
+    {
+      "id": "S10.Q11",
+      "stage": 10,
+      "title": "启动分析与恢复调度",
+      "algorithm_scope": "控制/WAL 状态分析、恢复起止范围、资源管理器路由、按序 replay 与成功状态提交。",
+      "source_paths": [
+        "libs/recovery/src/dispatcher.cpp",
+        "libs/recovery/src/startup_recovery.cpp",
+        "libs/recovery/src/startup_runner.cpp",
+        "libs/wal/src/manager_startup.cpp",
+        "libs/wal/src/manager_startup.hpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-RECOVERY",
+          "F-WAL"
+        ],
+        "required_checks": [
+          "未知 opcode",
+          "缺段/中部损坏",
+          "完整前缀截断尾部",
+          "反复崩溃恢复后状态不回退"
+        ],
+        "existing_test_sources": [
+          "libs/recovery/tests/startup_recovery_test.cpp",
+          "libs/recovery/tests/startup_runner_test.cpp",
+          "libs/recovery/tests/dispatcher_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "guide": "docs/course/questions/S10.Q11.md"
+    },
+    {
+      "id": "S10.Q12",
+      "stage": 10,
+      "title": "数据库初始化与关闭协议",
+      "algorithm_scope": "新库/干净库/崩溃库分类、启动依赖编排、StartingUp/运行/干净关闭发布与失败清理。",
+      "source_paths": [
+        "libs/engine/src/database.cpp",
+        "libs/engine/src/database_startup.cpp",
+        "libs/engine/src/database_startup.hpp",
+        "libs/wal/src/control_store.cpp"
+      ],
+      "unit": {
+        "requires_completed_questions": [],
+        "fixtures": [
+          "F-RECOVERY",
+          "F-IO"
+        ],
+        "required_checks": [
+          "新库区别于已有 StartingUp 库",
+          "初始化各失败点",
+          "控制状态与启动/关闭调用顺序",
+          "失败时资源可清理"
+        ],
+        "existing_test_sources": [
+          "libs/engine/tests/database_test.cpp",
+          "libs/recovery/tests/startup_recovery_test.cpp"
+        ],
+        "registration_status": "pending-isolated-test-registration"
+      },
+      "effort_weight": 3,
+      "region_status": "frozen",
+      "integration_checks": [
+        "真实数据库干净关闭与重开",
+        "SIGKILL 后恢复已提交数据、隔离未提交版本",
+        "恢复后再次崩溃与重复恢复"
+      ],
+      "guide": "docs/course/questions/S10.Q12.md"
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "storage.replacement",
+      "requirements": {
+        "any": [
+          "S01.Q02",
+          "S01.Q03"
+        ]
+      }
+    },
+    {
+      "id": "storage.core",
+      "requirements": {
+        "all": [
+          "S01.Q01",
+          "S01.Q04",
+          "S01.Q05",
+          "S01.Q06",
+          "S01.Q07",
+          "S01.Q08",
+          "S01.Q09",
+          "S01.Q10",
+          "storage.replacement"
+        ]
+      }
+    },
+    {
+      "id": "sql.base",
+      "requirements": {
+        "all": [
+          "S02.Q01",
+          "S02.Q02",
+          "S02.Q03",
+          "S02.Q04",
+          "S02.Q05",
+          "S02.Q06",
+          "S02.Q07",
+          "S02.Q08",
+          "S02.Q09",
+          "S02.Q10",
+          "S02.Q11"
+        ]
+      }
+    },
+    {
+      "id": "index.btree",
+      "requirements": {
+        "all": [
+          "S03.Q01",
+          "S03.Q02",
+          "S03.Q03",
+          "S03.Q04",
+          "S03.Q05",
+          "S03.Q06",
+          "S03.Q07",
+          "S03.Q08"
+        ]
+      }
+    },
+    {
+      "id": "optimizer.single_table",
+      "requirements": {
+        "all": [
+          "S04.Q01",
+          "S04.Q02",
+          "S04.Q03",
+          "S04.Q04",
+          "S04.Q05",
+          "S04.Q06",
+          "S04.Q08"
+        ]
+      }
+    },
+    {
+      "id": "query.aggregate",
+      "requirements": {
+        "all": [
+          "S05.Q01",
+          "S05.Q02",
+          "S05.Q03",
+          "S05.Q04",
+          "S05.Q05"
+        ]
+      }
+    },
+    {
+      "id": "query.sets",
+      "requirements": {
+        "all": [
+          "S06.Q01",
+          "S06.Q02",
+          "S06.Q03",
+          "S06.Q04",
+          "S06.Q05"
+        ]
+      }
+    },
+    {
+      "id": "join.nested_loop",
+      "requirements": {
+        "all": [
+          "S07.Q01",
+          "S07.Q02"
+        ]
+      }
+    },
+    {
+      "id": "join.hash",
+      "requirements": {
+        "all": [
+          "S07.Q01",
+          "S07.Q03"
+        ]
+      }
+    },
+    {
+      "id": "join.merge",
+      "requirements": {
+        "all": [
+          "S07.Q01",
+          "S07.Q04"
+        ]
+      }
+    },
+    {
+      "id": "join.index",
+      "requirements": {
+        "all": [
+          "S07.Q01",
+          "S07.Q02",
+          "S07.Q05",
+          "index.btree",
+          "S04.Q03"
+        ]
+      }
+    },
+    {
+      "id": "query.subplans",
+      "requirements": {
+        "all": [
+          "S07.Q07",
+          "S07.Q08"
+        ]
+      }
+    },
+    {
+      "id": "transaction.control",
+      "requirements": {
+        "all": [
+          "S08.Q01",
+          "S08.Q02",
+          "S08.Q03",
+          "S08.Q04",
+          "S08.Q05",
+          "S08.Q06",
+          "S08.Q07",
+          "S08.Q08"
+        ]
+      }
+    },
+    {
+      "id": "mvcc.rc_and_si",
+      "requirements": {
+        "all": [
+          "S09.Q01",
+          "S09.Q02",
+          "S09.Q03",
+          "S09.Q04"
+        ]
+      }
+    },
+    {
+      "id": "mvcc.maintenance",
+      "requirements": {
+        "all": [
+          "S09.Q07"
+        ]
+      }
+    },
+    {
+      "id": "isolation.serializable",
+      "requirements": {
+        "all": [
+          "transaction.control",
+          "mvcc.rc_and_si",
+          "S09.Q05",
+          "S09.Q06"
+        ]
+      }
+    },
+    {
+      "id": "durability.complete",
+      "requirements": {
+        "all": [
+          "S10.Q01",
+          "S10.Q02",
+          "S10.Q03",
+          "S10.Q04",
+          "S10.Q05",
+          "S10.Q06",
+          "S10.Q07",
+          "S10.Q08",
+          "S10.Q09",
+          "S10.Q10",
+          "S10.Q11",
+          "S10.Q12"
+        ]
+      }
+    },
+    {
+      "id": "database.basic_rc",
+      "requirements": {
+        "all": [
+          "storage.core",
+          "sql.base",
+          "S04.Q08",
+          "transaction.control",
+          "mvcc.rc_and_si",
+          "mvcc.maintenance",
+          "durability.complete"
+        ]
+      }
+    },
+    {
+      "id": "database.relational",
+      "requirements": {
+        "all": [
+          "database.basic_rc",
+          "index.btree",
+          "optimizer.single_table",
+          "query.aggregate",
+          "query.sets",
+          "join.nested_loop",
+          "join.index",
+          "S07.Q06",
+          "query.subplans"
+        ]
+      }
+    },
+    {
+      "id": "database.reference",
+      "requirements": {
+        "all": [
+          "S01.Q01",
+          "S01.Q02",
+          "S01.Q03",
+          "S01.Q04",
+          "S01.Q05",
+          "S01.Q06",
+          "S01.Q07",
+          "S01.Q08",
+          "S01.Q09",
+          "S01.Q10",
+          "S02.Q01",
+          "S02.Q02",
+          "S02.Q03",
+          "S02.Q04",
+          "S02.Q05",
+          "S02.Q06",
+          "S02.Q07",
+          "S02.Q08",
+          "S02.Q09",
+          "S02.Q10",
+          "S02.Q11",
+          "S02.Q12",
+          "S03.Q01",
+          "S03.Q02",
+          "S03.Q03",
+          "S03.Q04",
+          "S03.Q05",
+          "S03.Q06",
+          "S03.Q07",
+          "S03.Q08",
+          "S04.Q01",
+          "S04.Q02",
+          "S04.Q03",
+          "S04.Q04",
+          "S04.Q05",
+          "S04.Q06",
+          "S04.Q07",
+          "S04.Q08",
+          "S05.Q01",
+          "S05.Q02",
+          "S05.Q03",
+          "S05.Q04",
+          "S05.Q05",
+          "S06.Q01",
+          "S06.Q02",
+          "S06.Q03",
+          "S06.Q04",
+          "S06.Q05",
+          "S07.Q01",
+          "S07.Q02",
+          "S07.Q03",
+          "S07.Q04",
+          "S07.Q05",
+          "S07.Q06",
+          "S07.Q07",
+          "S07.Q08",
+          "S08.Q01",
+          "S08.Q02",
+          "S08.Q03",
+          "S08.Q04",
+          "S08.Q05",
+          "S08.Q06",
+          "S08.Q07",
+          "S08.Q08",
+          "S09.Q01",
+          "S09.Q02",
+          "S09.Q03",
+          "S09.Q04",
+          "S09.Q05",
+          "S09.Q06",
+          "S09.Q07",
+          "S10.Q01",
+          "S10.Q02",
+          "S10.Q03",
+          "S10.Q04",
+          "S10.Q05",
+          "S10.Q06",
+          "S10.Q07",
+          "S10.Q08",
+          "S10.Q09",
+          "S10.Q10",
+          "S10.Q11",
+          "S10.Q12"
+        ]
+      }
+    },
+    {
+      "id": "query.distinct",
+      "requirements": {
+        "all": [
+          "S06.Q03"
+        ]
+      }
+    },
+    {
+      "id": "query.prepared",
+      "requirements": {
+        "all": [
+          "S02.Q11"
+        ]
+      }
+    }
+  ],
+  "profiles": [
+    {
+      "id": "sample-10",
+      "mode": "unit",
+      "description": "每阶段一题的算法体验；不宣称组成完整数据库。",
+      "selection": [
+        "S01.Q02",
+        "S02.Q06",
+        "S03.Q02",
+        "S04.Q05",
+        "S05.Q01",
+        "S06.Q02",
+        "S07.Q02",
+        "S08.Q05",
+        "S09.Q03",
+        "S10.Q09"
+      ]
+    },
+    {
+      "id": "storage-track",
+      "mode": "unit",
+      "description": "存储算法专题；CLOCK/LRU 均可独立选做。",
+      "selection": [
+        "S01.Q01",
+        "S01.Q02",
+        "S01.Q03",
+        "S01.Q04",
+        "S01.Q05",
+        "S01.Q06",
+        "S01.Q07",
+        "S01.Q08",
+        "S01.Q09",
+        "S01.Q10"
+      ]
+    },
+    {
+      "id": "query-track",
+      "mode": "unit",
+      "description": "查询、集合、连接专题；各题用公开行流/AST 夹具独立验收。",
+      "selection": [
+        "S02.Q01",
+        "S02.Q02",
+        "S02.Q03",
+        "S02.Q04",
+        "S02.Q05",
+        "S02.Q06",
+        "S02.Q07",
+        "S02.Q08",
+        "S02.Q09",
+        "S02.Q10",
+        "S02.Q11",
+        "S02.Q12",
+        "S04.Q01",
+        "S04.Q02",
+        "S04.Q03",
+        "S04.Q04",
+        "S04.Q05",
+        "S04.Q06",
+        "S04.Q07",
+        "S04.Q08",
+        "S05.Q01",
+        "S05.Q02",
+        "S05.Q03",
+        "S05.Q04",
+        "S05.Q05",
+        "S06.Q01",
+        "S06.Q02",
+        "S06.Q03",
+        "S06.Q04",
+        "S06.Q05",
+        "S07.Q01",
+        "S07.Q02",
+        "S07.Q03",
+        "S07.Q04",
+        "S07.Q05",
+        "S07.Q06",
+        "S07.Q07",
+        "S07.Q08"
+      ]
+    },
+    {
+      "id": "db-basic-rc",
+      "mode": "integration",
+      "description": "基本持久化 RC 数据库：表 DDL、普通查询/DML、排序窗口、prepared、事务、维护与检查点恢复；不声明索引、聚合、集合、连接、COPY、ANALYZE 或 SSI。",
+      "requires": [
+        "database.basic_rc"
+      ],
+      "default_choices": {
+        "storage.replacement": "S01.Q02"
+      },
+      "default_question_count": 46,
+      "validation_status": "design-only-not-yet-proved"
+    },
+    {
+      "id": "db-relational",
+      "mode": "integration",
+      "description": "在基本库上加入索引、优化、聚合、集合、NLJ/索引连接和子查询；Hash/Merge、COPY、ANALYZE、SSI 可单独加入。",
+      "requires": [
+        "database.relational"
+      ],
+      "default_choices": {
+        "storage.replacement": "S01.Q02"
+      },
+      "default_question_count": 76,
+      "validation_status": "design-only-not-yet-proved"
+    },
+    {
+      "id": "db-reference",
+      "mode": "integration",
+      "description": "83 题全部完成，包含每种替代算法，才运行原完整参考回归。",
+      "requires": [
+        "database.reference"
+      ],
+      "default_question_count": 83,
+      "validation_status": "design-only-not-yet-proved"
+    }
+  ],
+  "source_inventory": [
+    {
+      "path": "libs/access/src/btree_bulk_build.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q05",
+        "S03.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_concurrency.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_insert.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q02",
+        "S03.Q03",
+        "S03.Q06",
+        "S03.Q07",
+        "S10.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_insert.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q02",
+        "S03.Q03",
+        "S03.Q06",
+        "S03.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_key.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_key_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_logging.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_logging.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_maintenance.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_page.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q01",
+        "S03.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_page_builder.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_page_read_view.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_relation.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q02",
+        "S03.Q03",
+        "S03.Q04",
+        "S03.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/btree_scan.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q02",
+        "S03.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/heap_delete.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q09",
+        "S09.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/heap_fetch.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q08",
+        "S09.Q03",
+        "S09.Q04",
+        "S09.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/heap_index_tid.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/heap_maintenance.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/heap_page.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/heap_page_scan_view.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/heap_prune.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q07",
+        "S09.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/heap_scan.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q08",
+        "S09.Q03",
+        "S09.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/heap_table.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q08",
+        "S01.Q09",
+        "S01.Q10",
+        "S10.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/heap_tuple_state_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q09",
+        "S09.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/heap_update.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q09",
+        "S09.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/access/src/tuple_codec.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "元组字节格式编解码；不决定可见性、版本或槽位分配。"
+    },
+    {
+      "path": "libs/catalog/src/analyze.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/consistency.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/consistency_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S03.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/format.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "目录字节格式与格式完整性校验；身份/代数/DDL 发布决策另题。"
+    },
+    {
+      "path": "libs/catalog/src/format_encode.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "目录字节格式与格式完整性校验；身份/代数/DDL 发布决策另题。"
+    },
+    {
+      "path": "libs/catalog/src/format_internal.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "目录字节格式与格式完整性校验；身份/代数/DDL 发布决策另题。"
+    },
+    {
+      "path": "libs/catalog/src/format_validation.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "目录字节格式与格式完整性校验；身份/代数/DDL 发布决策另题。"
+    },
+    {
+      "path": "libs/catalog/src/format_validation.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "目录字节格式与格式完整性校验；身份/代数/DDL 发布决策另题。"
+    },
+    {
+      "path": "libs/catalog/src/id_allocator.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/id_allocator.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/index_schema.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/metadata.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/metadata_validation.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/metadata_validation.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/schema.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/snapshot.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/statistics.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/store.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10",
+        "S03.Q08",
+        "S04.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/store_internal.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/catalog/src/store_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/catalog_snapshot_adapter.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/catalog_snapshot_adapter.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/checkpoint_admission.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/command_scope.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/command_scope.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/copy_executor.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q12"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/copy_executor.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q12"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/copy_text_decoder.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q12"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/copy_text_decoder.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q12"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/database.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q11",
+        "S10.Q07",
+        "S10.Q08",
+        "S10.Q12"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/database_startup.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q12"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/database_startup.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q12"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/ddl_executor.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10",
+        "S03.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/ddl_executor.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q10",
+        "S03.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/dispatch.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q11",
+        "S10.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/dispatch_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q11",
+        "S10.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/heap_index_scan_port.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q07",
+        "S07.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/heap_row_decoder.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "调用给定元组解码器并复制输出，无扫描或 MVCC 决策。"
+    },
+    {
+      "path": "libs/engine/src/heap_seq_scan_port.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/logical_scan_ssi.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/logical_scan_ssi.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/maintenance_executor.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q07",
+        "S09.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/maintenance_executor.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q07",
+        "S09.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/materialized_result_receiver.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "API 结果持有、收集与输出格式；不求值、过滤、聚合或执行 SQL。"
+    },
+    {
+      "path": "libs/engine/src/materialized_result_receiver.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "API 结果持有、收集与输出格式；不求值、过滤、聚合或执行 SQL。"
+    },
+    {
+      "path": "libs/engine/src/physical_modify_port.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q09",
+        "S03.Q08",
+        "S09.Q04",
+        "S09.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/physical_modify_port.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q09",
+        "S03.Q08",
+        "S09.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/physical_services.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "组合/访问桥接、端口声明与状态 DTO；业务决策必须落到其所属题。"
+    },
+    {
+      "path": "libs/engine/src/query_error.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/query_error.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/query_executor.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/query_executor.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/result.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "API 结果持有、收集与输出格式；不求值、过滤、聚合或执行 SQL。"
+    },
+    {
+      "path": "libs/engine/src/session.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q07",
+        "S09.Q02",
+        "S10.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/session_access.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "组合/访问桥接、端口声明与状态 DTO；业务决策必须落到其所属题。"
+    },
+    {
+      "path": "libs/engine/src/session_factory.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/storage_plan_factory.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/storage_plan_factory.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/storage_query_binding.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/storage_query_binding.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/storage_scan_ports.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "组合/访问桥接、端口声明与状态 DTO；业务决策必须落到其所属题。"
+    },
+    {
+      "path": "libs/engine/src/utility_execution_state.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "组合/访问桥接、端口声明与状态 DTO；业务决策必须落到其所属题。"
+    },
+    {
+      "path": "libs/engine/src/utility_executor.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/engine/src/utility_executor.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/aggregate.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S05.Q01",
+        "S05.Q02",
+        "S05.Q03",
+        "S05.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/append.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S06.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/exec_context.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "已定参数槽的数据持有、复制、取值、赋值和清空及形状检查；不选择槽布局，不编译或求值表达式。"
+    },
+    {
+      "path": "libs/execution/src/expression.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q06",
+        "S07.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/hash_join.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S07.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/join_support.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/limit.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/merge_join.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S07.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/modify_table.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q09",
+        "S09.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/nested_loop.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S07.Q02",
+        "S07.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/operators.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q07",
+        "S07.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/plan_state.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "通用流端口的所有权、调用错误传播及生命周期协议；不执行扫描、过滤、投影、排序或数据库策略，真实行算法按题挖空。"
+    },
+    {
+      "path": "libs/execution/src/projection_program.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/projection_program.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/row_count.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/scan_state.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q07",
+        "S07.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/sort.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/sort_support.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/state_support.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "共享输入/输出模式和TupleSlot的形状适配，无表达式求值或行推进策略。"
+    },
+    {
+      "path": "libs/execution/src/subplan.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S07.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/subquery_scan.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S06.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/topn.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/execution/src/tuple.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "有所有权的 Tuple/Descriptor/Slot 数据载体与形状检查。"
+    },
+    {
+      "path": "libs/execution/src/unique.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S06.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/equivalence.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/explain.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "已有计划的文本渲染；不产生或选择计划。"
+    },
+    {
+      "path": "libs/planner/src/join_order.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S07.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/join_strategy.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S07.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_aggregate.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S05.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_bound_adapter.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_dml.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_expression.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q05",
+        "S07.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_join_strategy.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S07.Q05",
+        "S07.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_query.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_required_columns.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_select_ops.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q05",
+        "S04.Q02",
+        "S04.Q04",
+        "S04.Q05",
+        "S05.Q04",
+        "S06.Q03",
+        "S06.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_statement.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_subplan.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S07.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_subplan_rewrite.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S07.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/lowering_table.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q05",
+        "S06.Q04",
+        "S06.Q05",
+        "S07.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/metadata_port.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "只读端口适配、值复制和异常边界；名称解析与路径策略另题。"
+    },
+    {
+      "path": "libs/planner/src/path_index.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/path_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q03",
+        "S04.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/path_relation.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/path_restrictions.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q01",
+        "S04.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/plan.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/plan_descriptor_validation.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/plan_descriptor_validation.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/plan_expression_validation.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/plan_expression_validation.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/plan_validation.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/preprocess_convert.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/preprocess_expression.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/preprocess_expression_compare.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/preprocess_expression_features.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/preprocess_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q05",
+        "S04.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/preprocess_query.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q05",
+        "S06.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/planner/src/preprocess_validation.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S04.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/btree_redo_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q09"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/btree_startup_redo.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q09"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/btree_wal.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q06",
+        "S10.Q09"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/btree_wal_codec.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "类型化 WAL 负载字段编解码；记录选择和 redo 决策另题。"
+    },
+    {
+      "path": "libs/recovery/src/btree_wal_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/catalog_index.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/catalog_recovery.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q06",
+        "S10.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/checkpoint.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q07",
+        "S10.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/dispatcher.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/durable_state_redo.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/full_page_image.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/full_page_image_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/heap_redo_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q09"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/heap_startup_redo.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q09"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/heap_wal.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q06",
+        "S10.Q09"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/heap_wal_codec.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "类型化 WAL 负载字段编解码；记录选择和 redo 决策另题。"
+    },
+    {
+      "path": "libs/recovery/src/heap_wal_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/page_image.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/page_image_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/recovery_page_cache.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q09"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/startup_port_boundary.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "跨端口异常转结构化错误，无恢复策略。"
+    },
+    {
+      "path": "libs/recovery/src/startup_recovery.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/startup_runner.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/transaction_wal.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/wal_durability.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/recovery/src/wal_stream.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/sql/src/binder.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q02",
+        "S02.Q03",
+        "S02.Q04",
+        "S05.Q04",
+        "S06.Q01",
+        "S06.Q05",
+        "S07.Q01",
+        "S07.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/sql/src/binder_scope.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q03",
+        "S02.Q04",
+        "S06.Q01",
+        "S07.Q01",
+        "S07.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/sql/src/binder_scope_internal.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q03",
+        "S02.Q04",
+        "S06.Q01",
+        "S07.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/sql/src/bound_clone.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "保持原结构的所有权复制；不绑定或改写表达式。"
+    },
+    {
+      "path": "libs/sql/src/bound_clone_internal.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "保持原结构的所有权复制；不绑定或改写表达式。"
+    },
+    {
+      "path": "libs/sql/src/catalog_port.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "只读端口适配、值复制和异常边界；名称解析与路径策略另题。"
+    },
+    {
+      "path": "libs/sql/src/parser.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q01",
+        "S06.Q01",
+        "S06.Q05",
+        "S07.Q01",
+        "S07.Q08",
+        "S10.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/storage/src/buffer_pool.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q04",
+        "S01.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/storage/src/disk_manager.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/storage/src/durable_metadata.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "固定元数据格式编解码与通用I/O适配；generation和发布时点由调用方决定，无业务状态、空间或路径选择。"
+    },
+    {
+      "path": "libs/storage/src/file_layout.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/storage/src/frame.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q04",
+        "S01.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/storage/src/free_space_map.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/storage/src/page.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "页格式、校验和与无策略字节访问；空间选择和页面修改算法已分题。"
+    },
+    {
+      "path": "libs/storage/src/replacement.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S01.Q02",
+        "S01.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/backend.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/backend_transaction_services.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q06",
+        "S08.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/backend_transaction_services.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q06",
+        "S08.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/commit_log.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/commit_log_files.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/commit_log_files.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/commit_log_format.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "CLOG 固定字节编码；事务状态转移及持久化顺序另题。"
+    },
+    {
+      "path": "libs/transaction/src/commit_log_format.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "CLOG 固定字节编码；事务状态转移及持久化顺序另题。"
+    },
+    {
+      "path": "libs/transaction/src/commit_log_segment.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/commit_log_segment.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/completion_journal_adapter.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/completion_journal_adapter.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/lock_manager.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q04",
+        "S08.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/lock_manager_state.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q04",
+        "S08.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/lock_mode_policy.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/lock_mode_policy.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/lock_queue.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/lock_queue.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/lock_wait_graph.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/lock_wait_graph.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/manager.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q02",
+        "S08.Q06",
+        "S08.Q08",
+        "S10.Q10"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/proc_array.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q02",
+        "S09.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/proc_array_completion.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/proc_array_snapshot.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/proc_array_state.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q02",
+        "S09.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/proc_array_state.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q02",
+        "S09.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/proc_slot.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/proc_slot_lease.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/snapshot_coordinator.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi_commit_order.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi_commit_order.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi_conflict_graph.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi_conflict_graph.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi_lifecycle.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q05",
+        "S09.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi_lifecycle.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q05",
+        "S09.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi_predicate_locks.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi_predicate_locks.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi_read_locks.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi_read_locks.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/ssi_state.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q05",
+        "S09.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/state.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q01",
+        "S09.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/transaction_completion.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/transaction_completion.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q06"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/visibility.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S09.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/xid.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/xid_assignment.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/transaction/src/xid_waiter.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S08.Q08"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/types/src/codec.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "固定 Value/基础类型表示、文本/字节编解码与日期原语；转换选择和标量运算实现另由 S02.Q02 负责。"
+    },
+    {
+      "path": "libs/types/src/coercion.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/types/src/datetime.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "固定 Value/基础类型表示、文本/字节编解码与日期原语；转换选择和标量运算实现另由 S02.Q02 负责。"
+    },
+    {
+      "path": "libs/types/src/operator_registry.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S02.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/types/src/type_io.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "固定 Value/基础类型表示、文本/字节编解码与日期原语；转换选择和标量运算实现另由 S02.Q02 负责。"
+    },
+    {
+      "path": "libs/types/src/type_io_internal.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "固定 Value/基础类型表示、文本/字节编解码与日期原语；转换选择和标量运算实现另由 S02.Q02 负责。"
+    },
+    {
+      "path": "libs/types/src/type_registry.cpp",
+      "classification": "provided",
+      "question_owners": [],
+      "note": "给定的内建类型 ID、名称/别名、typmod 合法范围与固定物理宽度元数据接口；类型转换和算子推导另属 S02.Q02。"
+    },
+    {
+      "path": "libs/types/src/value.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "固定 Value/基础类型表示、文本/字节编解码与日期原语；转换选择和标量运算实现另由 S02.Q02 负责。"
+    },
+    {
+      "path": "libs/wal/src/compression.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/control_format.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "记录/页/段/control 的固定字段编解码与格式校验；流边界、压缩选择、刷盘/发布策略另题。"
+    },
+    {
+      "path": "libs/wal/src/control_store.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q07",
+        "S10.Q12"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/delta.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/format_internal.hpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "记录/页/段/control 的固定字段编解码与格式校验；流边界、压缩选择、刷盘/发布策略另题。"
+    },
+    {
+      "path": "libs/wal/src/manager.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q04",
+        "S10.Q05",
+        "S10.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/manager_background_writer.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/manager_background_writer.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q04"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/manager_checkpoint.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/manager_checkpoint.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q07"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/manager_page_images.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/manager_page_images.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/manager_startup.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/manager_startup.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q11"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/page_format.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "记录/页/段/control 的固定字段编解码与格式校验；流边界、压缩选择、刷盘/发布策略另题。"
+    },
+    {
+      "path": "libs/wal/src/reader.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/reader_dispatch.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/reader_dispatch.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/reader_framing.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/reader_framing.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/reader_read_ahead.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/reader_read_ahead.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q03"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/record.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "记录/页/段/control 的固定字段编解码与格式校验；流边界、压缩选择、刷盘/发布策略另题。"
+    },
+    {
+      "path": "libs/wal/src/record_decode.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "记录/页/段/control 的固定字段编解码与格式校验；流边界、压缩选择、刷盘/发布策略另题。"
+    },
+    {
+      "path": "libs/wal/src/record_format.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "记录/页/段/control 的固定字段编解码与格式校验；流边界、压缩选择、刷盘/发布策略另题。"
+    },
+    {
+      "path": "libs/wal/src/record_image.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/record_image.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q05"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/ring_buffer.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/ring_layout.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/ring_layout.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q01"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/segment_directory.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/segment_directory.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/segment_file.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/segment_file.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/segment_format.cpp",
+      "classification": "provided-primitive-or-adapter",
+      "reason": "记录/页/段/control 的固定字段编解码与格式校验；流边界、压缩选择、刷盘/发布策略另题。"
+    },
+    {
+      "path": "libs/wal/src/segment_storage.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/writer.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/writer_io.cpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    },
+    {
+      "path": "libs/wal/src/writer_io.hpp",
+      "classification": "algorithm-owned",
+      "question_owners": [
+        "S10.Q02"
+      ],
+      "note": "按题目的语义区块划分；声明、格式和安全清理骨架仍可保留。"
+    }
+  ],
+  "inventory_policy": {
+    "scope": "上述 11 个核心组件的 src 下 .cpp/.hpp；公共头内实现与新增私有文件在实施时按相同语义追加审计。",
+    "external_provided_roots": [
+      "libs/base",
+      "libs/io",
+      "libs/api",
+      "libs/course",
+      "libs/protocol",
+      "apps",
+      "third_party"
+    ],
+    "external_rule": "仅给定基础设施、标准/第三方实现、协议与机械组装。发现这些目录有数据库策略算法时必须移入题目或明确登记所有者；目录名不构成保留算法的理由。",
+    "unmapped_algorithm_rule": "必须登记题目所有者后才能发布；不能自动归为给定底座。"
+  },
+  "integration_test_design": [
+    {
+      "id": "I-BASIC",
+      "requires": [
+        "database.basic_rc"
+      ],
+      "cases": [
+        "新建库与表 DDL、INSERT/UPDATE/DELETE、扫描/表达式/ORDER BY/LIMIT/OFFSET",
+        "普通与 prepared 参数重绑定、目录代数变化、多语句错误边界",
+        "真实自动提交与显式 RC 事务、命令失败原子性和后续进展",
+        "heap vacuum、普通/静态检查点、干净重开与 SIGKILL 恢复",
+        "未选能力预检及空索引集不触发索引桩；不能忽略已有数据库的真实索引"
+      ]
+    },
+    {
+      "id": "I-RELATIONAL",
+      "requires": [
+        "database.relational"
+      ],
+      "cases": [
+        "B+Tree/堆索引一致、唯一性 SQL 竞争及失败清理",
+        "优化前后结果/计划/计数、Top-N 峰值",
+        "聚合/DISTINCT/UNION 的类型/NULL/窗口层次",
+        "NLJ/Index NLJ 与相关子计划组合、参数重扫",
+        "上述关系能力在事务、干净重开、恢复后的结果一致"
+      ]
+    },
+    {
+      "id": "I-HASH",
+      "requires": [
+        "database.relational",
+        "join.hash"
+      ],
+      "cases": [
+        "启用 Hash Join 的等值/复合键/NULL/残余条件和实际计划",
+        "不适合 Hash 的谓词按所选可用策略处理"
+      ]
+    },
+    {
+      "id": "I-MERGE",
+      "requires": [
+        "database.relational",
+        "join.merge"
+      ],
+      "cases": [
+        "有序索引输入、重复组重放、NULL/残余条件和有序性证明"
+      ]
+    },
+    {
+      "id": "I-SSI",
+      "requires": [
+        "database.relational",
+        "isolation.serializable"
+      ],
+      "cases": [
+        "屏障定义的写偏斜/危险历史拒绝；无冲突历史可提交",
+        "谓词空读、唯一索引和旧版本生命周期"
+      ]
+    },
+    {
+      "id": "I-ALL",
+      "requires": [
+        "database.reference"
+      ],
+      "cases": [
+        "所有单题",
+        "原完整参考回归",
+        "新增选择器、组合及故障验收"
+      ]
+    }
+  ]
+}

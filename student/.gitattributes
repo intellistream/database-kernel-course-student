@@ -1,0 +1,3 @@
+# Canonical SQL table output intentionally preserves width-padding spaces and
+# the reference runner's trailing blank line.
+tests/sql-regress/expected/*.out whitespace=-trailing-space,-blank-at-eol

@@ -1,0 +1,33 @@
+-- SQL regression runner smoke test
+CREATE TABLE values_test (id INT, label CHAR(5), active BOOL);
+INSERT INTO values_test VALUES (2, 'a;b', TRUE), (10, NULL, FALSE);
+SELECT id, label, active FROM values_test ORDER BY id;
+id | label | active
+---+-------+-------
+ 2 | a;b   | t     
+10 | NULL  | f     
+(2 rows)
+
+SELECT id FROM values_test WHERE id > 99;
+id
+--
+(0 rows)
+
+BEGIN;
+INSERT INTO values_test VALUES (20, 'lost', TRUE);
+SELECT missing FROM values_test;
+ERROR:  bind error: column not found: missing
+COMMIT;
+SELECT id FROM values_test ORDER BY id;
+id
+--
+ 2
+10
+(2 rows)
+
+SHOW TABLES;
+table_name 
+-----------
+values_test
+(1 row)
+

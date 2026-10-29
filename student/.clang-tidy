@@ -1,0 +1,181 @@
+---
+Checks: >
+  -*,
+  clang-analyzer-*,
+  bugprone-*,
+  concurrency-*,
+  cppcoreguidelines-*,
+  misc-*,
+  modernize-*,
+  performance-*,
+  portability-simd-intrinsics,
+  portability-std-allocator-const,
+  readability-*,
+  cert-con54-cpp,
+  cert-dcl58-cpp,
+  cert-err58-cpp,
+  cert-err60-cpp,
+  cert-mem57-cpp,
+  cert-oop54-cpp,
+  -clang-analyzer-optin.performance.Padding,
+  -bugprone-switch-missing-default-case,
+  -bugprone-unchecked-optional-access,
+  -cppcoreguidelines-avoid-const-or-ref-data-members,
+  -cppcoreguidelines-avoid-do-while,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-non-private-member-variables-in-classes,
+  -cppcoreguidelines-pro-bounds-avoid-unchecked-container-access,
+  -misc-include-cleaner,
+  -misc-const-correctness,
+  -misc-multiple-inheritance,
+  -misc-no-recursion,
+  -misc-non-private-member-variables-in-classes,
+  -misc-use-internal-linkage,
+  -modernize-use-nodiscard,
+  -modernize-use-designated-initializers,
+  -modernize-use-ranges,
+  -modernize-use-scoped-lock,
+  -performance-enum-size,
+  -readability-math-missing-parentheses,
+  -readability-convert-member-functions-to-static,
+  -readability-identifier-length,
+  -readability-magic-numbers,
+  -readability-redundant-member-init
+
+WarningsAsErrors: '*'
+HeaderFilterRegex: '(/libs/|/apps/|/tests/|/benchmarks/)'
+FormatStyle: file
+
+CheckOptions:
+  # The public declaration style applies to named functions. Lambda return
+  # types are already local and Clang 22 would otherwise create pure churn.
+  - key: modernize-use-trailing-return-type.TransformFunctions
+    value: 'true'
+  - key: modernize-use-trailing-return-type.TransformLambdas
+    value: none
+
+  # Prefer auto when it removes a genuinely noisy type, not for every scalar.
+  - key: modernize-use-auto.MinTypeNameLength
+    value: '12'
+  - key: modernize-use-auto.RemoveStars
+    value: 'false'
+  - key: modernize-use-override.AllowOverrideAndFinal
+    value: 'false'
+  - key: modernize-use-override.IgnoreDestructors
+    value: 'false'
+
+  # Every control-flow body uses braces. Keep functions reviewable and composable.
+  - key: readability-braces-around-statements.ShortStatementLines
+    value: '0'
+  - key: readability-function-cognitive-complexity.Threshold
+    value: '25'
+  - key: readability-function-cognitive-complexity.DescribeBasicIncrements
+    value: 'true'
+  - key: readability-function-cognitive-complexity.IgnoreMacros
+    value: 'true'
+  - key: readability-function-size.LineThreshold
+    value: '120'
+  - key: readability-function-size.StatementThreshold
+    value: '80'
+  - key: readability-function-size.BranchThreshold
+    value: '20'
+  - key: readability-function-size.ParameterThreshold
+    value: '7'
+  - key: readability-function-size.NestingThreshold
+    value: '5'
+  - key: readability-function-size.VariableThreshold
+    value: '20'
+
+  # Naming: types are PascalCase; callable/value names are snake_case; stored
+  # fields carry a trailing underscore; named constants use kPascalCase.
+  - key: readability-identifier-naming.NamespaceCase
+    value: lower_case
+  - key: readability-identifier-naming.InlineNamespaceCase
+    value: lower_case
+  - key: readability-identifier-naming.AbstractClassCase
+    value: CamelCase
+  - key: readability-identifier-naming.ClassCase
+    value: CamelCase
+  - key: readability-identifier-naming.StructCase
+    value: CamelCase
+  - key: readability-identifier-naming.UnionCase
+    value: CamelCase
+  - key: readability-identifier-naming.EnumCase
+    value: CamelCase
+  - key: readability-identifier-naming.TypeAliasCase
+    value: CamelCase
+  - key: readability-identifier-naming.TypedefCase
+    value: CamelCase
+  - key: readability-identifier-naming.TemplateParameterCase
+    value: CamelCase
+  - key: readability-identifier-naming.TypeTemplateParameterCase
+    value: CamelCase
+  - key: readability-identifier-naming.TypeTemplateParameterIgnoredRegexp
+    value: '^expr-type$'
+  - key: readability-identifier-naming.ValueTemplateParameterCase
+    value: CamelCase
+  - key: readability-identifier-naming.FunctionCase
+    value: lower_case
+  - key: readability-identifier-naming.GlobalFunctionCase
+    value: lower_case
+  - key: readability-identifier-naming.MethodCase
+    value: lower_case
+  - key: readability-identifier-naming.VirtualMethodCase
+    value: lower_case
+  - key: readability-identifier-naming.VariableCase
+    value: lower_case
+  - key: readability-identifier-naming.GlobalVariableCase
+    value: lower_case
+  - key: readability-identifier-naming.LocalVariableCase
+    value: lower_case
+  - key: readability-identifier-naming.ParameterCase
+    value: lower_case
+  - key: readability-identifier-naming.ParameterPackCase
+    value: lower_case
+  - key: readability-identifier-naming.MemberCase
+    value: lower_case
+  - key: readability-identifier-naming.PrivateMemberCase
+    value: lower_case
+  - key: readability-identifier-naming.PrivateMemberSuffix
+    value: '_'
+  - key: readability-identifier-naming.ProtectedMemberCase
+    value: lower_case
+  - key: readability-identifier-naming.ProtectedMemberSuffix
+    value: '_'
+  - key: readability-identifier-naming.LocalConstantCase
+    value: lower_case
+  - key: readability-identifier-naming.GlobalConstantCase
+    value: CamelCase
+  - key: readability-identifier-naming.GlobalConstantPrefix
+    value: k
+  - key: readability-identifier-naming.ClassConstantCase
+    value: CamelCase
+  - key: readability-identifier-naming.ClassConstantPrefix
+    value: k
+  - key: readability-identifier-naming.StaticConstantCase
+    value: CamelCase
+  - key: readability-identifier-naming.StaticConstantPrefix
+    value: k
+  - key: readability-identifier-naming.EnumConstantCase
+    value: CamelCase
+  - key: readability-identifier-naming.EnumConstantPrefix
+    value: k
+  - key: readability-identifier-naming.MacroDefinitionCase
+    value: UPPER_CASE
+  - key: readability-identifier-naming.IgnoreMainLikeFunctions
+    value: 'true'
+  # Clang 22 exposes compiler-generated spaceship helper names such as
+  # "expr-type" to this check. Ignore names the checker itself cannot split.
+  - key: readability-identifier-naming.IgnoreFailedSplit
+    value: 'true'
+
+  # Similar adjacent parameters often indicate a missing strong type. Retain
+  # conventional range/comparison pairs as explicit exceptions.
+  - key: bugprone-easily-swappable-parameters.MinimumLength
+    value: '3'
+  - key: bugprone-easily-swappable-parameters.IgnoredParameterNames
+    value: >-
+      "";begin;end;first;last;lhs;rhs;expected;actual
+  - key: bugprone-easily-swappable-parameters.SuppressParametersUsedTogether
+    value: 'true'
+...

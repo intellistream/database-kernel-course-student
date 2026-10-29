@@ -1,0 +1,13 @@
+# DB SQL regression schedule. Tests on separate lines run sequentially.
+# Multiple names on one line form an isolated parallel group, as in pg_regress.
+test: runner_smoke
+test: basic_query_test1
+test: basic_query_test2
+test: basic_query_test3
+test: basic_query_test4
+test: basic_query_test5
+test: derived_duplicate_columns
+test: offset_without_limit
+test: cast_coercion
+test: timestamp
+test: btree_index

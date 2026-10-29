@@ -1,0 +1,112 @@
+[
+  {
+    "sql": "create table course_txn (id int, balance int);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "create index course_txn (id);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_txn values (1,100);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "begin;",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "update course_txn set balance = 80 where id = 1;",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_txn values (2,200);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "abort;",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "select id,balance from course_txn;",
+    "expect": {
+      "columns": [
+        "id",
+        "balance"
+      ],
+      "rows": [
+        [
+          1,
+          100
+        ]
+      ],
+      "numeric_columns": [
+        0,
+        1
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "select balance from course_txn where id = 2;",
+    "expect": {
+      "columns": [
+        "balance"
+      ],
+      "rows": [],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "begin;",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "update course_txn set balance = 120 where id = 1;",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "commit;",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "select balance from course_txn where id = 1;",
+    "expect": {
+      "columns": [
+        "balance"
+      ],
+      "rows": [
+        [
+          120
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  }
+]

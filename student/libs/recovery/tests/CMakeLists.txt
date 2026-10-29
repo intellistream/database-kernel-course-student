@@ -1,0 +1,46 @@
+db_add_test(
+    db_recovery_tests
+    SOURCES
+        btree_wal_integration_test.cpp
+        btree_wal_test.cpp
+        catalog_recovery_test.cpp
+        catalog_index_test.cpp
+        checkpoint_test.cpp
+        durable_state_redo_test.cpp
+        dispatcher_test.cpp
+        heap_wal_integration_test.cpp
+        heap_wal_test.cpp
+        recovery_page_cache_test.cpp
+        startup_recovery_test.cpp
+        startup_runner_test.cpp
+        transaction_wal_test.cpp
+        wal_durability_test.cpp
+        wal_stream_test.cpp
+    LIBRARIES
+        db::recovery
+        db::test_support
+        db::transaction
+    LABELS recovery unit
+)
+
+add_library(
+    db_recovery_public_header_check
+    OBJECT
+        btree_wal_header_compile.cpp
+        btree_startup_redo_header_compile.cpp
+        catalog_recovery_header_compile.cpp
+        catalog_index_header_compile.cpp
+        checkpoint_header_compile.cpp
+        durable_state_redo_header_compile.cpp
+        dispatcher_header_compile.cpp
+        heap_wal_header_compile.cpp
+        heap_startup_redo_header_compile.cpp
+        recovery_page_cache_header_compile.cpp
+        startup_recovery_header_compile.cpp
+        startup_runner_header_compile.cpp
+        transaction_wal_header_compile.cpp
+        wal_durability_header_compile.cpp
+        wal_stream_header_compile.cpp
+)
+target_link_libraries(db_recovery_public_header_check PRIVATE db::recovery)
+db_configure_target(db_recovery_public_header_check)

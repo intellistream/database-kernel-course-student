@@ -1,0 +1,207 @@
+[
+  {
+    "sql": "create table course_join_l (id int);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "create table course_join_r (sid int, score int);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_join_l values (1);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_join_l values (1);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_join_l values (2);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_join_r values (1,10);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_join_r values (1,20);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_join_r values (3,30);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "select course_join_l.id,course_join_r.score from course_join_l,course_join_r where course_join_l.id=course_join_r.sid;",
+    "expect": {
+      "columns": [
+        "id",
+        "score"
+      ],
+      "rows": [
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          20
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          20
+        ]
+      ],
+      "numeric_columns": [
+        0,
+        1
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "select course_join_l.id,course_join_r.score from course_join_l,course_join_r where course_join_l.id=course_join_r.sid and course_join_r.score>10;",
+    "expect": {
+      "columns": [
+        "id",
+        "score"
+      ],
+      "rows": [
+        [
+          1,
+          20
+        ],
+        [
+          1,
+          20
+        ]
+      ],
+      "numeric_columns": [
+        0,
+        1
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "select sid,count(*) as n,sum(score) as total from course_join_r group by sid;",
+    "expect": {
+      "columns": [
+        "sid",
+        "n",
+        "total"
+      ],
+      "rows": [
+        [
+          1,
+          2,
+          30
+        ],
+        [
+          3,
+          1,
+          30
+        ]
+      ],
+      "numeric_columns": [
+        0,
+        1,
+        2
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "select sid,count(*) as n from course_join_r group by sid having count(*)>1;",
+    "expect": {
+      "columns": [
+        "sid",
+        "n"
+      ],
+      "rows": [
+        [
+          1,
+          2
+        ]
+      ],
+      "numeric_columns": [
+        0,
+        1
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "select count(*) as n from course_join_r where score<0;",
+    "expect": {
+      "columns": [
+        "n"
+      ],
+      "rows": [
+        [
+          0
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "select score from course_join_r order by score desc;",
+    "expect": {
+      "columns": [
+        "score"
+      ],
+      "rows": [
+        [
+          30
+        ],
+        [
+          20
+        ],
+        [
+          10
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": true
+    }
+  },
+  {
+    "sql": "select course_join_l.id from course_join_l,course_join_r where course_join_l.id=course_join_r.sid and course_join_l.id=999;",
+    "expect": {
+      "columns": [
+        "id"
+      ],
+      "rows": [],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  }
+]

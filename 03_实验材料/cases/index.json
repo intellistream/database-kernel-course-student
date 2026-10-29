@@ -1,0 +1,120 @@
+[
+  {
+    "sql": "create table course_ix (id int, v int);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "create index course_ix (id);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_ix values (-3,-30);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_ix values (7,70);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_ix values (9,90);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_ix values (12,120);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "insert into course_ix values (20,200);",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "select id from course_ix where id >= 7 and id < 20;",
+    "expect": {
+      "columns": [
+        "id"
+      ],
+      "rows": [
+        [
+          7
+        ],
+        [
+          9
+        ],
+        [
+          12
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "select v from course_ix where id = -3;",
+    "expect": {
+      "columns": [
+        "v"
+      ],
+      "rows": [
+        [
+          -30
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "update course_ix set id = 8 where id = 7;",
+    "expect": {
+      "success": true
+    }
+  },
+  {
+    "sql": "select v from course_ix where id = 7;",
+    "expect": {
+      "columns": [
+        "v"
+      ],
+      "rows": [],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  },
+  {
+    "sql": "select v from course_ix where id = 8;",
+    "expect": {
+      "columns": [
+        "v"
+      ],
+      "rows": [
+        [
+          70
+        ]
+      ],
+      "numeric_columns": [
+        0
+      ],
+      "ordered": false
+    }
+  }
+]

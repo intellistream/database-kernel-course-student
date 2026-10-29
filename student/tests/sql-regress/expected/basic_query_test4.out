@@ -1,0 +1,74 @@
+--   4:
+create table student (id int, name char(9), major char(32));
+insert into student values (0, 'KangKanga', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+insert into student values (1, 'TomTomTom', 'Computer ScienceComputer Science');
+insert into student values (2, 'JerryJerr', 'Computer ScienceComputer Science');
+insert into student values (3, 'JackJackJ', 'Electrical Engineeringer Science');
+insert into student values (3, 'JerryJerr', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+insert into student values (4, 'JerryJerr', 'bbbbbbbbbbbbbbbcccccccccdddddddd');
+insert into student values (5, 'JackJackJ', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+insert into student values (-1, 'LiXianShe', 'c741258963qwertyuioplkjhgfdsazxc');
+insert into student values (7, 'RMDBrmdbr', '74125896332145698712365478996321');
+delete from student where name = 'Jack';
+delete from student where id < 0;
+select * from student;
+id | name      | major                           
+---+-----------+---------------------------------
+ 0 | KangKanga | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ 1 | TomTomTom | Computer ScienceComputer Science
+ 2 | JerryJerr | Computer ScienceComputer Science
+ 3 | JackJackJ | Electrical Engineeringer Science
+ 3 | JerryJerr | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ 4 | JerryJerr | bbbbbbbbbbbbbbbcccccccccdddddddd
+ 5 | JackJackJ | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ 7 | RMDBrmdbr | 74125896332145698712365478996321
+(8 rows)
+
+select name,major from student where id > -5;
+name      | major                           
+----------+---------------------------------
+KangKanga | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+TomTomTom | Computer ScienceComputer Science
+JerryJerr | Computer ScienceComputer Science
+JackJackJ | Electrical Engineeringer Science
+JerryJerr | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+JerryJerr | bbbbbbbbbbbbbbbcccccccccdddddddd
+JackJackJ | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+RMDBrmdbr | 74125896332145698712365478996321
+(8 rows)
+
+delete from student where id = 3 and name = 'JackJackJ';
+select * from student;
+id | name      | major                           
+---+-----------+---------------------------------
+ 0 | KangKanga | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ 1 | TomTomTom | Computer ScienceComputer Science
+ 2 | JerryJerr | Computer ScienceComputer Science
+ 3 | JerryJerr | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ 4 | JerryJerr | bbbbbbbbbbbbbbbcccccccccdddddddd
+ 5 | JackJackJ | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ 7 | RMDBrmdbr | 74125896332145698712365478996321
+(7 rows)
+
+select name from student where id = 3;
+name     
+---------
+JerryJerr
+(1 row)
+
+select name from student where name = 'JackJackJ';
+name     
+---------
+JackJackJ
+(1 row)
+
+delete from student where major = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+select * from student where id>=1;
+id | name      | major                           
+---+-----------+---------------------------------
+ 1 | TomTomTom | Computer ScienceComputer Science
+ 2 | JerryJerr | Computer ScienceComputer Science
+ 4 | JerryJerr | bbbbbbbbbbbbbbbcccccccccdddddddd
+ 7 | RMDBrmdbr | 74125896332145698712365478996321
+(4 rows)
+

@@ -1,0 +1,8 @@
+[package]
+name = "db-cpp-reference-client-harness"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+db_tpcc_client = { package = "ferrum-client", path = "@db_reference_client_dir@" }

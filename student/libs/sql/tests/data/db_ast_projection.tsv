@@ -1,0 +1,92 @@
+id	disposition	db_ast_shape	contract	reference	sql_escaped
+empty_input	accept	script.empty	parser	reference:src/sql/binder.rs:parse	\0
+semicolon_only	accept	script.empty	parser	reference:src/sql/binder.rs:parse	;
+select_constant	accept	query.select	source_ast	reference:src/sql/ast/stmt.rs:TableRef::Empty	SELECT 1
+select_from	accept	query.select	source_ast	reference:src/sql/binder.rs:bind_statement	SELECT id FROM items
+statement_batch	accept	script.batch.query	parser	reference:src/sql/binder.rs:parse	SELECT 1; SELECT 2
+comments_and_trailing_semicolon	accept	query.select	parser	reference:src/sql/binder.rs:parse	-- lead\nSELECT 1 /* tail */;
+quoted_identifiers	accept	query.select	parser	reference:src/sql/binder.rs:bind_statement	SELECT "select" FROM "table"
+identifier_case_preserved	accept	query.select	parser	reference:src/sql/binder.rs:bind_statement	SELECT CamelColumn FROM CamelTable
+unicode_identifiers	accept	query.select	parser	reference:src/sql/binder.rs:bind_statement	SELECT 名称 FROM 数据
+select_distinct_order_limit_offset	accept	query.select.distinct_order_limit	result_shaping	reference:docs/course/questions/S02.Q01.md	SELECT DISTINCT id FROM t ORDER BY id DESC NULLS LAST LIMIT 5 OFFSET 2
+select_star	accept	query.select.star	result_shaping	reference:docs/course/questions/S02.Q01.md	SELECT * FROM t
+select_qualified_star	accept	query.select.qualified_star	result_shaping	reference:docs/course/questions/S02.Q01.md	SELECT t.* FROM t
+where_boolean_arithmetic	accept	query.select.where	expressions	reference:docs/course/questions/S02.Q01.md	SELECT id FROM t WHERE (a + 1) >= 2 AND b IS NOT NULL
+between_literal_in	accept	query.select.where	expressions	reference:docs/course/questions/S02.Q01.md	SELECT id FROM t WHERE id BETWEEN 1 AND 9 AND id IN (1, 3, 5)
+cast_expression	accept	query.select.cast	expressions	reference:src/sql/binder/expr.rs	SELECT CAST('1' AS INT) FROM t
+typed_timestamp_literal	accept	query.select.typed_literal	expressions	reference:src/sql/binder/expr.rs	SELECT TIMESTAMP '2026-08-12 14:00:00' FROM t
+parameter_placeholder	accept	query.select.parameter	source_ast	reference:src/sql/binder/expr.rs:bind_param	SELECT id FROM t WHERE id = $1
+inner_join_on	accept	query.join.inner_on	joins	reference:src/sql/binder/from.rs	SELECT a.id FROM a INNER JOIN b ON a.id = b.id
+left_join_on	accept	query.join.left_on	joins	reference:src/sql/ast/stmt.rs:JoinKind	SELECT * FROM a LEFT JOIN b ON a.id = b.id
+right_join_on	accept	query.join.right_on	joins	reference:src/sql/ast/stmt.rs:JoinKind	SELECT * FROM a RIGHT JOIN b ON a.id = b.id
+full_join_on	accept	query.join.full_on	joins	reference:src/sql/ast/stmt.rs:JoinKind	SELECT * FROM a FULL JOIN b ON a.id = b.id
+cross_join	accept	query.join.cross	joins	reference:src/sql/binder/from.rs	SELECT * FROM a CROSS JOIN b
+comma_join	accept	query.join.cross	joins	reference:src/sql/binder/from.rs:bind_from	SELECT * FROM a, b
+using_one_column	accept	query.join.using_one	joins	reference:src/sql/binder/from.rs	SELECT * FROM a JOIN b USING (id)
+derived_table	accept	query.derived	joins	reference:src/sql/binder/from.rs:bind_table_factor	SELECT q.id FROM (SELECT id FROM t) AS q
+scalar_subquery	accept	query.subquery.scalar	subqueries	reference:src/sql/binder/expr.rs	SELECT (SELECT id FROM u WHERE u.id = t.id) FROM t
+exists_subquery	accept	query.subquery.exists	subqueries	reference:src/sql/binder/expr.rs	SELECT id FROM t WHERE EXISTS (SELECT 1 FROM u WHERE u.id = t.id)
+in_subquery	accept	query.subquery.in	subqueries	reference:src/sql/binder/expr.rs	SELECT id FROM t WHERE id IN (SELECT id FROM u)
+aggregate_group_having	accept	query.aggregate.group_having	aggregates	reference:docs/course/questions/S02.Q01.md	SELECT k, COUNT(*) FROM t GROUP BY k HAVING COUNT(*) > 1
+aggregate_distinct	accept	query.aggregate.distinct	aggregates	reference:docs/course/questions/S02.Q01.md	SELECT COUNT(DISTINCT v) FROM t
+insert_values	accept	dml.insert_values	statements	reference:src/sql/binder/dml.rs:bind_insert	INSERT INTO t (id, v) VALUES (1, 'a'), (2, 'b')
+insert_select	accept	dml.insert_query	statements	reference:src/sql/binder/dml.rs:bind_insert_source	INSERT INTO t SELECT id FROM u
+update	accept	dml.update	statements	reference:src/sql/binder/dml.rs:bind_update	UPDATE t SET v = v + 1 WHERE id = 7
+delete	accept	dml.delete	statements	reference:src/sql/binder/dml.rs:bind_delete	DELETE FROM t WHERE id = 7
+create_table	accept	ddl.create_table	statements	reference:src/sql/binder/dml.rs:bind_create_table	CREATE TABLE t (id INT, f FLOAT, b BOOL, c CHAR(8), ts TIMESTAMP(3)) WITH (fillfactor = 80)
+create_table_if_not_exists	accept	ddl.create_table	statements	reference:src/sql/binder/dml.rs:bind_create_table	CREATE TABLE IF NOT EXISTS t (id INT)
+drop_table	accept	ddl.drop_table	statements	reference:src/sql/binder/dml.rs:bind_drop_table	DROP TABLE IF EXISTS t
+create_index_btree	accept	ddl.create_index	statements	reference:src/sql/binder.rs:bind_statement	CREATE INDEX idx_t_id ON t USING BTREE (id)
+create_unique_index	accept	ddl.create_index	statements	reference:src/sql/binder.rs:bind_statement	CREATE UNIQUE INDEX IF NOT EXISTS idx_t_id ON t (id)
+drop_index	accept	ddl.drop_index	statements	reference:src/sql/binder.rs:bind_statement	DROP INDEX IF EXISTS idx_t_id
+begin	accept	transaction.begin	utilities	reference:src/sql/binder.rs:bind_statement	BEGIN
+commit	accept	transaction.commit	utilities	reference:src/sql/binder.rs:bind_statement	COMMIT
+rollback	accept	transaction.rollback	utilities	reference:src/sql/binder.rs:bind_statement	ROLLBACK
+set_transaction_read_committed	accept	transaction.set_isolation	utilities	reference:src/sql/binder.rs:bind_statement	SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+set_transaction_repeatable_read	accept	transaction.set_isolation	utilities	reference:src/sql/binder.rs:bind_statement	SET TRANSACTION ISOLATION LEVEL REPEATABLE READ
+set_transaction_serializable	accept	transaction.set_isolation	utilities	reference:src/sql/binder.rs:bind_statement	SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
+copy_from_stdin	accept	utility.copy_from	utilities	reference:src/sql/binder/copy.rs	COPY t FROM STDIN
+copy_text_options	accept	utility.copy_from	utilities	reference:tests/unit/sql/binder/copy.rs	COPY t (id, v) FROM STDIN WITH (FORMAT TEXT, DELIMITER E'\\t', NULL '\\N')
+explain	accept	utility.explain	utilities	reference:src/sql/binder.rs:bind_statement	EXPLAIN SELECT id FROM t
+explain_dml	accept	utility.explain	utilities	reference:src/sql/binder.rs:bind_statement	EXPLAIN UPDATE t SET v = 1
+show_tables	utility	utility.show_tables	utilities	reference:src/sql/binder.rs:parse	SHOW TABLES
+snapshot_isolation	utility	transaction.set_repeatable_read	parser	reference:src/sql/binder.rs:is_snapshot_isolation_setting	SET TRANSACTION ISOLATION LEVEL SNAPSHOT ISOLATION
+vacuum	utility	utility.vacuum	utilities	reference:src/sql/binder.rs:parse	VACUUM
+vacuum_table	utility	utility.vacuum	utilities	reference:src/sql/binder.rs:parse	VACUUM t
+analyze	utility	utility.analyze	utilities	reference:src/sql/binder.rs:parse	ANALYZE
+analyze_table	utility	utility.analyze	utilities	reference:src/sql/binder.rs:parse	ANALYZE t
+checkpoint	utility	utility.checkpoint	utilities	reference:src/sql/binder.rs:parse	CHECKPOINT
+top_level_values	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	VALUES (1), (2)
+union	accept	query.union	source_ast	reference:docs/course/questions/S06.Q01.md	SELECT id FROM a UNION SELECT id FROM b
+intersect	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	SELECT id FROM a INTERSECT SELECT id FROM b
+natural_join	unsupported	none	feature_boundary	reference:src/sql/binder/from.rs	SELECT * FROM a NATURAL JOIN b
+multi_using_columns	unsupported	none	feature_boundary	reference:src/sql/binder/from.rs	SELECT * FROM a JOIN b USING (id, tenant)
+lateral_derived	unsupported	none	feature_boundary	reference:src/sql/binder/from.rs	SELECT * FROM a, LATERAL (SELECT a.id) AS q
+like_expression	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	SELECT id FROM t WHERE name LIKE 'a%'
+window_function	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	SELECT ROW_NUMBER() OVER (ORDER BY id) FROM t
+grouping_sets	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	SELECT k, COUNT(*) FROM t GROUP BY GROUPING SETS ((k), ())
+fetch_with_ties	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	SELECT id FROM t ORDER BY id FETCH FIRST 3 ROWS WITH TIES
+create_table_constraints	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	CREATE TABLE t (id INT PRIMARY KEY, v INT NOT NULL UNIQUE)
+generated_column	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	CREATE TABLE t (a INT, b INT GENERATED ALWAYS AS (a + 1) STORED)
+date_type	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	CREATE TABLE t (d DATE)
+char_length_omitted	unsupported	none	feature_boundary	reference:src/sql/binder/dml.rs:char_len	CREATE TABLE t (c CHAR)
+expression_index	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	CREATE INDEX idx ON t ((id + 1))
+partial_index	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	CREATE INDEX idx ON t (id) WHERE id > 0
+hash_index	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	CREATE INDEX idx ON t USING HASH (id)
+savepoint	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	SAVEPOINT s
+explain_analyze	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	EXPLAIN ANALYZE SELECT id FROM t
+copy_to_stdout	unsupported	none	feature_boundary	reference:src/sql/binder/copy.rs	COPY t TO STDOUT
+copy_from_file	unsupported	none	feature_boundary	reference:src/sql/binder/copy.rs	COPY t FROM '/tmp/data'
+copy_csv	unsupported	none	feature_boundary	reference:src/sql/binder/copy.rs	COPY t FROM STDIN WITH (FORMAT CSV)
+copy_header	unsupported	none	feature_boundary	reference:src/sql/binder/copy.rs	COPY t FROM STDIN WITH (HEADER)
+copy_inline_payload	unsupported	none	feature_boundary	reference:tests/unit/sql/binder/copy.rs	COPY t FROM STDIN;\n1\talpha\n\\.
+vacuum_full	unsupported	none	feature_boundary	reference:docs/course/questions/S02.Q01.md	VACUUM FULL t
+checkpoint_named	unsupported	none	feature_boundary	reference:src/sql/binder.rs:parse	CHECKPOINT named_checkpoint
+set_session	unsupported	none	feature_boundary	reference:src/sql/binder.rs:bind_statement	SET search_path = public
+malformed_select	parse_error	none	parser	reference:src/sql/binder.rs:parse	SELECT FROM
+unterminated_string	parse_error	none	parser	reference:src/sql/binder.rs:parse	SELECT 'abc
+missing_parenthesis	parse_error	none	parser	reference:src/sql/binder.rs:parse	SELECT (1 + 2
+incomplete_insert	parse_error	none	parser	reference:src/sql/binder.rs:parse	INSERT INTO t VALUES (
+empty_char_length	parse_error	none	parser	reference:src/sql/binder.rs:parse	CREATE TABLE t (c CHAR())
+malformed_batch	parse_error	none	parser	reference:src/sql/binder.rs:parse	SELECT 1; SELECT FROM
+unicode_parse_error	parse_error	none	parser	reference:src/sql/binder.rs:parse	SELECT 名称 FROM

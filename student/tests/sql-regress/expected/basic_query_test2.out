@@ -1,0 +1,51 @@
+--   2:
+create table student (id int, name char(9), major char(32));
+insert into student values (0, 'KangKanga', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+insert into student values (1, 'TomTomTom', 'Computer ScienceComputer Science');
+insert into student values (2, 'JerryJerr', 'Computer ScienceComputer Science');
+insert into student values (3, 'JackJackJ', 'Electrical Engineeringer Science');
+insert into student values (3, 'JerryJerr', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+select * from student where id >= 1;
+id | name      | major                           
+---+-----------+---------------------------------
+ 1 | TomTomTom | Computer ScienceComputer Science
+ 2 | JerryJerr | Computer ScienceComputer Science
+ 3 | JackJackJ | Electrical Engineeringer Science
+ 3 | JerryJerr | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+(4 rows)
+
+select id from student where id = 2;
+id
+--
+ 2
+(1 row)
+
+select major from student where name = 'JerryJerr';
+major                           
+--------------------------------
+Computer ScienceComputer Science
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+(2 rows)
+
+select name,major from student where name = 'JerryJerr' and id = 0;
+name | major
+-----+------
+(0 rows)
+
+select name,major from student where name = 'JerryJerr' and id = 2;
+name      | major                           
+----------+---------------------------------
+JerryJerr | Computer ScienceComputer Science
+(1 row)
+
+select name,id from student where major = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+name      | id
+----------+---
+KangKanga |  0
+JerryJerr |  3
+(2 rows)
+
+select myname from student;
+ERROR:  bind error: column not found: myname
+select name from student where myname = 'aaa';
+ERROR:  bind error: column not found: myname

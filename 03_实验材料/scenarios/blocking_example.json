@@ -1,0 +1,30 @@
+{
+  "description": "仅演示send/await格式，需先创建自己的course_lock测试表。T2的更新可阻塞，T1提交后await；若策略中止T2，学生应依据隔离契约检查其响应。此文件不是带预期的通过性用例。",
+  "steps": [
+    {
+      "session": "T1",
+      "sql": "begin;"
+    },
+    {
+      "session": "T1",
+      "sql": "update course_lock set v = 2 where id = 1;"
+    },
+    {
+      "session": "T2",
+      "sql": "begin;"
+    },
+    {
+      "session": "T2",
+      "action": "send",
+      "sql": "update course_lock set v = 3 where id = 1;"
+    },
+    {
+      "session": "T1",
+      "sql": "commit;"
+    },
+    {
+      "session": "T2",
+      "action": "await"
+    }
+  ]
+}

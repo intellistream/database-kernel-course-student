@@ -1,0 +1,16 @@
+-- PostgreSQL limit.sql: OFFSET without LIMIT
+CREATE TABLE offset_input (id INT);
+INSERT INTO offset_input VALUES (1), (2), (3);
+
+SELECT id FROM offset_input ORDER BY id OFFSET 1;
+id
+--
+ 2
+ 3
+(2 rows)
+
+SELECT id FROM offset_input ORDER BY id OFFSET 99;
+id
+--
+(0 rows)
+
