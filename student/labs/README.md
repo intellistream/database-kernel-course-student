@@ -1,6 +1,6 @@
 # 实验运行器
 
-先读 [题目指南](../docs/course/README.md) 选择练习，再用本运行器构建、查看登记和验收。每题只在全部精确登记的测试实际执行并通过后取得权重；源码标记、文件名和编译成功都不作为算法通过证据。
+先读 [题目指南](../docs/course/README.md) 选择练习，再用本运行器构建、查看登记和验收。每题只在全部精确登记的测试实际执行并通过后取得权重。
 
 目前 [Append](../docs/course/questions/S06.Q02.md) 与 [Unique](../docs/course/questions/S06.Q03.md) 已配置独立验收，其余 81 题的注册或隔离验证仍待补齐。初始算法桩会明确失败；缺少注册的题目报告错误或未执行。具体范围见 [verification.json](verification.json)。
 
@@ -29,7 +29,7 @@ python3 labs/run.py plan --profile db-relational --json
 | `integrate --profile <组合>` | 依次检查题集覆盖、所需单题、真实能力接线和真实 Database/Session SQL；前一步未通过即停止后续步骤。 |
 | `all` | 验收 `db-reference` 后执行完整 CTest 回归。 |
 
-`plan` 正常退出只表示计划已生成。三个数据库组合的真实验收仍待补齐。运行器不会提供数据库实现，也不会根据选择自动补全算法。
+`plan` 正常退出只表示计划已生成。三个数据库组合的真实验收仍待补齐。
 
 ## 自定义选题
 
@@ -55,7 +55,7 @@ python3 labs/run.py plan --profile db-relational --json
 
 默认构建目录为 `build/gcc-release`；可用 `LABS_BUILD_DIR` 或命令后的 `--build-dir` 指定。配置采用 Ninja、Release、`BUILD_TESTING=ON` 和 `DB_WARNINGS_AS_ERRORS=ON`。首次配置用 `CXX` 选择 GCC 13–15，后续沿用 CMake 缓存。
 
-构建、枚举和测试共用目录内的 `build.lock` 排他锁。默认并行度为 `min(16, CPU 数)`，`LABS_JOBS` 接受 1–16。不要绕过锁并发修改同一构建目录。
+构建、枚举和测试共用目录内的 `build.lock` 排他锁。默认并行度为 `min(16, CPU 数)`，`LABS_JOBS` 接受 1–16。同一构建目录通过该锁串行修改。
 
 ```sh
 LABS_JOBS=8 python3 labs/run.py scaffold
@@ -69,7 +69,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s labs/tests -v
 |---|---|
 | `passed` / `failed` | 本题实际验收通过或失败；全部具名用例通过才计权重。 |
 | `not_run` / `not_selected` | 未取得执行结果或未选择，不计通过。 |
-| 退出码 `0` | 所请求动作完成；只读计划不等于功能通过。 |
+| 退出码 `0` | 所请求动作完成。 |
 | 退出码 `1` | 构建或实际测试失败。 |
 | 退出码 `2` | 输入、注册、枚举或执行条件错误。 |
 
@@ -83,7 +83,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s labs/tests -v
 {"binary": "relative/path/to/test_binary", "name": "ExactSuite.ExactCase"}
 ```
 
-`binary` 是构建目录内的可执行文件相对路径，不能逃出目录；`name` 必须是 `--gtest_list_tests` 能枚举的精确完整名称，包含参数化后缀。示例只是结构，不是实际注册。不给通配符、阶段正则或整文件分配分数。
+`binary` 是构建目录内的可执行文件相对路径，不能逃出目录；`name` 必须是 `--gtest_list_tests` 能枚举的精确完整名称，包含参数化后缀。登记格式使用精确的二进制路径和完整测试名。
 
 运行器先枚举本次全部相关二进制，再分题执行；同题同二进制可合并具名过滤。它清除外部 `GTEST_*` 过滤和分片环境，并核对 XML 中实际名称、数量与状态。零退出码但没有实际结果仍然失败。
 
@@ -91,7 +91,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s labs/tests -v
 
 ## 登记数据库组合
 
-组合登记在 `integration.profiles[profile_id]`，`kind` 为 `database_session`，包含两组非空且不重叠的精确用例：`capability_test_ids` 验证真实能力预检、未启用功能无副作用及替代实现接线，`test_ids` 通过真实 `Database/Session` 执行 SQL。不能用 mock 数据库代替。`db-reference` 还必须设置 `full_regression: true`。
+组合登记在 `integration.profiles[profile_id]`，`kind` 为 `database_session`，包含两组非空且不重叠的精确用例：`capability_test_ids` 验证真实能力预检、未启用功能无副作用及替代实现接线，`test_ids` 通过真实 `Database/Session` 执行 SQL。`db-reference` 还必须设置 `full_regression: true`。
 
 组合子进程收到 `LABS_PROFILE`，以及 JSON 格式的 `LABS_CAPABILITIES`、`LABS_CHOICES`、`LABS_SELECTED_QUESTIONS`。最后一个变量仅包含本组合要求且已通过单题验收的题集。这些变量传递选择，不会自动实现产品能力开关；缺少真实接线验收时，`product_capabilities` 为 `unverified`，组合被拒绝。
 

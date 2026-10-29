@@ -4,7 +4,7 @@
 
 第一次使用请读 [练习流程](getting-started.md)。共用资料有 [类型与所有权约定](conventions.md)、[夹具边界](fixtures.md) 和 [格式速查](formats.md)。完整题名索引见 [problem.md](../../problem.md)。
 
-目前 Append、Unique 两题已有独立测试注册与验证；其余 81 题的注册或隔离验证仍待补齐。指南完整覆盖题目，不代表所有验收已经可用。
+目前 Append、Unique 两题已有独立测试注册与验证；其余 81 题的注册或隔离验证仍待补齐。
 
 ## 按主题选择
 

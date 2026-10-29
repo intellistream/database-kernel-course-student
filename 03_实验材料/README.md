@@ -2,9 +2,9 @@
 
 阅读 [实验手册](实验指导.html) 或 [PDF](实验手册.pdf)，逐项任务位于 [labs](labs/)。课程主线源码位于 [student](../student/README.md)，请在 Linux / WSL2 本机磁盘工作。
 
-L0–L7 共 32 学时。当前只登记了 Append 与 Unique 的独立验收；其余模块的测试与整库接线尚待补齐。按教师公布的可用范围提交，不把未运行写成通过。
+L0–L7 共 32 学时，按任务书完成实现、测试与答辩。测试安排见 [实验状态](../04_Ferrum实验基础/实验状态.md)。
 
-`tools/` 中的 RMDB NUL 文本协议工具用于官方原框架对照，不能直接连接 Ferrum Wire。`cases/`、`scenarios/` 是课程公开的小数据与并发语义练习；预期输出用于说明任务合同，不是内核算法实现。工具测试运行：
+`tools/` 提供 RMDB 文本协议对照工具；`cases/`、`scenarios/` 提供小数据与并发语义练习。工具测试运行：
 
 ```sh
 python -m unittest discover -s 03_实验材料/tests -v

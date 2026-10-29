@@ -12,7 +12,7 @@
 
 ## 类型与三种“相等”
 
-[DataType](../../libs/types/include/db/types/data_type.hpp) 表示类型 ID 和修饰信息，[Value](../../libs/types/include/db/types/value.hpp) 表示一个有类型的值。类型化 NULL 仍携带类型；BOOL、INT64、FLOAT32、CHAR 和 TIMESTAMP 等表示以头文件及类型注册表为准。SQL 支持范围不等于所有内部表示都可出现在任意语法位置。
+[DataType](../../libs/types/include/db/types/data_type.hpp) 表示类型 ID 和修饰信息，[Value](../../libs/types/include/db/types/value.hpp) 表示一个有类型的值。类型化 NULL 仍携带类型；BOOL、INT64、FLOAT32、CHAR 和 TIMESTAMP 等表示以头文件及类型注册表为准。SQL 各语法位置按绑定规则检查类型。
 
 | 比较语境 | 学习时要区分的规则 | 相关题 |
 |---|---|---|
@@ -32,7 +32,7 @@
 | `PageReadGuard` / `PageWriteGuard` | 控制页内容访问，释放后不可继续使用借用的页视图 |
 | 只可移动的句柄 | 移动转移资源；源对象的状态按接口约定处理 |
 
-关键接口见 [帧与页守卫](../../libs/storage/include/db/storage/frame.hpp)、[Tuple](../../libs/execution/include/db/execution/tuple.hpp)。得到一个候选帧编号，并不等于已经取得安全替换它的资格。输出槽中的借用值也不等于已经拥有一行长期有效的输出。
+关键接口见 [帧与页守卫](../../libs/storage/include/db/storage/frame.hpp)、[Tuple](../../libs/execution/include/db/execution/tuple.hpp)。取得候选帧后，按同步协议确认替换资格。输出槽中的借用值遵循源对象的有效期。
 
 ## 失败是接口的一部分
 
@@ -62,6 +62,6 @@
 
 给定内容包括强类型 ID、字节序、CRC、固定格式、值和描述符、基础 I/O、通用资源管理及声明的端口。它们帮助你构造输入和表达结果。
 
-决定查询结果、访问路径、空间选择、可见性、锁授予、事务发布和恢复动作的区间属于学生算法。固定 codec 给定，不代表流式读取、压缩选择或发布策略也给定。完整目录见 [题库清单](question-bank.json)；实际修改位置见 [manifest](../../labs/manifest.json)。
+决定查询结果、访问路径、空间选择、可见性、锁授予、事务发布和恢复动作的区间属于学生算法。项目给定固定 codec；学生实现流式读取、压缩选择和发布策略。完整目录见 [题库清单](question-bank.json)；实际修改位置见 [manifest](../../labs/manifest.json)。
 
 关于测试中哪些依赖可以被固定输入替代，继续阅读 [夹具与验收边界](fixtures.md)。

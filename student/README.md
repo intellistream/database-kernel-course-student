@@ -33,7 +33,7 @@ python3 labs/run.py unit S06.Q02
 
 可以选做单题，不要求按阶段顺序实现。第一次练习可从 [Append](docs/course/questions/S06.Q02.md) 或 [Unique](docs/course/questions/S06.Q03.md) 开始，这两题已有独立验收。其余 81 题的独立测试注册或隔离验证仍待补齐；指南中的现有测试链接是阅读素材。初始算法桩被调用时会明确失败。
 
-接收材料记录完整编译、27 个给定原语测试和 23 个运行器测试已通过；本课程发布时未重新运行该构建。它们不代表 83 题或数据库功能已完成；真实数据库组合验收仍待补齐。范围见 [验证记录](labs/verification.json)。
+历史测试记录：完整构建、27 个给定原语测试、23 个运行器测试。范围见 [验证记录](labs/verification.json)。
 
 公共接口、私有实现和组件测试分别位于 `libs/<component>/include/`、`src/`、`tests/`。[应用入口](apps/README.md) 和 [跨组件测试](tests/README.md) 供组合练习时使用；[构建说明](cmake/README.md) 保留编译约束。
 

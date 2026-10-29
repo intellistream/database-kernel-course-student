@@ -1,6 +1,6 @@
 {
   "archive": "Ferrum-cpp-student.tar.gz",
-  "sha256": "e45272c902e327ada346a083a23b2e03cea547c0db0e110d258369390fb52911",
+  "sha256": "77e8232272517aedaf69dbb80bfde67ae19267615fdda494d416da6541679d56",
   "policy": "学生发布派生包：保留算法桩与公开用例；去除教师课程重构草案；更新 README 中历史测试结果的范围说明。展开源码在 student/。",
   "files": [
     {
@@ -17,8 +17,8 @@
     },
     {
       "path": "Ferrum-cpp-student/README.md",
-      "bytes": 2896,
-      "sha256": "4d3bd38e856a04bf0c5dee510125e08649d496476cfd409e1a0eb5a87753af58",
+      "bytes": 2750,
+      "sha256": "a6e891a039b73b8b13da7397ac4fcde5a50ce9d9873dca74607ff57ca0639de2",
       "mode": "0o664"
     },
     {
@@ -5711,20 +5711,20 @@
     },
     {
       "path": "Ferrum-cpp-student/docs/README.md",
-      "bytes": 995,
-      "sha256": "26c5c79dbb96f193c9dd53080ce1c97cf6fdb160875db55a40cf6a665beaeaee",
+      "bytes": 977,
+      "sha256": "fa07bf165c78a05e4d1304c1314e97ed45c13720f0c7695cda17fafc2c4092e6",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/conventions.md",
-      "bytes": 5241,
-      "sha256": "efcc5bc5056b8215ba7c1f4c3faf28bffafd7210d9998dd338f5438aaa651aa9",
+      "bytes": 5162,
+      "sha256": "ec33fc87a6abe8a658f4af10a200803ef9430d8a90058590be5ba73a77e06dfa",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/README.md",
-      "bytes": 2181,
-      "sha256": "474dfd456a42349d5fc659ba6b68d5c5fb365e196d7f3153d234ce1fdc7f53a0",
+      "bytes": 2118,
+      "sha256": "98ba4b3c2e27142c56b49793f88bccd7a7d1d9d96e8753a541670ceaaa3e5fed",
       "mode": "0o664"
     },
     {
@@ -5735,8 +5735,8 @@
     },
     {
       "path": "Ferrum-cpp-student/docs/course/formats.md",
-      "bytes": 5297,
-      "sha256": "809f2d60925e8f794d22bb343b93b0de5df0f42497eeb0fac519f47200c4140f",
+      "bytes": 5286,
+      "sha256": "ef7f7c9f467b99107049521d7a99360032321eab6662f464a5e29fa43a1ef771",
       "mode": "0o664"
     },
     {
@@ -5747,14 +5747,14 @@
     },
     {
       "path": "Ferrum-cpp-student/docs/course/stages/S08.md",
-      "bytes": 2902,
-      "sha256": "13fddec38f56c9a634ed48ad3b23acc3b4745b1dccea3c19b81b084be8a1bcd3",
+      "bytes": 2896,
+      "sha256": "7b355396a364c7480d868f5681b2c931a3c000a5f2200278ea22735083de4667",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/stages/S10.md",
-      "bytes": 3786,
-      "sha256": "6418f03911910d4b894eea44c321d9331dc439c93e506ffe055b879338cb8c5a",
+      "bytes": 3777,
+      "sha256": "0dbec89106d676b481b2721fd83206e90cdb56dc13ec5b881cce7bce4acd2438",
       "mode": "0o664"
     },
     {
@@ -5801,512 +5801,512 @@
     },
     {
       "path": "Ferrum-cpp-student/docs/course/fixtures.md",
-      "bytes": 4888,
-      "sha256": "91ab3d0296872a8788bdbc185bb51c6a8c7c179338415db952a60b966f87c826",
+      "bytes": 4909,
+      "sha256": "c134ba663e5a0ed919a629052d87367761bd69447bdbefc3c50024b5f266a516",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/getting-started.md",
-      "bytes": 5732,
-      "sha256": "73443798b84cad1c3ca2ec874605cc515eaf07edd87eb48ce4c1bef7a2071b0f",
+      "bytes": 5702,
+      "sha256": "a5ef8a914f4d4f642b85e9676bab5fb69749fad4c8e10ae29b3a9a00f6e74fd8",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q09.md",
-      "bytes": 3379,
-      "sha256": "d1d7a6e569a86ce18adafa2b8f3ad90afa3f54f22e76aabad561e463d63b97ed",
+      "bytes": 3349,
+      "sha256": "731fcecc94e22fef0b3d82f175b6e74a614f7a5f5edd619889eb617bac923cf1",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S04.Q03.md",
-      "bytes": 2741,
-      "sha256": "e18edb6447d2d17d71f0bc856c4d5df60cab170c8da9d0c7f3aa8d5597e1e3cc",
+      "bytes": 2711,
+      "sha256": "6ff088a245c5624bc4f644cd2337687fb9e0864e48e3344a957dfb724e5bd127",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q11.md",
-      "bytes": 4208,
-      "sha256": "591aa848db65ee4eb0245aac200fde1796d41514b1700aa5aa55c1c358c68daa",
+      "bytes": 3666,
+      "sha256": "474b242e0f6615dbb1e5271a96369e07096c9266e54dfc75ec102d746ecb417b",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S08.Q03.md",
-      "bytes": 2824,
-      "sha256": "883cd595711ba43131c0b58dcbb5d469f5f14336a81ec0726fda3bb54bd6880d",
+      "bytes": 2785,
+      "sha256": "80aec7dbe3d3a3d9898d61623206248a0bb73e87682e89822b40312c860e4da3",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S03.Q01.md",
-      "bytes": 3453,
-      "sha256": "c68360a198fdcafb1144dbf2907ddaadb9e03c778b6c276ffac3898f064785fd",
+      "bytes": 2911,
+      "sha256": "4c649206a26d0edd9a2a37017202f4db27e82173b51502a3a46e378c5b537a78",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S09.Q07.md",
-      "bytes": 3061,
-      "sha256": "933bac2c318270b7a79ceb660ef9fd92ac5569add70b27ee50abdde23897866d",
+      "bytes": 3031,
+      "sha256": "30c829768ebd79b049afe36ed654387e5260028a508ac73956aae3456ae0ee94",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q10.md",
-      "bytes": 3215,
-      "sha256": "5a7b93f6105892a36ed1aab17e69ee6730e076f45d9e4c7c44a92c282bac089f",
+      "bytes": 3173,
+      "sha256": "94cafb5c6ded06f062ac3989fb7e7244f4da7b2dc88443e4b1b6eb5d11c23f76",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S06.Q02.md",
-      "bytes": 3324,
-      "sha256": "d1bf571ba98c3f12cfcaf2533abe7109d52855dcc60dae706bfded332f1c68b2",
+      "bytes": 3294,
+      "sha256": "bfb243e12c5d01cb65fdd5905deafed0732ba79065349a8ea99e475364cb2918",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S06.Q03.md",
-      "bytes": 3885,
-      "sha256": "7956437afb970e13fbcebd583eca1585ac886efdeec05b2e2e465270e62e521a",
+      "bytes": 3855,
+      "sha256": "71059611971460c7e96be3c33e532a3462420462215d7da69ca79d4bd290ad15",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S01.Q10.md",
-      "bytes": 3250,
-      "sha256": "c1f485c2a61cfea7f27743cb2e227582f2ab6303dbdd19ab1c99da936a0dc893",
+      "bytes": 2708,
+      "sha256": "a15ab329d0d5e4a31547fc9ce30597a277ce59c02acf43f1192dbcb738225776",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S03.Q03.md",
-      "bytes": 3534,
-      "sha256": "ce2bd1b8a66865c4e9ba1810209fa0a19805ebaa143bee5a5c83eee2affed691",
+      "bytes": 2992,
+      "sha256": "54f5df2a3158055ff09963b67a89975abcb51276b91e1b858ecbb7fbeb56283c",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S03.Q05.md",
-      "bytes": 3303,
-      "sha256": "b40af6038fc9da9008f3332f0aebc1242268cb5ee761977136891d1842298cfe",
+      "bytes": 2761,
+      "sha256": "bc451559e0aabb7cb3ffd04bee8f49a40ce62fc102e1ee1453cc5f3756bca08a",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q04.md",
-      "bytes": 2998,
-      "sha256": "f560fe8d772de2075a2103e93213904046fab7958ce0178eeff42d83d67e0266",
+      "bytes": 2968,
+      "sha256": "3ead04f7921a21ede4fa6095a33761f2163bdc959d16190431a64725e484e45c",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S01.Q04.md",
-      "bytes": 3435,
-      "sha256": "1fc850d80816258ec7cae6f98cdb54d0d2f1e489e22618ac7cd3a3ca635d9355",
+      "bytes": 2893,
+      "sha256": "476d446363f40ff7e4d647a63fac5369ec5fe131583faee7c802a36580045cf4",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S05.Q04.md",
-      "bytes": 2787,
-      "sha256": "e54455b8bb0ab1394a80ee37bf11bc90a19cd931db8b07cb8ef8571566b0ce0b",
+      "bytes": 2757,
+      "sha256": "ca27d04ec24d96ef58f63dfc8e693d4ec95b3e8a09ac2090ad9bcb7fcdc7d25b",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S04.Q05.md",
-      "bytes": 2707,
-      "sha256": "b0cd9aa588b299d06988df9421a8d21c85fcba710ad000871252fc6e1896b348",
+      "bytes": 2677,
+      "sha256": "3b1ed0b73b0838d6a76c038c4359fa8c383baddb37db623ef0a7424a45af5577",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S09.Q01.md",
-      "bytes": 2999,
-      "sha256": "b374c789cdfd06dde65a418a06cfd267bdf392a975a66e2a13040d7c7136a4e9",
+      "bytes": 2969,
+      "sha256": "7303f394e1846e589f449bd736e168cc31969eed8232a5862c013eab1e3e3927",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S05.Q01.md",
-      "bytes": 2606,
-      "sha256": "cf0431bc5f5f16fa987486d4a283a907fdc1da43c7dfbf02f3e641724caf3043",
+      "bytes": 2576,
+      "sha256": "8a65ee35a2ce9efc78819a65b179fa387b4d104311e0f2025de97ffec99f70d2",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S07.Q08.md",
-      "bytes": 3141,
-      "sha256": "f54038e5be78328a61f98465e1f63c6a814b9ae0b6764af477d5651e417855b2",
+      "bytes": 3102,
+      "sha256": "751b6d1c1faaff7ececc3c0ddc6b370114e1c27d4c5794b6759a8f011272b6e8",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S08.Q07.md",
-      "bytes": 3138,
-      "sha256": "9cc4503c84e4ccabaeac1ad17d4aede62b413c7507be56ebb8e48ca9fc5eab5e",
+      "bytes": 3108,
+      "sha256": "0ea5575017dbe3a47ed75f6f025a083e4b2909b7e1eaf639de5ca32bd92e723d",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S09.Q05.md",
-      "bytes": 3309,
-      "sha256": "ecf57f6a7011b2df02e875e1ed113531357807ccb17f9c0d9f516a2b1de1d184",
+      "bytes": 3279,
+      "sha256": "e87281f7715bc54e8d3d855010c3fb1de030815f39b9d0da3263f0628fd2b5d8",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q02.md",
-      "bytes": 2913,
-      "sha256": "37f1c8361a0e7ea12c57c45ef1e9121593077cbfa54958ff131441be86c804f5",
+      "bytes": 2883,
+      "sha256": "9ff04b2289fa90ac7f8da2d2b476fd5498963873a3765585d5a888581dba434b",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S05.Q02.md",
-      "bytes": 2574,
-      "sha256": "c94a999433bc3755f8da333be4d74f4d569a39c94bd5f7629e698ad7cecab5cb",
+      "bytes": 2544,
+      "sha256": "edac42e9752deb59c77432f905bd3b6160da92acb092d0d78c27f838dd9d7e69",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S09.Q04.md",
-      "bytes": 3077,
-      "sha256": "ad7850ec002202ab885fde9e5bb6a8db40c0a5ffff20f13020c79bc46b8b77b1",
+      "bytes": 3047,
+      "sha256": "0371693b35ce44654349c14da3e8de3730b463f7d1175da9efef9a382e4d1ed8",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S06.Q05.md",
-      "bytes": 2889,
-      "sha256": "437d0ec703a9aefc2cfdba5f3c5d2bb6575b13357dec6cdadbb14716b7581ff0",
+      "bytes": 2859,
+      "sha256": "5a745d880946cf906bad06e00730ae69d5a7d9ec700b865acac2b547d38a4a52",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S01.Q01.md",
-      "bytes": 3504,
-      "sha256": "5e50702dfb90145d44a045bffb092dd52446d93fbe56ead8f56a4bb704068378",
+      "bytes": 2962,
+      "sha256": "deb90e59fc9016ea9bfb2b6d1e7c23cc83085e29c4276cf5284702d1764590ae",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S05.Q03.md",
-      "bytes": 2660,
-      "sha256": "c3f03d5d7dd49e3dfed3a99fa84849c1e76f6b9908d5d8a75d56f18552ea04e5",
+      "bytes": 2630,
+      "sha256": "179ec2b69149720ae623c29daf1bcd9a617b804a8b25eb5c647a185fc2f807c7",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q06.md",
-      "bytes": 3325,
-      "sha256": "14b1fbc09415d63d838f5ec2854483abbbb4c2e3b3fc2f65ddfda552aaad022d",
+      "bytes": 3295,
+      "sha256": "47a6f6cd860e49195ebf7573a7bc0b752720d3c9a299086d9d81df23c00f1299",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S09.Q03.md",
-      "bytes": 3127,
-      "sha256": "8e3a77d77bcfda8b93f775c347a0a239b763f5557aab1b82c1a23979f91acf6a",
+      "bytes": 3097,
+      "sha256": "9bf4cafa4be2f09484e48dab1f9a10aaf6d5b6ef667b52d3e9afb10b575c4290",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q08.md",
-      "bytes": 3571,
-      "sha256": "9459467d3d27934c5c04235b0b6405df625f07eafbbbdcbf9fa8d2d2231759d8",
+      "bytes": 3541,
+      "sha256": "1bc9f498b696d6a2eb7d994ce601911a2fd2fdf3f370a571181c6c229e05798b",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S07.Q05.md",
-      "bytes": 3037,
-      "sha256": "d54e4f840ab7482f16908ba7d6b44e9f5ab9ee1617fefca9a19954be88438686",
+      "bytes": 3007,
+      "sha256": "64ec3a4ee1be686d8b6f2305107358b2181dafae1314143ea43d019f29bb5d17",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q05.md",
-      "bytes": 3132,
-      "sha256": "d2d9b2f500e7791383d52cae5850434c1259409ce4b3144acb2b9b36f2590433",
+      "bytes": 3102,
+      "sha256": "dfce8f418f01f16f4f4d19dc448c4a2fd3daac3dd5fad888732c68226f47c335",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q02.md",
-      "bytes": 3532,
-      "sha256": "2122528fcf14007079a57996804ec6d3c0b66b7e244d38711a5a6a5ed532b370",
+      "bytes": 2990,
+      "sha256": "f0ed0fde885b428fdf6340932640076094ffb1fa0fabeab3e1b8c331e25a4d35",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S03.Q04.md",
-      "bytes": 3317,
-      "sha256": "9b952bb47f853c677833d7bd580f25cf21a5ec1d7e0f48dfb89c512e091eb010",
+      "bytes": 2775,
+      "sha256": "7236228db0839415ffe7bfc2cf52f7a3a273f8bcfc4e0e73b5f8ec14bb4c2797",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S08.Q02.md",
-      "bytes": 3212,
-      "sha256": "41db22b8c79e57f05faee5ee76d69eab692b184cf3437ad06a22d979a2fad973",
+      "bytes": 3182,
+      "sha256": "5453bcb7d7492ec94557f38b7e64539175f238cf5772d63fc926a496b7cd326e",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S08.Q04.md",
-      "bytes": 2976,
-      "sha256": "9188cc577935e7c1f17a058c29b9a874200c587fd88acb0d7f35d4abf286ff41",
+      "bytes": 2946,
+      "sha256": "df9cb12341c6b5c5bc9d3ea91741ebd0682b52bb8008c5396d3de42de3388992",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S03.Q08.md",
-      "bytes": 3959,
-      "sha256": "8e2f9a28f505ed5c36537f05e5e21de3586863228e4654b7285d429a7f6a5eb9",
+      "bytes": 3417,
+      "sha256": "ad3229267c053a6c18ebe428b7e3d434d6e44a3eb1391b797dabfe46a0ea94c3",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S03.Q06.md",
-      "bytes": 3366,
-      "sha256": "75f87aaeaaefdff77ebb104ebe01fea645f0d8ee4b2af765d432b67b68be2e95",
+      "bytes": 2824,
+      "sha256": "cee400167ddc75e1132b369a10763a4bfb02459fe187168c57e5eb94cde417f2",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q12.md",
-      "bytes": 3073,
-      "sha256": "3eb0090e5632333ea2ca87a6042e376b70444bed84e50882b36a84eaf2076c4c",
+      "bytes": 3049,
+      "sha256": "d507ddc9b49e04bcea1550e372dd15fe1ba8f2ab74196ada96ef587e4fb89144",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S04.Q08.md",
-      "bytes": 3353,
-      "sha256": "52dcdbf18b66377f952d33658a38270e6233cd64959e11b7d57917122e34eae3",
+      "bytes": 3323,
+      "sha256": "05e145e5cd93188f0e919fc4cca8f97f21094e1c5a7fec002c500dde61c4643a",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q09.md",
-      "bytes": 3503,
-      "sha256": "a0226083b73864ec624cc12edd94f3248a408ae0800952523e28a5f3bad378ab",
+      "bytes": 2961,
+      "sha256": "37a06b67381f3375d289b2cb1875ecb91295d1df340d5bc3a2824b923dd3fbea",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q07.md",
-      "bytes": 3443,
-      "sha256": "1b5e62ce94a6ebc4e460f80522cecca15785250add4305059ae06e893d6c19e9",
+      "bytes": 3407,
+      "sha256": "2d54600610eb69a58a1ab2d84c656ddcfe3b0fd6afe9b3e3f4eaa70eb96b0131",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S07.Q04.md",
-      "bytes": 2476,
-      "sha256": "ebe3fe14116e184db7305b2d4b242c00cd5298cfbf55512475d1464efbab3580",
+      "bytes": 2446,
+      "sha256": "25c9fff3b578ce2a8e05c60c8cb3523fa7e53b54e2b18f0b1dd532140b98a265",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S08.Q01.md",
-      "bytes": 2897,
-      "sha256": "ea426dc3baabd8f5dd08b7a72f10abf8de284388a7358171a63e679b33f0bf9a",
+      "bytes": 2867,
+      "sha256": "d3a9e26b421be45e7fa6de587ef0dafb0ace623c7a92c2a9e57b7dab901796c8",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S07.Q01.md",
-      "bytes": 2860,
-      "sha256": "22d82ef5af51ad81f70e1dc417481f5e0614b82ad335c7deca82bcd962c3f1b2",
+      "bytes": 2830,
+      "sha256": "a2ec86f1b7a925b8a612d4134527ec018640dbd8e73265af726da27982697e19",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S01.Q09.md",
-      "bytes": 3599,
-      "sha256": "ee0c7b9bf29e6fa8de17849a92e81786c9444ddc6cd3c3fcc426525029a5e775",
+      "bytes": 3057,
+      "sha256": "64d00ff2fa4ae4a67d80682888e9813a731bec54f65373b4d87beac9b9bacc9d",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q04.md",
-      "bytes": 3434,
-      "sha256": "5ff71f744983aa620f06bf1b4f720f5572487283dc80157decddacc19918d30d",
+      "bytes": 2892,
+      "sha256": "4d42a40d7a288587be425b4fb18388ade7ce84a95b9457e3fc877725ad3b1021",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S04.Q04.md",
-      "bytes": 2823,
-      "sha256": "d1c33cc406ad01ba95eaf34c03c01c80337a1c9862a2ec6a81f687921ccd591b",
+      "bytes": 2793,
+      "sha256": "4a5e09a14a00e32501e3b4df2a0dbf4be1532acaca5b90ea41e0beaf4ca60f7e",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S01.Q08.md",
-      "bytes": 3553,
-      "sha256": "2577ecd6afc8ab53c4c407cf0fa8fd6ac492a04fc803903889128d013b76da32",
+      "bytes": 3011,
+      "sha256": "27bcd37b0df497aa0ec4862d2f997aef7b9b50d385402ab73fcae314514b09d3",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q11.md",
-      "bytes": 3094,
-      "sha256": "8263f31b60bca296a2a8bcb845d75e5dd95df7f38bcbdc356e2390690d50fa5d",
+      "bytes": 3064,
+      "sha256": "0fe461c98730ecdc69daa63fdba595b99426f935483b6a13ea319e5c7720488d",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q07.md",
-      "bytes": 3673,
-      "sha256": "38e52ebcc19b0d7b1c15e8c8fa39d5f38e7b0144d51d5fa8095af12b48dc0e1c",
+      "bytes": 3131,
+      "sha256": "d528a9bc492fb40d3f4c7372dd1b6f79b57ec654e482239801d5f07cddbd2fb3",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S07.Q03.md",
-      "bytes": 2521,
-      "sha256": "617ac49a2a1638a86bd08e1cb003b32540cccf00cb29efab197b25efe95cf249",
+      "bytes": 2491,
+      "sha256": "8f56cd695ed814aaff296a40decf01e530f4e5fa0823a6a0ef06a15734e4b572",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S01.Q03.md",
-      "bytes": 3206,
-      "sha256": "6aa8ac13c477be4ecc28bc27eff6a74622da66686a3475ac0db2d89fc2c16b43",
+      "bytes": 2664,
+      "sha256": "394856c8a06281d82a99c420e4835827351a8d35d0a6720d8de5ed4b38c2a1df",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S01.Q07.md",
-      "bytes": 3347,
-      "sha256": "cb1aaad478d2189987354a78a16bbf7b35c805df8eca4eb6a934c261589319cc",
+      "bytes": 2805,
+      "sha256": "7fd37269d26d8487554fe121c974df6085da6119f4c7b92df8b1b517a2f4677b",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S09.Q02.md",
-      "bytes": 2955,
-      "sha256": "5fff13f84f173f16d5f9a8899bad3a97c0e763fbda49b633e54f2a4d9f63ead5",
+      "bytes": 2925,
+      "sha256": "c05acffefc32a44f924c0f90474e50a6d7445373a3994958120875d81bef2e81",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q12.md",
-      "bytes": 3442,
-      "sha256": "1bab4d43fa4391a397a8aaacc43d5bb74427ca08770e42c9312a99e51732a628",
+      "bytes": 2900,
+      "sha256": "cd7cf21b84685e52ce4913982890b919fc0c0951d112975295f056888a7f83b6",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q10.md",
-      "bytes": 4212,
-      "sha256": "81db18650831a687a9b654a8977d9d4bb1af7ceb2a9a893f4c83e468e1c5494e",
+      "bytes": 3670,
+      "sha256": "3ab2dc22c1c7ce3e2ded177e81dd944fbe76bd18c2b533c41282c4596f120346",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q08.md",
-      "bytes": 3377,
-      "sha256": "366b835afb40bf8ed5b2a8b7ff08b14d03848cc8441419057aa6e6c6a97f482b",
+      "bytes": 2835,
+      "sha256": "8835476fef039625bf85fb5944d05406cfe4c24ba4e2dcd26416275f9af08f2a",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S08.Q06.md",
-      "bytes": 3317,
-      "sha256": "b30c1676ccada026bbc3fdfc5006c1e44a01a45107c175f0a8fbebe103c95fba",
+      "bytes": 3287,
+      "sha256": "489e8fff1d1ee91db70bd7b7f9db3e5c910b6a4a052322784ef9d780d7c7376e",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S03.Q02.md",
-      "bytes": 3415,
-      "sha256": "9c1a6c0e9f1f983ebc378a3f48c500a0414ca512827aacf47f8e6d970b72b139",
+      "bytes": 2873,
+      "sha256": "684a9b2f905f55de933c37974940f9779ddd50b42681049c0ff6cbe7095bb19d",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S01.Q02.md",
-      "bytes": 3264,
-      "sha256": "9d87e5fcd7849dfefc77f2855c808cc7f6bcc458419cd9931bea152e130c64f8",
+      "bytes": 2722,
+      "sha256": "c99dde5f98c990a0b8d0135e608b5dd5c86c3c73a240ee10760074788a3393d8",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S06.Q01.md",
-      "bytes": 2879,
-      "sha256": "c22a5b9d47c69f1deb1b421d28250fc1b350766cd91ebcff7e65bb46490b3136",
+      "bytes": 2849,
+      "sha256": "9ec7ded66e8abc2cf5ef5476c0b96de9374552340f284dab0f69f90ad3a027e0",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S01.Q06.md",
-      "bytes": 3202,
-      "sha256": "189b80b5c96e17745965936a1651d3a515a96b87889fd72453ce7475ceea7b7a",
+      "bytes": 2660,
+      "sha256": "124a9a8bd1d859989757e1d59415b37d3996f285280f7d23903e496060089976",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S03.Q07.md",
-      "bytes": 3326,
-      "sha256": "08469e0b55475fd4681dbccda45c55ad24e86d53f7944639a78db8145f800b26",
+      "bytes": 2784,
+      "sha256": "388f6a039837e2a32381f06ef077127466d369833bc9cbd2ba1ace9933364477",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S04.Q07.md",
-      "bytes": 2988,
-      "sha256": "05ca8437eaafd66e113eb7cf6368649dacb6599fb3190e7b62004fda95a3eb4d",
+      "bytes": 2958,
+      "sha256": "b274d46a662fabf8ae8ecb6e03f8087abb9f75ce1e29adaca5e37edf5013213b",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q06.md",
-      "bytes": 3308,
-      "sha256": "538b4daca3ed4f2ea17f80c3effc2ef57771514d263d4fbd0bcc684352e8d243",
+      "bytes": 2766,
+      "sha256": "237c39b7db6462bd2d74688d1ce7842228f087abbaa6e4c17ba5ebff6fe5402c",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S07.Q02.md",
-      "bytes": 2506,
-      "sha256": "c8ca5a049fa60938ed8e76eb66037000af302c60edc1cec2c186617210a2af0f",
+      "bytes": 2476,
+      "sha256": "386ae2cc5173cae551310d31c851dccf5e51cb0644bc5194da4c29dbd0b13562",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S08.Q08.md",
-      "bytes": 2741,
-      "sha256": "a7e29640b27bb7df3580523c35061a67ad954531937ae3575bc5e9811c677588",
+      "bytes": 2711,
+      "sha256": "41847ff305dea38be1dea377228d28f2b16caf01e254cfffeb66c8f535968f42",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q03.md",
-      "bytes": 2791,
-      "sha256": "43e67b7a9f14d1d94d79571892a43552afa0e5c270a784d58c38ba500b99a717",
+      "bytes": 2761,
+      "sha256": "8b10ccd08949023437abf688abebd8ff409a213bdefffc8c946789675cc754eb",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S06.Q04.md",
-      "bytes": 2737,
-      "sha256": "c8ed4b83d86bd965d99fbeb9c4b94871e26e8f6ca53cdd0c855a531e81bcf443",
+      "bytes": 2707,
+      "sha256": "c8c0b3387b342326fc4e4e8af652cc771659187e3b4a353ac66ff84271f5d505",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S07.Q07.md",
-      "bytes": 2738,
-      "sha256": "8b2b1f6bb8843384dc6f2ad61dd7191b2cfc9305f6a9ae1ff2984341e3aeddbe",
+      "bytes": 2708,
+      "sha256": "50792a139b67070e8ce953a910cf235727aa2efd875c03183631a7f2c7c66c2d",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S05.Q05.md",
-      "bytes": 2734,
-      "sha256": "7a01d47f38792723c93538f0e755fe6499b71f609ad121c7fadeb813c7545506",
+      "bytes": 2704,
+      "sha256": "7ba00f4fdccb4b5ed57b955fc2c1c580b1609c32949f69f7dae8e988ff493c4b",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S04.Q01.md",
-      "bytes": 3260,
-      "sha256": "c9951cbe9896c832a30f40f2d8bbdb7c4629251af193441b21b555d0ea10b23f",
+      "bytes": 3230,
+      "sha256": "51090ee25a7464c696a60e865cfc015f1edc366f9cdba18b3f8565c2722fe239",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S07.Q06.md",
-      "bytes": 2784,
-      "sha256": "5e05b1dca845ffe7442167b626cc636a634b97b2b8b2370eaad173db5cac900f",
+      "bytes": 2754,
+      "sha256": "83cc2826188d7728561905ada60b276ca911b270e74888d5dbb54f3310b6d0d9",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S10.Q01.md",
-      "bytes": 2532,
-      "sha256": "b7e0a5a6ddafd83a907c5bbed6ff0e7ba95fda06ff1b30aa8aa574aa3169fb6e",
+      "bytes": 2502,
+      "sha256": "6fc747ff8167a06942befc030a869bbbdea9f70279cb83dc3b1e684e4135d1f0",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S01.Q05.md",
-      "bytes": 3296,
-      "sha256": "9f28d368637ff33b8d11074dcaabe45771a0af4716bf2b9daa3329a650686946",
+      "bytes": 2754,
+      "sha256": "1a555f8e85dd5b72ca271e3e854a68180f62532241ab19223df9b925f3b9de70",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S04.Q06.md",
-      "bytes": 2495,
-      "sha256": "4c3f4b45c118c701e0adcb52a8738f6026702fdbc6165631445fcd6f96626060",
+      "bytes": 2465,
+      "sha256": "c2f5f505cdcba01d48fb8663663164fabd0bb5bf4442b5493e90cbb111181f5a",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S04.Q02.md",
-      "bytes": 2843,
-      "sha256": "f62f9af8b075427a0cbe027bc8c7b39a1bccb1007d2de010ab5eb7fab80f6f11",
+      "bytes": 2813,
+      "sha256": "856086239335bd20c33f954be1f665b5174523ffb5a9318139c2cd6966c58675",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q01.md",
-      "bytes": 3359,
-      "sha256": "d8103e97186ed185e29d0f32bd9b68093f2231de146560933584f75633c472e3",
+      "bytes": 2817,
+      "sha256": "b21b164593ae38871d43bff2a2ec1894a7618d8d29895269bee2d6cb3527c699",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S09.Q06.md",
-      "bytes": 2941,
-      "sha256": "a31f2e8c15b3642fc92df5b90bf09733233d5f51a5578e608e57245eb14a9c07",
+      "bytes": 2911,
+      "sha256": "8ed2a3cf9cc13c31594ca5e73e784c9a5dcd950286c8e129ee70ce9b46eabc4f",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q03.md",
-      "bytes": 3246,
-      "sha256": "d3d926d467a3c0b1136406d48bb1f6b50a722b72fff07ba60b1b6ec649ffbd96",
+      "bytes": 2704,
+      "sha256": "5fe0e4000d3fcac8797d9a884490c46a0cf8143c6cfdcba3141552c1063b4c80",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S08.Q05.md",
-      "bytes": 2799,
-      "sha256": "bab8bfe142ade853c07d7c32070528085de6ba219f8c4971e7eba169433cda3a",
+      "bytes": 2769,
+      "sha256": "c3a56528c6cf6ccdebab1697190a654fb057ec03a07eef7efc0a9d24047e97b2",
       "mode": "0o664"
     },
     {
       "path": "Ferrum-cpp-student/docs/course/questions/S02.Q05.md",
-      "bytes": 4173,
-      "sha256": "12582ff7a81ca6ff52069865434236650df6dccffc35711abe508adf519504be",
+      "bytes": 3631,
+      "sha256": "a1c3f341c269e3dd7eb519fe01cb558414646f327c67899bcf0ecedbb6bbb1eb",
       "mode": "0o664"
     },
     {
@@ -9767,8 +9767,8 @@
     },
     {
       "path": "Ferrum-cpp-student/labs/README.md",
-      "bytes": 7006,
-      "sha256": "6ad7dad26605f76a576b24e5a9c1ee51e113e648cb070c967b984f47849d077f",
+      "bytes": 6745,
+      "sha256": "d9d20366b4b47e01356b61168b320f99485a943ae7946de16adc1fb258035916",
       "mode": "0o664"
     },
     {
@@ -9905,8 +9905,8 @@
     },
     {
       "path": "Ferrum-cpp-student/apps/README.md",
-      "bytes": 760,
-      "sha256": "2562cd8ee43609b2894d66536a81cdd0e4b28f1bd20ad4e477351e2fac1a9bc7",
+      "bytes": 729,
+      "sha256": "44576c3babebe9af8930f94e1dfbe9658bdda621ef3f26210d42aa90d63f686b",
       "mode": "0o664"
     },
     {
