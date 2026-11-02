@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-11-02",
   "files": [
     {
       "path": ".gitattributes",
@@ -8,13 +8,18 @@
     },
     {
       "path": ".github/workflows/materials.yml",
-      "bytes": 470,
-      "sha256": "856d8ec48c2105ce4616a80c6fae9bb1bc3d913a8ab2cf31e6cf5c879b0c6e9a"
+      "bytes": 569,
+      "sha256": "d67ff536e8a6273328bde67ce63bd239ee17685678319ab00adddf020d35277b"
     },
     {
       "path": ".gitignore",
       "bytes": 104,
       "sha256": "b90d66de4eda6cd43895d41186cfd70ae8247185966c9d6f882ced76c72bd276"
+    },
+    {
+      "path": "00_课程大纲/《数据库系统设计与实现课程》教学日历.doc",
+      "bytes": 64000,
+      "sha256": "8dd13b01b906c4eaa9b82f3ceea5b155c289840006122e57a28c8b2cd4aa0154"
     },
     {
       "path": "00_课程大纲/计算机学院_数据库系统设计与实现_40_3_张书豪_教授.docx",
@@ -27,84 +32,39 @@
       "sha256": "05a5794a738d40303ec38155e291ef95391583b887e3148746b5b8144b273b3f"
     },
     {
-      "path": "01_课件（第6版）/第6版PPT 第10章 关系查询处理和查询优化.ppt",
-      "bytes": 9275392,
-      "sha256": "c379bea346842c3404872a09f15fe67e8e4d25be03ebd4d34dab60857b52dd78"
+      "path": "01_课件（第6版）/01_系统基础.pptx",
+      "bytes": 101624,
+      "sha256": "e4c91cdb8cc784f2f309791fd5a8dae5e8a96e57425779de146a7c61a34049b4"
     },
     {
-      "path": "01_课件（第6版）/第6版PPT 第11章 数据库恢复技术.ppt",
-      "bytes": 46113280,
-      "sha256": "f2016078ab86323bbdab0e04dd564061c708beded654d50eb8fe0c5b68fadabc"
+      "path": "01_课件（第6版）/02_存储与索引.pptx",
+      "bytes": 207178,
+      "sha256": "d7ff88ae59403b60e630a4736c19721d40fbf2bf481d36a87582b5b7238dc138"
     },
     {
-      "path": "01_课件（第6版）/第6版PPT 第12章 并发控制.ppt",
-      "bytes": 10810880,
-      "sha256": "b66bab95ac21e5bd9ec700ee3381f03eb97cd1ea6411f3b41b2ce1e65a52f98a"
+      "path": "01_课件（第6版）/03_查询处理.pptx",
+      "bytes": 202945,
+      "sha256": "66a9a083cf50aad7457735b9b53204e85575b6899cc4d985fa5897c401436be2"
     },
     {
-      "path": "01_课件（第6版）/第6版PPT 第13章 数据库管理系统概述.pptx",
-      "bytes": 3065653,
-      "sha256": "dbaf6088222a811eeb9a8042ff16fa436187e5388c799462dbd2c67816a5f0e6"
+      "path": "01_课件（第6版）/04_事务与恢复.pptx",
+      "bytes": 243009,
+      "sha256": "76e74bbf33c8398748abd9feb77d8ec04f16895b8549b05eda4a874cd1083640"
     },
     {
-      "path": "01_课件（第6版）/第6版PPT 第1章 绪论.pptx",
-      "bytes": 3766570,
-      "sha256": "7605f9ea1050d9841c50fdda28fd00f97cbbf0eb913021a27698216c85868b55"
+      "path": "01_课件（第6版）/05_系统集成与评测.pptx",
+      "bytes": 101970,
+      "sha256": "eee724c4b55062de50f86c771938bb5eb9781d7aa538715d2e534594fd93bc7e"
     },
     {
-      "path": "01_课件（第6版）/第6版PPT 第2章 关系数据库.pptx",
-      "bytes": 2314981,
-      "sha256": "8adf2d0189f458d2a2af1dc4d57437de02db795f071447c161e87981eae3c13b"
+      "path": "01_课件（第6版）/README.md",
+      "bytes": 4757,
+      "sha256": "35e6ba14636f41ad829a1ae74081dd71a76e8df6e2dee32b60ff68e1992b1854"
     },
     {
-      "path": "01_课件（第6版）/第6版PPT 第3章 关系数据库标准语言SQL（1）--3.1&3.2.pptx",
-      "bytes": 3538889,
-      "sha256": "8cc6584e1bc31dd3237221d42efdd5129e06e2d0ca922dc3258e616ae031720c"
-    },
-    {
-      "path": "01_课件（第6版）/第6版PPT 第3章 关系数据库标准语言SQL（2）--3.3.pptx",
-      "bytes": 3668519,
-      "sha256": "709437c68b4be6b4e0a47b65d388b26db0e60fd9e75dc469d61a94e49519207f"
-    },
-    {
-      "path": "01_课件（第6版）/第6版PPT 第3章 关系数据库标准语言SQL（3）--3.4--3.7.pptx",
-      "bytes": 3492116,
-      "sha256": "03dc3d5b26769d8e8e2f55ae4e42f298922e3acb639b618f6e7237af1afc9709"
-    },
-    {
-      "path": "01_课件（第6版）/第6版PPT 第4章 数据库安全性.pptx",
-      "bytes": 3944102,
-      "sha256": "2f7d84cce76e41060d14d4d859407c0d140a90c30b7dd15c5a2690e950528e2e"
-    },
-    {
-      "path": "01_课件（第6版）/第6版PPT 第5章 数据库完整性.pptx",
-      "bytes": 3523100,
-      "sha256": "44472bc8b68b057083935dc4fbb89a1b5f861756c1beb56f736c5a8090b7c7ff"
-    },
-    {
-      "path": "01_课件（第6版）/第6版PPT 第6章关系数据理论.pptx",
-      "bytes": 4696778,
-      "sha256": "b0a4ea87d6524436851877ee94bfd1acfe2ee0e12199ab34fb4a215e899c745a"
-    },
-    {
-      "path": "01_课件（第6版）/第6版PPT 第7章 数据库设计(1).pptx",
-      "bytes": 4980139,
-      "sha256": "1b7a44a08c0f1c16846a3b7e80dd5ab3cef70c92e59378373510bc4b2dce53cb"
-    },
-    {
-      "path": "01_课件（第6版）/第6版PPT 第7章 数据库设计(2).pptx",
-      "bytes": 4916164,
-      "sha256": "70e8823ca262fbfd4a769c5793bef325776c69915c75f3015806308752e9dfa0"
-    },
-    {
-      "path": "01_课件（第6版）/第6版PPT 第8章 数据库编程.pptx",
-      "bytes": 4664067,
-      "sha256": "408145818a094e67702ab98b7545ec32719bd149ee78b48feda02efd5ed18bab"
-    },
-    {
-      "path": "01_课件（第6版）/第6版PPT 第9章 关系数据库存储管理.pptx",
-      "bytes": 6684624,
-      "sha256": "cbb129f71c360ccbc786ee40255a0b494aca32d9db633a72fad9904a0af58501"
+      "path": "01_课件（第6版）/课程安排.json",
+      "bytes": 13659,
+      "sha256": "6f7107938b4a3e07ea59e005ecb1dd94e2c6787ad046f4910e96b9e98e30f541"
     },
     {
       "path": "02_历年赛题/2023/2023数据库系统设计赛技术方案V3.0.pdf",
@@ -323,8 +283,8 @@
     },
     {
       "path": "03_实验材料/README.md",
-      "bytes": 715,
-      "sha256": "fe5198d9ba9cd9507b2cb5191000313368290cfef820a0bb37d2fb4207bb7f24"
+      "bytes": 486,
+      "sha256": "0fd87e0e1b39de4078d483cf9fd2064ed70f5d76b697759585afb0191225c5fd"
     },
     {
       "path": "03_实验材料/report_template.md",
@@ -392,6 +352,11 @@
       "sha256": "11c23382fdd3006b048e1cf587945de6b1075b822971da8701982159e9d54414"
     },
     {
+      "path": "03_实验材料/课堂实验安排.md",
+      "bytes": 3798,
+      "sha256": "54e0a392bdc9ff88cd55564803f0c6aa782a927f66a283af676027bc4edbd684"
+    },
+    {
       "path": "04_Ferrum实验基础/32学时实验映射.json",
       "bytes": 3841,
       "sha256": "f53c20fd03073a2331f81273f4bc495e29e589ccd20e2d0d132cdd68a80a5cfe"
@@ -438,8 +403,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 2587,
-      "sha256": "4b5b2095a7e24953c6dd81d12af9e41e176f955ef002573ecc01397080a2236d"
+      "bytes": 2948,
+      "sha256": "a254308ba03918ba77b3cc624750e9cf3cdb4e956266b04278b536500a1a0164"
+    },
+    {
+      "path": "scripts/validate_modules.py",
+      "bytes": 2231,
+      "sha256": "e7de3436032eaddb5b9279d54ca585473f03da206b7b3f252e7639142533afbe"
     },
     {
       "path": "scripts/validate_student.py",
@@ -9023,8 +8993,8 @@
     },
     {
       "path": "课程实施与赛题映射.html",
-      "bytes": 1382,
-      "sha256": "eac17e373ad97f55ccc16377627894a094b62d497356f8fe13d3f4761642cc1a"
+      "bytes": 13038,
+      "sha256": "f567dbb7474abd21d6019f00c394b4e3894fd3f4e8700217d50705255c032b97"
     }
   ]
 }

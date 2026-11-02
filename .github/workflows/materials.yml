@@ -18,3 +18,5 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s 03_实验材料/tests -v
       - run: python scripts/validate_student.py
+      - name: Module curriculum and slide packages
+        run: python scripts/validate_modules.py
