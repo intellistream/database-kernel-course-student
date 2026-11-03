@@ -8,8 +8,12 @@ assert len(data)==5 and sum(m['hours'] for m in data)==40
 lessons=[l for m in data for l in m['lessons']]
 labs=[l for m in data for l in m['labs']]
 assert [l['no'] for l in lessons]==list(range(1,21))
-assert [l['no'] for l in labs]==list(range(1,9)) and sum(l['hours'] for l in labs)==32
-assert all(l['week']==f'第{10+l["no"]}周' and l['hours']==4 for l in labs)
+assert [l['no'] for l in labs]==list(range(1,11)) and sum(l['hours'] for l in labs)==40
+assert [int(re.search(r'第(\d+)周',l['week'])[1]) for l in labs]==[4,5,6,7,8,9,10,11,12,14]
+assert all(l['hours']==4 for l in labs)
+for l in labs:
+ pre=lessons[l['prerequisite_lesson']-1]
+ assert int(re.search(r'第(\d+)周',pre['week'])[1])<=int(re.search(r'第(\d+)周',l['week'])[1])
 for l in lessons:
  expected=f'第{3+(l["no"]-1)//2}周第{1+(l["no"]-1)%2}次' if l['no']<=16 else f'第{l["no"]-6}周'
  assert l['week']==expected and l['hours']==2,l
@@ -36,5 +40,5 @@ for m in data:
    if n.endswith('.xml'):
     value=z.read(n).decode('utf-8')
     assert '参考要点：' not in value and '课堂练习参考答案' not in value
-assert total==188 and tables>30 and connectors>50
-print(json.dumps(dict(modules=5,lessons=20,labs=8,slides=total,native_tables=tables,native_connectors=connectors),ensure_ascii=False))
+assert total==190 and tables>30 and connectors>50
+print(json.dumps(dict(modules=5,lessons=20,labs=10,slides=total,native_tables=tables,native_connectors=connectors),ensure_ascii=False))

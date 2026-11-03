@@ -1,0 +1,152 @@
+[
+  {
+    "no": 1,
+    "title": "系统骨架",
+    "week": "第4周",
+    "hours": 4,
+    "tasks": [
+      "配置Ferrum环境、接口与测试框架",
+      "接通模块调用与日志输出",
+      "提交依赖图与一个失败复现"
+    ],
+    "reading": [
+      "L0"
+    ],
+    "prerequisite_lesson": 2
+  },
+  {
+    "no": 2,
+    "title": "页与缓冲池",
+    "week": "第5周",
+    "hours": 4,
+    "tasks": [
+      "实现页读写、pin/unpin与替换",
+      "验证脏页写回与失败清理",
+      "记录页面与缓冲帧的状态变化"
+    ],
+    "reading": [
+      "L1"
+    ],
+    "prerequisite_lesson": 4
+  },
+  {
+    "no": 3,
+    "title": "记录与目录",
+    "week": "第6周",
+    "hours": 4,
+    "tasks": [
+      "实现槽目录与堆表增删改查",
+      "维护表定义和物理对象对应关系",
+      "验证重启后的记录与元数据"
+    ],
+    "reading": [
+      "L1"
+    ],
+    "prerequisite_lesson": 5
+  },
+  {
+    "no": 4,
+    "title": "索引访问",
+    "week": "第7周",
+    "hours": 4,
+    "tasks": [
+      "实现B+树查找、插入与分裂",
+      "完成跨叶范围扫描与唯一性检查",
+      "提交树结构图及堆索引对照结果"
+    ],
+    "reading": [
+      "L2"
+    ],
+    "prerequisite_lesson": 7
+  },
+  {
+    "no": 5,
+    "title": "基础执行器",
+    "week": "第8周",
+    "hours": 4,
+    "tasks": [
+      "实现扫描、过滤与投影",
+      "实现Append与Unique并运行公开用例",
+      "验证NULL、重复行及结束状态"
+    ],
+    "reading": [
+      "L3"
+    ],
+    "prerequisite_lesson": 10
+  },
+  {
+    "no": 6,
+    "title": "查询引擎",
+    "week": "第9周",
+    "hours": 4,
+    "tasks": [
+      "接通连接、聚合与优化规则",
+      "对照SQL结果、计划与执行统计",
+      "解释一项优化及其回归结果"
+    ],
+    "reading": [
+      "L3"
+    ],
+    "prerequisite_lesson": 12
+  },
+  {
+    "no": 7,
+    "title": "锁与死锁",
+    "week": "第10周",
+    "hours": 4,
+    "tasks": [
+      "实现锁管理、等待与死锁处理",
+      "验证并发调度和中止清理",
+      "保存事件顺序和逐事务结果"
+    ],
+    "reading": [
+      "L4"
+    ],
+    "prerequisite_lesson": 14
+  },
+  {
+    "no": 8,
+    "title": "MVCC与快照",
+    "week": "第11周",
+    "hours": 4,
+    "tasks": [
+      "实现版本可见性与快照",
+      "推演写偏斜并验证多事务读写",
+      "提交版本链与可见性对照记录"
+    ],
+    "reading": [
+      "L5"
+    ],
+    "prerequisite_lesson": 15
+  },
+  {
+    "no": 9,
+    "title": "日志与恢复",
+    "week": "第12周（本周理论后）",
+    "hours": 4,
+    "tasks": [
+      "接通WAL、检查点与启动恢复",
+      "验证成功提交、未完成事务和重复重启",
+      "核对表、索引、目录与客户端观察"
+    ],
+    "reading": [
+      "L6"
+    ],
+    "prerequisite_lesson": 18
+  },
+  {
+    "no": 10,
+    "title": "系统综合验收",
+    "week": "第14周（本周理论后）",
+    "hours": 4,
+    "tasks": [
+      "运行功能、并发与恢复回归",
+      "提交一次可解释的性能对照",
+      "系统演示与个人源码答辩"
+    ],
+    "reading": [
+      "L7"
+    ],
+    "prerequisite_lesson": 20
+  }
+]
