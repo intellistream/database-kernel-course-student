@@ -40,5 +40,5 @@ for m in data:
    if n.endswith('.xml'):
     value=z.read(n).decode('utf-8')
     assert '参考要点：' not in value and '课堂练习参考答案' not in value
-assert total==190 and tables>30 and connectors>50
+assert total==sum(m['slides'] for m in data) and tables>30 and connectors>50
 print(json.dumps(dict(modules=5,lessons=20,labs=10,slides=total,native_tables=tables,native_connectors=connectors),ensure_ascii=False))
