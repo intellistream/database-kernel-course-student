@@ -33,38 +33,38 @@
     },
     {
       "path": "01_课件（第6版）/01_系统基础.pptx",
-      "bytes": 169453,
-      "sha256": "1960afc715004d15f80d90b4fa2e9d75ae25cd0b1bdce53c1b351479d22ea764"
+      "bytes": 327678,
+      "sha256": "0c4afc461954be3eae7b18922dc0743a03a2b19b3990c7710567d21e53646d6f"
     },
     {
       "path": "01_课件（第6版）/02_存储与索引.pptx",
-      "bytes": 384173,
-      "sha256": "9c927435f4d9fcdb23ac367bd760ddba1adb1d3f2d522360298fcfa34acc46ec"
+      "bytes": 782454,
+      "sha256": "848924d81cd0f734c54cefdfa6ea2cde65e6b64f2dc0411ad6c656dd842a4d2f"
     },
     {
       "path": "01_课件（第6版）/03_查询处理.pptx",
-      "bytes": 394176,
-      "sha256": "a7ff244410f973bce758acb0d9419ec4e491548b843c0a145758f78c3dd62f91"
+      "bytes": 787729,
+      "sha256": "655ea7ceb37a7e14a9c9f06952272f5d5b5e29c92c76494f50c559f62aedcc96"
     },
     {
       "path": "01_课件（第6版）/04_事务与恢复.pptx",
-      "bytes": 477605,
-      "sha256": "c32e296b7ea5a644c4038eb39f3332dadcf66e60c7e5afba0dd5d87926cce117"
+      "bytes": 952933,
+      "sha256": "b3cab3df6d9d4ffb893073f49d16f53041570a8abdfda3b1b1ebb74d818a9c91"
     },
     {
       "path": "01_课件（第6版）/05_系统集成与评测.pptx",
-      "bytes": 170120,
-      "sha256": "f785b95ae7b022f3197cf6f5cad4d8e94ee8001f58ffd2632c048382680373f1"
+      "bytes": 327913,
+      "sha256": "1890ba6e66741b3c2990ea8de6bf950adffe9fbf4a323e0fff037cfb4a5d7704"
     },
     {
       "path": "01_课件（第6版）/README.md",
-      "bytes": 15217,
-      "sha256": "9e3707af7fc0b8dbcda11e94e904dc2b3311467df9401d0c22bf0c8745d6ee7e"
+      "bytes": 4121,
+      "sha256": "be9eb25c9b8d7a958e86a05ea968283a65453189e6b1295d6de545f338573dc2"
     },
     {
       "path": "01_课件（第6版）/课程安排.json",
-      "bytes": 14729,
-      "sha256": "a5d608db5c3ec0fc36024f3f0ded217265a50a324fa1607d890ad0cc71812bac"
+      "bytes": 14747,
+      "sha256": "dc81eb4ac4ab7d454f9338a8082501aa93ce645754d33a2a6a4fb17a5b0cde8e"
     },
     {
       "path": "02_历年赛题/2023/2023数据库系统设计赛技术方案V3.0.pdf",
@@ -408,8 +408,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3048,
-      "sha256": "e6b765308f4474be5c406760c2a902c1a7659a4ea5412e91c0e8f8cd900ac72d"
+      "bytes": 3098,
+      "sha256": "722ea4cadabf9ec2f9ea5ebe3685ae9dfc66083c3333f7c5e050f81c28c58153"
     },
     {
       "path": "scripts/validate_modules.py",
@@ -8998,8 +8998,8 @@
     },
     {
       "path": "课程实施与赛题映射.html",
-      "bytes": 13612,
-      "sha256": "d9a9a0d0fa3f7bacaa00997fb9c19300c8f95bfd870e37673e4622c0caf5cca8"
+      "bytes": 13614,
+      "sha256": "82d9d06ceb41b6ca9eef2324bc1da872dd1c326c524df70374ca8ffa49e10a0e"
     }
   ]
 }
