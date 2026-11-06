@@ -4,6 +4,8 @@ import json, re, zipfile, xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 BASE=ROOT/'01_课件（第6版）'
 data=json.loads((BASE/'课程安排.json').read_text(encoding='utf-8'))
+index=json.loads((BASE/'内容索引.json').read_text(encoding='utf-8'))
+assert sum(p['kind']=='break' for p in index['pages'])==20
 assert len(data)==5 and sum(m['hours'] for m in data)==40
 lessons=[l for m in data for l in m['lessons']]
 labs=[l for m in data for l in m['labs']]
@@ -36,6 +38,12 @@ for m in data:
   for l in m['lessons']:
    assert l['title'] in alltext
    assert 1<=l['pages'][0]<=l['pages'][1]<=m['slides']
+   item=next(x for x in index['lessons'] if x['no']==l['no'])
+   assert item['pages']==l['pages']
+   page=item['break_page']
+   assert item['periods']['1'][1]+1==page==item['periods']['2'][0]-1
+   break_text='\n'.join(t.text or '' for t in ET.fromstring(z.read(f'ppt/slides/slide{page}.xml')).findall('.//a:t',ns))
+   assert '课间休息' in break_text and item['break_question'] in break_text.replace('\n','')
   for n in z.namelist():
    if n.endswith('.xml'):
     value=z.read(n).decode('utf-8')

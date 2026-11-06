@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-06",
   "files": [
     {
       "path": ".gitattributes",
@@ -33,38 +33,43 @@
     },
     {
       "path": "01_课件（第6版）/01_系统基础.pptx",
-      "bytes": 327678,
-      "sha256": "0c4afc461954be3eae7b18922dc0743a03a2b19b3990c7710567d21e53646d6f"
+      "bytes": 334134,
+      "sha256": "0e9503289b1b687459157c8123a0c1a3c531c343282525e78d79df4da33fd235"
     },
     {
       "path": "01_课件（第6版）/02_存储与索引.pptx",
-      "bytes": 782454,
-      "sha256": "848924d81cd0f734c54cefdfa6ea2cde65e6b64f2dc0411ad6c656dd842a4d2f"
+      "bytes": 798663,
+      "sha256": "37bdc937038c6a6acfcaa75389d76e66ffd4723bb2f1367399cf6991beb0a484"
     },
     {
       "path": "01_课件（第6版）/03_查询处理.pptx",
-      "bytes": 787729,
-      "sha256": "655ea7ceb37a7e14a9c9f06952272f5d5b5e29c92c76494f50c559f62aedcc96"
+      "bytes": 804043,
+      "sha256": "2929bc53c316d438de51e26f761628d4db429b9d6ed7b4f3fe8bd51de9b2b038"
     },
     {
       "path": "01_课件（第6版）/04_事务与恢复.pptx",
-      "bytes": 952933,
-      "sha256": "b3cab3df6d9d4ffb893073f49d16f53041570a8abdfda3b1b1ebb74d818a9c91"
+      "bytes": 972463,
+      "sha256": "ef70219f5a8466e06320800a0508d4d3f8c3908225a04d908c7de6f31778b434"
     },
     {
       "path": "01_课件（第6版）/05_系统集成与评测.pptx",
-      "bytes": 327913,
-      "sha256": "1890ba6e66741b3c2990ea8de6bf950adffe9fbf4a323e0fff037cfb4a5d7704"
+      "bytes": 334402,
+      "sha256": "6e0703b17298c860d8077a3172e9af0e42d1862a779115858e0567e7bed782c3"
     },
     {
       "path": "01_课件（第6版）/README.md",
-      "bytes": 4121,
-      "sha256": "be9eb25c9b8d7a958e86a05ea968283a65453189e6b1295d6de545f338573dc2"
+      "bytes": 4289,
+      "sha256": "324b9e7bc0cd231efa3e9330ed0dd9536a161986bc476db8a7d61badee4a7503"
+    },
+    {
+      "path": "01_课件（第6版）/内容索引.json",
+      "bytes": 245861,
+      "sha256": "13943b1795bf5621085cbbfeb982da56bc50f06d3f4e160ec07db966cedb4566"
     },
     {
       "path": "01_课件（第6版）/课程安排.json",
       "bytes": 14747,
-      "sha256": "dc81eb4ac4ab7d454f9338a8082501aa93ce645754d33a2a6a4fb17a5b0cde8e"
+      "sha256": "f56f652e6787d6509648c38001b745eca3ad076f1d04a80d24ae54ee986a56c1"
     },
     {
       "path": "02_历年赛题/2023/2023数据库系统设计赛技术方案V3.0.pdf",
@@ -408,13 +413,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 3098,
-      "sha256": "722ea4cadabf9ec2f9ea5ebe3685ae9dfc66083c3333f7c5e050f81c28c58153"
+      "bytes": 3121,
+      "sha256": "d9079a0d85b97df52685830ceafb78d0a3c0a63fc8bf7fdcd34abeab5bf5a990"
     },
     {
       "path": "scripts/validate_modules.py",
-      "bytes": 2472,
-      "sha256": "277b3946ff95bf47e52f3c501bf55e58c663e5197b4e6527f00419f806498cdd"
+      "bytes": 3016,
+      "sha256": "e105b97345cfdf4efdaae33e4b91824fba95a32bc1c0cc48bb069e5e999694cf"
     },
     {
       "path": "scripts/validate_student.py",
@@ -8999,7 +9004,7 @@
     {
       "path": "课程实施与赛题映射.html",
       "bytes": 13614,
-      "sha256": "82d9d06ceb41b6ca9eef2324bc1da872dd1c326c524df70374ca8ffa49e10a0e"
+      "sha256": "2bacc49d3c57db5320dfcb8fbf5b2fb1837e4c5f4368c068e3b71a85890148d9"
     }
   ]
 }
