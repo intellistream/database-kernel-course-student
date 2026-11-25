@@ -33,28 +33,28 @@
     },
     {
       "path": "01_课件（第6版）/01_系统基础.pptx",
-      "bytes": 331726,
-      "sha256": "a1348972b576fce5be9a3967943d2c5974794538081923b9dc0108604feb40ab"
+      "bytes": 331676,
+      "sha256": "01aa6b0b297009083000c22df8fdf80d819d6745c3d1c4f211c2455448a99106"
     },
     {
       "path": "01_课件（第6版）/02_存储与索引.pptx",
-      "bytes": 793030,
-      "sha256": "ca31f3fa301bf3031765dd5c41586d5c7a528544d8c2b19372b1ed5a956ddfae"
+      "bytes": 792935,
+      "sha256": "07689d4b79522c66b7e396b96dbc72c3c74244a82fe4b6359ff2218e08666b0d"
     },
     {
       "path": "01_课件（第6版）/03_查询处理.pptx",
-      "bytes": 798419,
-      "sha256": "4a5e019d65f54b1a8abc494d0262d3d90fb457b9ee9ceac8617c02118490bc0b"
+      "bytes": 798304,
+      "sha256": "160ef6e4f3edd892ca9b52216a994224be401d93f0267a03a1242013506aacd0"
     },
     {
       "path": "01_课件（第6版）/04_事务与恢复.pptx",
-      "bytes": 965886,
-      "sha256": "fa29d550bb65c719eaddecf65244746b6cbbdd6c26509316ebb8a86b53bbdf21"
+      "bytes": 965778,
+      "sha256": "d6804f6579b35686892d7208804b5a6b9e5576f0e65ff9ba0e1bfc65f077acb7"
     },
     {
       "path": "01_课件（第6版）/05_系统集成与评测.pptx",
-      "bytes": 331958,
-      "sha256": "eaddcd7d90c7deb06b010fa501f60558f6a28408325ec263df2549bad824ebf2"
+      "bytes": 331987,
+      "sha256": "07f10b2bfc92b481e65daf5c4f3d03377917a8412d301bcacf93dcf9041778c6"
     },
     {
       "path": "01_课件（第6版）/README.md",
@@ -63,8 +63,8 @@
     },
     {
       "path": "01_课件（第6版）/内容索引.json",
-      "bytes": 244586,
-      "sha256": "2155cf5e06f00e228e9bc3290e41cde227b616b4bc5bf377a484cd35c26855c1"
+      "bytes": 244304,
+      "sha256": "4d6b0fca64352375b3bb13c95fdd8c3aac0297d6ea3165c0de8077274da136e6"
     },
     {
       "path": "01_课件（第6版）/分课PPT/README.md",
@@ -73,103 +73,103 @@
     },
     {
       "path": "01_课件（第6版）/分课PPT/第01次课_数据库架构与查询路径.pptx",
-      "bytes": 175434,
-      "sha256": "8d1481bfe064dd15325237d14b68492139c21c10a2b11bcec140819fed0c1b91"
+      "bytes": 175405,
+      "sha256": "79103a565770b27dc8f6187f844d9da728f250403df20cbb4298dc36c02a9ab1"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第02次课_接口_资源管理与测试.pptx",
-      "bytes": 178215,
-      "sha256": "7ffc046e43d68dc3b9a99265f45c315e1401f12fbe360bac84de5e8edb22b17c"
+      "bytes": 178167,
+      "sha256": "0bc48515ecf9d252af9597a0bc85e6409d4da0bdca93fa03a8e9bb8f71a052cc"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第03次课_页式存储与空间管理.pptx",
-      "bytes": 174132,
-      "sha256": "1f719d7c8618a9c74404cb63a43a4f12cc34bbc9ec46c8931207484f95bdc58d"
+      "bytes": 174068,
+      "sha256": "efb11794293b8eb23feaa371025a016e8f41013bca53ee3730c502fd5c050337"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第04次课_缓冲池与页生命周期.pptx",
-      "bytes": 178870,
-      "sha256": "bc81909ca13b7e1b6ded14f5476414c16874a248b7b2f3a28232c8f9699f0a20"
+      "bytes": 178847,
+      "sha256": "1289ce548b766b07a5274880326641919fc830601a6a93f23ac413378b660050"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第05次课_记录组织与系统目录.pptx",
-      "bytes": 181790,
-      "sha256": "69838b12ac35175cfb6422d014510d6d9df01f549958cb3467627eccfabcb020"
+      "bytes": 181753,
+      "sha256": "229a9287031ded63862bb872a13939bb8b01535b9595a5146f12dfa192c2212e"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第06次课_B+树查找与键比较.pptx",
-      "bytes": 173659,
-      "sha256": "55a0068797b5362505f6c27c10ee35f7e951878ca0247c72dd70b58d282f4969"
+      "bytes": 173679,
+      "sha256": "70c6ad57868d3fa71d632271fea08001267b36db5770164b7b65662491393dc1"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第07次课_B+树分裂与索引一致性.pptx",
-      "bytes": 178968,
-      "sha256": "57a41ce69c9da3ae905f51bb456903f7a886bbd0e2fb5d73aa7fe498c97eb578"
+      "bytes": 178944,
+      "sha256": "5c98e09dd799fd36758cd8e790e37eea2d0d856824c7114cf4a5c9f82b8668d7"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第08次课_SQL前端与计划表示.pptx",
-      "bytes": 174175,
-      "sha256": "1b1ae1e43856e255a5c0dbb07f5ee6715a47d2224b938181f231367abc192cd1"
+      "bytes": 174189,
+      "sha256": "43e74aed286ec4e36aa5507a6a5738732a37c94de80b5f00186ff2773beb345d"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第09次课_类型_NULL与基础执行器.pptx",
-      "bytes": 172786,
-      "sha256": "cb385d31feca0dd03acd771cec9510761b7d88ef036854ae02ddeb89de228845"
+      "bytes": 172808,
+      "sha256": "2890bd9ea81d0a3905721efe1761b163f2ccb8944ee76fe8ec6358c1efa77445"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第10次课_迭代器_集合与排序.pptx",
-      "bytes": 177473,
-      "sha256": "cf8ce6e0d7368b1a5ccdbd66b1c16809b3c9019a709571adfce0d46363ada97f"
+      "bytes": 177451,
+      "sha256": "259d670670bac1f5d1607c2340e8e546036d62c463112a4aa4f77732ea07a254"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第11次课_连接与聚合.pptx",
-      "bytes": 191344,
-      "sha256": "1ad643bd598e74d2386aa520b6d44f87e02cc369473255c982c9e7e687fbd8ee"
+      "bytes": 191294,
+      "sha256": "09be98f568462da93ad4bee37ff40fe20e3521d399cad91dda3c80c270f87366"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第12次课_查询优化与代价验证.pptx",
-      "bytes": 177162,
-      "sha256": "08f067063b92beb59f911b487bcf570077e93ce21688724bed39043c9cb961ff"
+      "bytes": 177184,
+      "sha256": "135a0a3f5c712ebece7925d0738d77f08223a27b741d70a736529322f5534065"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第13次课_事务状态与两阶段锁.pptx",
-      "bytes": 175522,
-      "sha256": "e066d4bfb581816128f2dda3fffcbd27e99dbf56617031dd78625d20fc2c71d6"
+      "bytes": 175524,
+      "sha256": "daeafaaf2b5e2434e1a5c97416aa1318bc732bdf79fb5eb1f3034568d1dec424"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第14次课_等待队列与死锁.pptx",
-      "bytes": 177416,
-      "sha256": "5cba907f97b09d48123adbf7626ed428982bef907c24f157eb59ae2ca1d83269"
+      "bytes": 177410,
+      "sha256": "49f3d17e4112151cb505e4f9dcbc85801e1b7019f5b13f4bd76b315d7f31fd45"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第15次课_MVCC与快照隔离.pptx",
-      "bytes": 199357,
-      "sha256": "88e428996cd6c12d75832b6f13819cd8791f6544ad45b25545a831103c5a8864"
+      "bytes": 199380,
+      "sha256": "e0fc37c11e4afdc69cce97ee5e1f175e431ba3b743082b1c8d05d8807ba2773e"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第16次课_WAL与提交持久性.pptx",
-      "bytes": 176070,
-      "sha256": "847fa3bbfee4e57e556fbc1163e6526c6ba6361482083b8920b342260ee18ae3"
+      "bytes": 176074,
+      "sha256": "b60a872218fbf25859a352c5971c2a0bfc8673ce7b906509ed9ccb4b5877f7d8"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第17次课_重做_撤销与恢复调度.pptx",
-      "bytes": 177686,
-      "sha256": "0687b6f00191a73aaa6ee2ebef5fdfd8d798f701eda783b13a8d8f35502ec42f"
+      "bytes": 177668,
+      "sha256": "73a9b8aa409dd861f098f809422bc58ddff6ea6f676dfc387dafb4051ae0b736"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第18次课_检查点与崩溃验证.pptx",
-      "bytes": 178441,
-      "sha256": "388777f7b868fb140dc61f63c6dc5577276f85ca493805cff9e0191aeee9285d"
+      "bytes": 178459,
+      "sha256": "d32bed7e6e57f8c8ccb78f6d3fc3abb313496510f75ac5c0cca1069b86a4c260"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第19次课_端到端接口与回归.pptx",
-      "bytes": 176016,
-      "sha256": "20f9672248e1d0693f5e1020c5db4f9f8a21f7148d920e2f5d2a4a95022a02a6"
+      "bytes": 175987,
+      "sha256": "cb232947f16c5cbdd9a4ab3c558da989cb0a5a6f7dae1ca899f743590f2f00d6"
     },
     {
       "path": "01_课件（第6版）/分课PPT/第20次课_性能分析与综合验收.pptx",
-      "bytes": 177949,
-      "sha256": "a2dcf0d7aa5a7b4f2b6cf47afcb6a8180c55dfb59e312c7cf88358ee0e6773c8"
+      "bytes": 177951,
+      "sha256": "98e7c9520ae82f4ea0adb9ea96d566c30feefdb04b3653e78792fb852aeb478b"
     },
     {
       "path": "01_课件（第6版）/分课PPT/课次目录.json",

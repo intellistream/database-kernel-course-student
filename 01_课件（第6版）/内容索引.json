@@ -961,7 +961,7 @@
     },
     {
       "number": 43,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 1,
       "key": "L01.QUIZ",
@@ -1278,7 +1278,7 @@
     },
     {
       "number": 73,
-      "title": "用受控替身定位接口问题",
+      "title": "固定事件顺序的接口测试",
       "kind": "table",
       "lesson": 2,
       "key": "L02.S28",
@@ -1298,7 +1298,7 @@
     },
     {
       "number": 75,
-      "title": "测试按层定位问题",
+      "title": "单元测试与系统测试",
       "kind": "table",
       "lesson": 2,
       "key": "L02.S30",
@@ -1394,7 +1394,7 @@
     },
     {
       "number": 84,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 2,
       "key": "L02.QUIZ",
@@ -1859,7 +1859,7 @@
     },
     {
       "number": 43,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 3,
       "key": "L03.QUIZ",
@@ -2292,7 +2292,7 @@
     },
     {
       "number": 84,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 4,
       "key": "L04.QUIZ",
@@ -2735,7 +2735,7 @@
     },
     {
       "number": 126,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 5,
       "key": "L05.QUIZ",
@@ -3168,7 +3168,7 @@
     },
     {
       "number": 167,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 6,
       "key": "L06.QUIZ",
@@ -3601,7 +3601,7 @@
     },
     {
       "number": 208,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 7,
       "key": "L07.QUIZ",
@@ -4006,7 +4006,7 @@
     },
     {
       "number": 36,
-      "title": "前端到执行器的交接检查",
+      "title": "计划进入执行器时携带的信息",
       "kind": "points",
       "lesson": 8,
       "key": "L08.S32",
@@ -4082,7 +4082,7 @@
     },
     {
       "number": 43,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 8,
       "key": "L08.QUIZ",
@@ -4515,7 +4515,7 @@
     },
     {
       "number": 84,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 9,
       "key": "L09.QUIZ",
@@ -4689,7 +4689,7 @@
     },
     {
       "number": 101,
-      "title": "Append和Unique的练习定位",
+      "title": "Append与Unique的输入和输出",
       "kind": "code",
       "lesson": 10,
       "key": "L10.S16",
@@ -4948,7 +4948,7 @@
     },
     {
       "number": 125,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 10,
       "key": "L10.QUIZ",
@@ -5431,7 +5431,7 @@
     },
     {
       "number": 171,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 11,
       "key": "L11.QUIZ",
@@ -5788,7 +5788,7 @@
     },
     {
       "number": 205,
-      "title": "查询模块的阶段交付",
+      "title": "查询模块的端到端验证",
       "kind": "points",
       "lesson": 12,
       "key": "L12.S32",
@@ -5864,7 +5864,7 @@
     },
     {
       "number": 212,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 12,
       "key": "L12.QUIZ",
@@ -6261,7 +6261,7 @@
     },
     {
       "number": 36,
-      "title": "事务接口的检查点",
+      "title": "事务接口的状态变更",
       "kind": "points",
       "lesson": 13,
       "key": "L13.S32",
@@ -6337,7 +6337,7 @@
     },
     {
       "number": 43,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 13,
       "key": "L13.QUIZ",
@@ -6770,7 +6770,7 @@
     },
     {
       "number": 84,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 14,
       "key": "L14.QUIZ",
@@ -7157,7 +7157,7 @@
     },
     {
       "number": 121,
-      "title": "MVCC实验的逐步观察",
+      "title": "不同快照下的MVCC读取",
       "kind": "table",
       "lesson": 15,
       "key": "L15.S35",
@@ -7167,7 +7167,7 @@
     },
     {
       "number": 122,
-      "title": "并发测试应记录哪些事件",
+      "title": "并发调度中的同步事件",
       "kind": "table",
       "lesson": 15,
       "key": "L15.S36",
@@ -7263,7 +7263,7 @@
     },
     {
       "number": 131,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 15,
       "key": "L15.QUIZ",
@@ -7620,7 +7620,7 @@
     },
     {
       "number": 165,
-      "title": "提交路径的故障检查",
+      "title": "提交应答前后断开连接",
       "kind": "points",
       "lesson": 16,
       "key": "L16.S32",
@@ -7696,7 +7696,7 @@
     },
     {
       "number": 172,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 16,
       "key": "L16.QUIZ",
@@ -8053,7 +8053,7 @@
     },
     {
       "number": 206,
-      "title": "恢复幂等性的验证过程",
+      "title": "重复重启后的恢复结果",
       "kind": "code",
       "lesson": 17,
       "key": "L17.S32",
@@ -8139,7 +8139,7 @@
     },
     {
       "number": 214,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 17,
       "key": "L17.QUIZ",
@@ -8420,7 +8420,7 @@
     },
     {
       "number": 241,
-      "title": "事务与恢复模块的阶段交付",
+      "title": "事务与恢复的端到端验证",
       "kind": "points",
       "lesson": 18,
       "key": "L18.S25",
@@ -8572,7 +8572,7 @@
     },
     {
       "number": 255,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 18,
       "key": "L18.QUIZ",
@@ -8754,7 +8754,7 @@
     },
     {
       "number": 15,
-      "title": "结果编码必须携带的语义",
+      "title": "结果编码的列类型、行与结束标记",
       "kind": "table",
       "lesson": 19,
       "key": "L19.S12",
@@ -9053,7 +9053,7 @@
     },
     {
       "number": 43,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 19,
       "key": "L19.QUIZ",
@@ -9071,7 +9071,7 @@
     },
     {
       "number": 45,
-      "title": "性能分析先固定可比较条件",
+      "title": "查询性能的比较条件",
       "kind": "table",
       "lesson": 20,
       "key": "L20.S01",
@@ -9081,7 +9081,7 @@
     },
     {
       "number": 46,
-      "title": "正确性通过后进入性能分析",
+      "title": "结果校验与性能测量",
       "kind": "diagram",
       "lesson": 20,
       "key": "L20.S02",
@@ -9091,7 +9091,7 @@
     },
     {
       "number": 47,
-      "title": "性能实验必须固定的条件",
+      "title": "性能实验中的控制变量",
       "kind": "table",
       "lesson": 20,
       "key": "L20.S03",
@@ -9294,7 +9294,7 @@
     },
     {
       "number": 66,
-      "title": "查询剖析的因果证据",
+      "title": "算子耗时、页访问与锁等待",
       "kind": "table",
       "lesson": 20,
       "key": "L20.S21",
@@ -9486,7 +9486,7 @@
     },
     {
       "number": 84,
-      "title": "课堂练习与实现检查",
+      "title": "课堂练习",
       "kind": "exercise",
       "lesson": 20,
       "key": "L20.QUIZ",
