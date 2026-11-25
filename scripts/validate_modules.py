@@ -50,3 +50,24 @@ for m in data:
     assert '参考要点：' not in value and '课堂练习参考答案' not in value
 assert total==sum(m['slides'] for m in data) and tables>30 and connectors>50
 print(json.dumps(dict(modules=5,lessons=20,labs=10,slides=total,native_tables=tables,native_connectors=connectors),ensure_ascii=False))
+
+split=BASE/'分课PPT'
+if split.is_dir():
+ catalog=json.loads((split/'课次目录.json').read_text(encoding='utf-8'))
+ assert [row['lesson'] for row in catalog]==list(range(1,21))
+ assert {p.name for p in split.glob('*.pptx')}=={row['file'] for row in catalog}
+ for lesson,row in zip(lessons,catalog):
+  assert row['hours']==2 and row['title']==lesson['title'] and row['week']==lesson['week']
+  with zipfile.ZipFile(split/row['file']) as deck:
+   names=deck.namelist()
+   assert sum(bool(re.fullmatch(r'ppt/slides/slide\d+\.xml',n)) for n in names)==row['slides']
+   def slide_text(p):
+    return ''.join(t.text or '' for t in ET.fromstring(deck.read(f'ppt/slides/slide{p}.xml')).findall('.//a:t',ns))
+   assert f"第{lesson['no']}次课" in slide_text(1)
+   assert '课间休息' in slide_text(row['break_page'])
+   assert '伪代码走读' in slide_text(row['case_page']+1)
+   for n in names:
+    if re.fullmatch(r'ppt/notesSlides/notesSlide\d+\.xml',n):
+     note=''.join(t.text or '' for t in ET.fromstring(deck.read(n)).findall('.//a:t',ns))
+     assert not re.sub(r'[\d\s]','',note),(row['lesson'],n)
+ print(f"20 standalone student decks, {sum(row['slides'] for row in catalog)} pages")
